@@ -1,4 +1,4 @@
-Team ADLIB
+Team ADLIP
 
 팀원
 
