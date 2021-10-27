@@ -24,8 +24,8 @@ function Router() {
           <Switch>
             <Route exact path='/login' component={LogIn} />
             <Route exact path='/signup' component={SignUp} />
-            <Route exact path='/category/:main/:sub' component={List} />
-            <Route exact path='/category/:main' component={List} />
+            <Route exact path='/category/:id' component={List} />
+            <Route exact path='/category/:id/:sub' component={List} />
             <Route exact path='/category' component={Category} />
             <Route exact path='/products/:id' component={Detail} />
             <Route exact path='/' component={Main} />

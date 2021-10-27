@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "category_name": "여행"
+  },
+  {
+    "id": 2,
+    "category_name": "스포츠"
+  },
+  {
+    "id": 3,
+    "category_name": "모임"
+  },
+  {
+    "id": 4,
+    "category_name": "문화예술"
+  }
+]
