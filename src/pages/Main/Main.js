@@ -1,7 +1,20 @@
 import React from 'react';
-import styled from 'styled-components';
+import MainCardList from './MainCardList/MainCardList';
 import MainCarousel from '../../components/MainCarousel/MainCarousel';
+import { MainStyle, MainFlexCenter, Categories, Banner } from './Main.style';
 
 export default function Main() {
-  return <div></div>;
+  return (
+    <MainStyle>
+      <MainFlexCenter>
+        <MainCarousel className='carcel' />
+        <Categories>categories</Categories>
+        <MainCardList />
+        <MainCardList />
+        <MainCardList />
+        <MainCardList />
+        <Banner>베너</Banner>
+      </MainFlexCenter>
+    </MainStyle>
+  );
 }

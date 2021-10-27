@@ -5,6 +5,10 @@ import SignUp from './pages/SignUp/SignUp';
 import List from './pages/List/List';
 import Detail from './pages/Detail/Detail';
 import Main from './pages/Main/Main';
+import Footer from '../src/components/Footer/Footer';
+import Header from '../src/components/Header/Header';
+import Nav from '../src/components/Nav/Nav';
+import Category from './pages/Category/Category';
 import GlobalStyle from './styles/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import theme from './styles/theme';
@@ -15,13 +19,18 @@ function Router() {
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <BrowserRouter>
+          <Header />
+          <Nav />
           <Switch>
-            <Route exact path='/' component={Main} />
             <Route exact path='/login' component={LogIn} />
             <Route exact path='/signup' component={SignUp} />
-            <Route exact path='/list' component={List} />
-            <Route exact path='/detail' component={Detail} />
+            <Route exact path='/category/:main/:sub' component={List} />
+            <Route exact path='/category/:main' component={List} />
+            <Route exact path='/category' component={Category} />
+            <Route exact path='/products/:id' component={Detail} />
+            <Route exact path='/' component={Main} />
           </Switch>
+          <Footer />
         </BrowserRouter>
       </ThemeProvider>
     </>
