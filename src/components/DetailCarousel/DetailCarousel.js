@@ -71,7 +71,7 @@ function DetailCarousel() {
 
           return (
             <ReviewWrapper key={id}>
-              <Link to='/comments'>
+              <Link to='/products/:id/comments'>
                 <ReviewImgWrapper>
                   <ReviewImg alt={showingImg.name} src={showingImg.img} />
                 </ReviewImgWrapper>
