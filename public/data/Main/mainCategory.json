@@ -1,0 +1,24 @@
+{
+  "category": [
+    {
+      "id": 1,
+      "name": "여행",
+      "url": "https://cdn.pixabay.com/photo/2017/12/15/13/51/polynesia-3021072_960_720.jpg"
+    },
+    {
+      "id": 2,
+      "name": "스포츠",
+      "url": "https://cdn.pixabay.com/photo/2016/11/14/03/06/woman-1822459_960_720.jpg](https://cdn.pixabay.com/photo/2016/11/14/03/06/woman-1822459_960_720.jpg"
+    },
+    {
+      "id": 3,
+      "name": "모임",
+      "url": "https://cdn.pixabay.com/photo/2016/01/19/15/07/cocktails-1149171_960_720.jpg](https://cdn.pixabay.com/photo/2016/01/19/15/07/cocktails-1149171_960_720.jpg"
+    },
+    {
+      "id": 4,
+      "name": "문화예술",
+      "url": "https://cdn.pixabay.com/photo/2016/10/08/15/54/tokyo-culture-center-1723972_960_720.jpg](https://cdn.pixabay.com/photo/2016/10/08/15/54/tokyo-culture-center-1723972_960_720.jpg"
+    }
+  ]
+}

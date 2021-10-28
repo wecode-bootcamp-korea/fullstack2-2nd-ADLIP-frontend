@@ -1,0 +1,35 @@
+{
+  "footerMenu": ["프로젝트소개", "팀원소개", "문의사항", "공지사항"],
+  "footerSubMenu": [
+    {
+      "tilte": "고객센터",
+      "content": [
+        "이메일 : tjdwltn121@gmail.com",
+        "고객센터 : 010-####-####",
+        "업무시간 : 평일 06:00 - 16:00 (점심: 12:00 - 13:00)"
+      ]
+    },
+    {
+      "tilte": "Frientrip",
+      "content": [
+        "(주)애드립 | 사업자등록번호 : 123-23-45678",
+        "통신판매업신고번호 : 2021-위코드-202020",
+        "대표: 성** | 개인정보 관리 책임자: *태*",
+        "(주)애드립은 통신판매중개자가 아니고 거래 및 개인정보 관리 책임에 아무런 관련 없습니다. 단지 프로젝트를 위한 페이지입니다."
+      ]
+    }
+  ],
+  "footerIconLink": [
+    {
+      "id": 1,
+      "name": "Frontend",
+      "link": "https://github.com/wecode-bootcamp-korea/fullstack2-2nd-ADLIP-frontend"
+    },
+    {
+      "id": 2,
+      "name": "Backend",
+      "link": "https://github.com/wecode-bootcamp-korea/fullstack2-2nd-ADLIP-backend"
+    },
+    { "id": 3, "name": "CloneSite", "link": "https://www.frip.co.kr/" }
+  ]
+}
