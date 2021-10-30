@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "sub_category_name_1": "국내여행",
+    "sub_category_name_2": "해외여행",
+    "sub_category_name_3": "제주도"
+  },
+  {
+    "id": 2,
+    "sub_category_name_1": "실내스포츠",
+    "sub_category_name_2": "실외스포츠",
+    "sub_category_name_3": "라이딩"
+  },
+  {
+    "id": 3,
+    "sub_category_name_1": "술",
+    "sub_category_name_2": "스터디",
+    "sub_category_name_3": "기타"
+  },
+  {
+    "id": 4,
+    "sub_category_name_1": "음악",
+    "sub_category_name_2": "미술",
+    "sub_category_name_3": "사진"
+  }
+]
