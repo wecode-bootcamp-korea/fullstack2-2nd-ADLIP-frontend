@@ -1,0 +1,220 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "인기 급상승🚀",
+      "productList": [
+        {
+          "id": 1,
+          "main_image_url": "/images/1.JPG",
+          "summary": "#혼자여행 #고양이 #위스키 #불",
+          "product_name": "[프립버스] 강릉의자랑 안목해변에는 바닷물보다 커피가 더 많습니다.",
+          "price": 49000,
+          "is_discount": true,
+          "discount_rate": 0.15,
+          "isNew": true,
+          "isOnly": true,
+          "rating": "4"
+        },
+        {
+          "id": 2,
+          "main_image_url": "/images/2.jpg",
+          "summary": "#아시아의하와이 #물맑아 #한량",
+          "product_name": "[오키나와] 오키나와 여름에 40도 걸어다니면 피부다까짐",
+          "price": 39000,
+          "is_discount": false,
+          "discount_rate": null,
+          "isNew": false,
+          "isOnly": true,
+          "rating": null
+        },
+        {
+          "id": 3,
+          "main_image_url": "/images/3.JPG",
+          "summary": "#해외여행 #탕진잼 #통장탈탈",
+          "product_name": "[포르투갈] 야경밖에 볼건없지만 그래도좋다 가면 포르투갈 와인맛있다",
+          "price": 1115000,
+          "is_discount": true,
+          "discount_rate": 0.12,
+          "isNew": true,
+          "isOnly": false,
+          "rating": null
+        },
+        {
+          "id": 4,
+          "main_image_url": "/images/4.JPG",
+          "summary": "#렌트필수 #더워죽어 #에메랄드바다",
+          "product_name": "[오키나와] 여기도 오키나와 좋았단말이야 오키나와 또가고싶다 오키나와",
+          "price": 239900,
+          "is_discount": true,
+          "discount_rate": 0.19,
+          "isNew": true,
+          "isOnly": false,
+          "rating": "3"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "주간 BEST🏆",
+      "productList": [
+        {
+          "id": 1,
+          "main_image_url": "/images/1.JPG",
+          "summary": "#혼자여행 #고양이 #위스키 #불",
+          "product_name": "[프립버스] 강릉의자랑 안목해변에는 바닷물보다 커피가 더 많습니다.",
+          "price": 49000,
+          "is_discount": true,
+          "discount_rate": 0.15,
+          "isNew": true,
+          "isOnly": true,
+          "rating": "4"
+        },
+        {
+          "id": 2,
+          "main_image_url": "/images/2.jpg",
+          "summary": "#아시아의하와이 #물맑아 #한량",
+          "product_name": "[오키나와] 오키나와 여름에 40도 걸어다니면 피부다까짐",
+          "price": 39000,
+          "is_discount": false,
+          "discount_rate": null,
+          "isNew": false,
+          "isOnly": true,
+          "rating": null
+        },
+        {
+          "id": 3,
+          "main_image_url": "/images/3.JPG",
+          "summary": "#해외여행 #탕진잼 #통장탈탈",
+          "product_name": "[포르투갈] 야경밖에 볼건없지만 그래도좋다 가면 포르투갈 와인맛있다",
+          "price": 1115000,
+          "is_discount": true,
+          "discount_rate": 0.12,
+          "isNew": true,
+          "isOnly": false,
+          "rating": null
+        },
+        {
+          "id": 4,
+          "main_image_url": "/images/4.JPG",
+          "summary": "#렌트필수 #더워죽어 #에메랄드바다",
+          "product_name": "[오키나와] 여기도 오키나와 좋았단말이야 오키나와 또가고싶다 오키나와",
+          "price": 239900,
+          "is_discount": true,
+          "discount_rate": 0.19,
+          "isNew": true,
+          "isOnly": false,
+          "rating": "3"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "위코드특별여행✌💛",
+      "productList": [
+        {
+          "id": 1,
+          "main_image_url": "/images/1.JPG",
+          "summary": "#혼자여행 #고양이 #위스키 #불",
+          "product_name": "[프립버스] 강릉의자랑 안목해변에는 바닷물보다 커피가 더 많습니다.",
+          "price": 49000,
+          "is_discount": true,
+          "discount_rate": 0.15,
+          "isNew": true,
+          "isOnly": true,
+          "rating": "4"
+        },
+        {
+          "id": 2,
+          "main_image_url": "/images/2.jpg",
+          "summary": "#아시아의하와이 #물맑아 #한량",
+          "product_name": "[오키나와] 오키나와 여름에 40도 걸어다니면 피부다까짐",
+          "price": 39000,
+          "is_discount": false,
+          "discount_rate": null,
+          "isNew": false,
+          "isOnly": true,
+          "rating": null
+        },
+        {
+          "id": 3,
+          "main_image_url": "/images/3.JPG",
+          "summary": "#해외여행 #탕진잼 #통장탈탈",
+          "product_name": "[포르투갈] 야경밖에 볼건없지만 그래도좋다 가면 포르투갈 와인맛있다",
+          "price": 1115000,
+          "is_discount": true,
+          "discount_rate": 0.12,
+          "isNew": true,
+          "isOnly": false,
+          "rating": null
+        },
+        {
+          "id": 4,
+          "main_image_url": "/images/4.JPG",
+          "summary": "#렌트필수 #더워죽어 #에메랄드바다",
+          "product_name": "[오키나와] 여기도 오키나와 좋았단말이야 오키나와 또가고싶다 오키나와",
+          "price": 239900,
+          "is_discount": true,
+          "discount_rate": 0.19,
+          "isNew": true,
+          "isOnly": false,
+          "rating": "3"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "술먹고싶다~~~!⚡",
+      "productList": [
+        {
+          "id": 1,
+          "main_image_url": "/images/1.JPG",
+          "summary": "#혼자여행 #고양이 #위스키 #불",
+          "product_name": "[프립버스] 강릉의자랑 안목해변에는 바닷물보다 커피가 더 많습니다.",
+          "price": 49000,
+          "is_discount": true,
+          "discount_rate": 0.15,
+          "isNew": true,
+          "isOnly": true,
+          "rating": "4"
+        },
+        {
+          "id": 2,
+          "main_image_url": "/images/2.jpg",
+          "summary": "#아시아의하와이 #물맑아 #한량",
+          "product_name": "[오키나와] 오키나와 여름에 40도 걸어다니면 피부다까짐",
+          "price": 39000,
+          "is_discount": false,
+          "discount_rate": null,
+          "isNew": false,
+          "isOnly": true,
+          "rating": null
+        },
+        {
+          "id": 3,
+          "main_image_url": "/images/3.JPG",
+          "summary": "#해외여행 #탕진잼 #통장탈탈",
+          "product_name": "[포르투갈] 야경밖에 볼건없지만 그래도좋다 가면 포르투갈 와인맛있다",
+          "price": 1115000,
+          "is_discount": true,
+          "discount_rate": 0.12,
+          "isNew": true,
+          "isOnly": false,
+          "rating": null
+        },
+        {
+          "id": 4,
+          "main_image_url": "/images/4.JPG",
+          "summary": "#렌트필수 #더워죽어 #에메랄드바다",
+          "product_name": "[오키나와] 여기도 오키나와 좋았단말이야 오키나와 또가고싶다 오키나와",
+          "price": 239900,
+          "is_discount": true,
+          "discount_rate": 0.19,
+          "isNew": true,
+          "isOnly": false,
+          "rating": "3"
+        }
+      ]
+    }
+  ]
+}
