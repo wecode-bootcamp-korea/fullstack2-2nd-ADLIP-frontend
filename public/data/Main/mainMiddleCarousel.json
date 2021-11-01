@@ -1,0 +1,29 @@
+{
+  "images": [
+    {
+      "id": 1,
+      "name": "처음소계",
+      "url": "https://ifh.cc/g/SMoAwk.png"
+    },
+    {
+      "id": 2,
+      "name": "생일",
+      "url": "https://ifh.cc/g/z1wkle.png"
+    },
+    {
+      "id": 3,
+      "name": "닥터",
+      "url": "https://ifh.cc/g/wnsjFi.png"
+    },
+    {
+      "id": 4,
+      "name": "크리스마스",
+      "url": "https://ifh.cc/g/pKjFmX.png"
+    },
+    {
+      "id": 5,
+      "name": "수험생",
+      "url": "https://ifh.cc/g/7SHndi.png"
+    }
+  ]
+}

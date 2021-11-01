@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
@@ -41,24 +41,25 @@ function PrevArrow(props) {
   );
 }
 
-function MainCarousel() {
-  const [images, setImages] = useState([]);
+function MainCarousel(props) {
+  const { carouselData, isDot } = props;
 
-  useEffect(() => {
-    getImages();
-  }, []);
-
-  const getImages = () => {
-    fetch('/data/Main/mainCarousel.json')
-      .then(res => res.json())
-      .then(res => setImages(res))
-      .catch(console.log);
+  const settings = {
+    dots: isDot,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    autoplay: true,
+    autoplaySpeed: 2000,
   };
 
   return (
     <div>
-      <StyledSlider {...settings}>
-        {images.map(image => {
+      <StyledSlider {...settings} propsName={carouselData?.name}>
+        {carouselData?.map(image => {
           return (
             <Link to='/list' key={image.id}>
               <img alt={image.name} src={image.url} />
@@ -72,18 +73,9 @@ function MainCarousel() {
 
 export default MainCarousel;
 
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  nextArrow: <NextArrow />,
-  prevArrow: <PrevArrow />,
-};
-
 const StyledSlider = styled(Slider)`
   width: 768px;
+  margin: 20px;
 
   .slick-prev:before,
   .slick-next:before {

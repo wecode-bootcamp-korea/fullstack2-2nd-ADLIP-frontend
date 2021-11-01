@@ -1,27 +1,29 @@
-[
-  {
-    "id": 1,
-    "name": "단풍산행",
-    "url": "https://i.esdrop.com/d/dzl8ervbasc7/IE0qkPWsMM.png"
-  },
-  {
-    "id": 2,
-    "name": "서핑",
-    "url": "https://i.esdrop.com/d/dzl8ervbasc7/8WHmPwMMrn.png"
-  },
-  {
-    "id": 3,
-    "name": "감귤따기",
-    "url": "https://i.esdrop.com/d/dzl8ervbasc7/vZfyI8hUTw.png"
-  },
-  {
-    "id": 4,
-    "name": "코딩열풍",
-    "url": "https://i.esdrop.com/d/dzl8ervbasc7/iBUUzYx6eE.png"
-  },
-  {
-    "id": 5,
-    "name": "백신접종",
-    "url": "https://i.esdrop.com/d/dzl8ervbasc7/O29EXJRF4X.png"
-  }
-]
+{
+  "images": [
+    {
+      "id": 1,
+      "name": "단풍산행",
+      "url": "https://i.esdrop.com/d/dzl8ervbasc7/IE0qkPWsMM.png"
+    },
+    {
+      "id": 2,
+      "name": "서핑",
+      "url": "https://i.esdrop.com/d/dzl8ervbasc7/8WHmPwMMrn.png"
+    },
+    {
+      "id": 3,
+      "name": "감귤따기",
+      "url": "https://i.esdrop.com/d/dzl8ervbasc7/vZfyI8hUTw.png"
+    },
+    {
+      "id": 4,
+      "name": "코딩열풍",
+      "url": "https://i.esdrop.com/d/dzl8ervbasc7/iBUUzYx6eE.png"
+    },
+    {
+      "id": 5,
+      "name": "백신접종",
+      "url": "https://i.esdrop.com/d/dzl8ervbasc7/O29EXJRF4X.png"
+    }
+  ]
+}
