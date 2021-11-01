@@ -1,0 +1,707 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "nickname": "젤리파워",
+      "rating": 5,
+      "text": "애드립으로 종종 취미 활동 했었지만, 운동을 해보겠다는 생각은 하지 못했었어요.\n\n일이 바빠져 애드립을 잠시 잊고 지내던중에 고관절 통증이 심해져서 마사지, 물리치료, 침 치료 받아봤지만 치료받을때뿐이라 운동과 같이 해야겠단 생각이 들었어요.\n\n당연하게도(?) 자연스럽게 애드립이 떠오르더군요.\n\n슈퍼호스트중에 센스요가 프립이 있었고 자세교정 문구에 바로 결제했어요.\n\n그렇게 시작된 요가수업이 4월이었으니까 만6개월 되어가네요.\n\n첫 수업에 제 지긋지긋한 고관절 통증교정이 되는걸 느끼고는\n(믿을수 없으시겠지만, 우드롤러 동작에서 원장님이 교정포인트를 바로 짚어주셨어요. 그리고 그날 저녁 편안하게 잠들었습니다.)\n\n수업내용에 반해 꾸준히 지금까지 하고 있어요.\n\n요가수련을 한 뒤로 치료는 따로 받지 않아요. 아프지 않으니까요!! (손목통증까지 사라졌어요. 야호! ^0^)\n\n아픔이 없어지는 것만으로 삶의 질이 한 단계 상승합니다. 너무 좋아요.",
+      "createdAt": "2021-10-27 15:10:42",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1588286840104-8957b019727f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1527933053326-89d1746b76b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 3,
+          "img": "https://images.unsplash.com/photo-1549576490-b0b4831ef60a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 2,
+      "nickname": "ys1703",
+      "rating": 4,
+      "text": "선생님이 정말 잘 가르쳐주신 수업이어서 추천 드립니다\n평소 허리와 골반에 통증이 있어서 신청했는데\n전문성 있는 선생님께 통증 원인과 교정 자세 등 아주 세세하게 배운 시간 이었네요\n요가 초보자나 남성분들도 부담없이 신청 하셔도 좋은 수업 이었습니다 감사합니다",
+      "createdAt": "2021-10-26 10:34:15",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1562088287-bde35a1ea917?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2592&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1562088287-6d37803aca2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 3,
+      "nickname": "밀가루맛",
+      "rating": 4,
+      "text": "새해 첫 애드립!\n오늘도 자세교정도 세심하게 봐주셔서 감사합니다.\n108배 처음해봤는데 따라가기가 힘들었어요^^; 그래도 뿌듯합니다. 다음엔 오늘보다 완성도 높여서 해보고싶어요.\n맛난차와 간식 그리고 깜짝 드림캐쳐선물까지 감사합니다..\n새해 복 많이 받으세요~!!!^-^",
+      "createdAt": "2021-01-01 18:47:23",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1616376392785-8e7e283571e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1540205453279-389ebbc43b5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 4,
+      "nickname": "김지현",
+      "rating": 5,
+      "text": "지난 일요일에 첫수업 듣고 너무 좋아서 새해 첫날에 두번째 수업 듣고 왔어요. 한명 한명 꼼꼼하게 몸 상태 틀어진 부분 짚어주시는 것도 굉장히 인상적이었고, 열정적으로 강도있는 수업 진행해주셔서 너무 좋았습니다. 몸이 많이 굳어서 힘든 동작이 꽤 있었지만 운동 끝나니까 몸이 가볍고 개운하네요. 108배까지 하니까 온몸에 열이 올라 땀났어요. 심신이 맑아지는 기분이 들고 또 뿌듯하네요. 끝나고 따뜻한 차랑 다과 준비해주셔서 감사했습니다. 주말에 적어도 한번씩은 꾸준히 해보고 싶은 욕심이 생겨요. 드림캐처 선물도 감동입니다. 감사합니다.",
+      "createdAt": "2021-02-18 19:53:23",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1820&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1621879164000-2da8d59b733c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 3,
+          "img": "https://images.unsplash.com/photo-1621886178958-be42369fc9e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 4,
+          "img": "https://images.unsplash.com/photo-1570655652364-2e0a67455ac6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1644&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 5,
+          "img": "https://images.unsplash.com/photo-1502230831726-fe5549140034?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 5,
+      "nickname": "성지수",
+      "rating": 5,
+      "text": "선생님 안녕하세요! 수련 과정 친절하게 잘 바꿔주셔서 감사드립니다. 제 몸의 삐뚤어진 곳도 하나하나 다 봐주시고  교정 프로그램 내용도 알차고 정말 좋은 시간이었습니다🧘🏻‍♀️ 현재 하고 있는 필라테스가 끝나면 꼭 여기로 다시 와서 자세 교정 프로그램을 받아보려 합니다🙌🏻 그 때 좌측 고관절 외회전을 어떻게 최대한 막아보면 좋을지 알려주시면 감사드려요🥲ㅎㅎ 스피루리나 잘 먹고 집에 갑니다! 감사했습니다💜",
+      "createdAt": "2021-10-10 11:23:43",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1624651208388-f8726eace8f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1548&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1623657659760-235e10639d8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 3,
+          "img": "https://images.unsplash.com/photo-1591311630200-ffa9120a540f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1620&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 6,
+      "nickname": "김윤진",
+      "rating": 4,
+      "text": "왼쪽 골반이 자기전에 너무 아팠는데 오랫만에 와서 시원하게 풀고가요!",
+      "createdAt": "2021-07-23 11:25:12",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/flagged/photo-1573556291531-a5d957d7e4e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/flagged/photo-1573556278922-ad9a1914c801?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 7,
+      "nickname": "김휘민",
+      "rating": 5,
+      "text": "살면서 꾸준히 운동을 해본적이 없는데 선생님 만나서 요가 처음해보고 근 두달동안 해보고 있어요!! 맨처음에는 이게 몸인가 싶을정도로 엉망이었는데🤦🏻‍♀️🚮 수년간의 공시+고시공부에 스트레스를 음주+폭식으로 풀었거든요.... ㅠㅠ 지금은 많이 좋아졌답니다😆 피부도 좋아지고 어깨도 펴지고 목도 생겼...ㅋㅋㅋㅋㅋㅋㅋ 다리부종도 많이 좋아지구요!! 슬랙스 종아리부분이 헐렁헐렁해졌어요!! 오늘 골반교정시간에 왼쪽 골반이 엄청 뻐근한 기분을 느껴서 뿌듯하네요 아직 멀었지만 완벽하게 올바른 자세를 만들때까지 계속 해보겠습니당 차 감사하고 팩도 잘쓰겠습니당!!! 좋은 주말 보내세요🧘🏻‍♀️💦",
+      "createdAt": "2021-03-12 20:13:45",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1531403939386-c08a16cd7eef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1540206276207-3af25c08abc4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 8,
+      "nickname": "김원영",
+      "rating": 5,
+      "text": "요가가 이렇게 힘든건지 몰랐어요 ㅠ 선생님께서 떡이랑 다과도 준비해 주시고 한명씩 봐주시고 동작도 쉽지않았어요. 저같이 고강도 운동을 좋아하시는 분이라면 강추! 게다가 생각지도 못한 근력운동까지 해서 너무 알찬 시간이었어요!! 추석연휴 몸 뻐근하신분 꼭 참여하세요!! 너무 힘들어서 집에올때 다리사 후덜덜 했다는 ㅠㅠ 너무 좋아서 한달 끊어서 다니고 싶을 정도예요! 처음 왔는데도 이름까지 기억해주셔서 감사합니다! 차가 너무 맛있었어요!!!",
+      "createdAt": "2021-07-22 21:44:23",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1601568870191-8c417f7e0077?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 9,
+      "nickname": "김동권",
+      "rating": 4,
+      "text": "하고 나면 항상 해냈다는(?) 성취감이 든답니다😄",
+      "createdAt": "2021-10-01 09:12:44",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1618425977996-bebc5afe88f9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 10,
+      "nickname": "진심요가",
+      "rating": 3,
+      "text": "7월부터 주말마다 꾸준히 신청해서 하고 있는데 정말 좋아요~!! 몸이 너무 안좋아서 꾸준히 마사지를 받고 있는데 역시니 남이 풀어주는 거랑 내가 푸는 거랑은 다르네요. 몸이 원체 굳어서 동작이 잘 안되지만 하고 나면 몸이 쭉쭉 늘어나서 개운해요:-) 그리고 수련후 내어주시는 차와 떡은 너무 맛있어서 계속 손이 가요 ㅋㅋ제가 원래 떡을 잘 안먹는데 맛있더라고요~ 여튼 저는 이수업 강추합니다~!!",
+      "createdAt": "2021-08-09 11:29:40",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2940&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1526718583451-e88ebf774771?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 3,
+          "img": "https://images.unsplash.com/photo-1549995546-87cb41aa98a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 11,
+      "nickname": "ys1703",
+      "rating": 4,
+      "text": "선생님이 정말 잘 가르쳐주신 수업이어서 추천 드립니다\n평소 허리와 골반에 통증이 있어서 신청했는데\n전문성 있는 선생님께 통증 원인과 교정 자세 등 아주 세세하게 배운 시간 이었네요\n요가 초보자나 남성분들도 부담없이 신청 하셔도 좋은 수업 이었습니다 감사합니다",
+      "createdAt": "2021-10-26 10:34:15",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1562088287-bde35a1ea917?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2592&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1562088287-6d37803aca2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 12,
+      "nickname": "젤리파워",
+      "rating": 5,
+      "text": "애드립으로 종종 취미 활동 했었지만, 운동을 해보겠다는 생각은 하지 못했었어요.\n\n일이 바빠져 애드립을 잠시 잊고 지내던중에 고관절 통증이 심해져서 마사지, 물리치료, 침 치료 받아봤지만 치료받을때뿐이라 운동과 같이 해야겠단 생각이 들었어요.\n\n당연하게도(?) 자연스럽게 애드립이 떠오르더군요.\n\n슈퍼호스트중에 센스요가 프립이 있었고 자세교정 문구에 바로 결제했어요.\n\n그렇게 시작된 요가수업이 4월이었으니까 만6개월 되어가네요.\n\n첫 수업에 제 지긋지긋한 고관절 통증교정이 되는걸 느끼고는\n(믿을수 없으시겠지만, 우드롤러 동작에서 원장님이 교정포인트를 바로 짚어주셨어요. 그리고 그날 저녁 편안하게 잠들었습니다.)\n\n수업내용에 반해 꾸준히 지금까지 하고 있어요.\n\n요가수련을 한 뒤로 치료는 따로 받지 않아요. 아프지 않으니까요!! (손목통증까지 사라졌어요. 야호! ^0^)\n\n아픔이 없어지는 것만으로 삶의 질이 한 단계 상승합니다. 너무 좋아요.",
+      "createdAt": "2021-10-27 15:10:42",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1588286840104-8957b019727f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1527933053326-89d1746b76b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 3,
+          "img": "https://images.unsplash.com/photo-1549576490-b0b4831ef60a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 13,
+      "nickname": "밀가루맛",
+      "rating": 4,
+      "text": "새해 첫 애드립!\n오늘도 자세교정도 세심하게 봐주셔서 감사합니다.\n108배 처음해봤는데 따라가기가 힘들었어요^^; 그래도 뿌듯합니다. 다음엔 오늘보다 완성도 높여서 해보고싶어요.\n맛난차와 간식 그리고 깜짝 드림캐쳐선물까지 감사합니다..\n새해 복 많이 받으세요~!!!^-^",
+      "createdAt": "2021-01-01 18:47:23",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1616376392785-8e7e283571e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1540205453279-389ebbc43b5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 14,
+      "nickname": "성지수",
+      "rating": 5,
+      "text": "선생님 안녕하세요! 수련 과정 친절하게 잘 바꿔주셔서 감사드립니다. 제 몸의 삐뚤어진 곳도 하나하나 다 봐주시고  교정 프로그램 내용도 알차고 정말 좋은 시간이었습니다🧘🏻‍♀️ 현재 하고 있는 필라테스가 끝나면 꼭 여기로 다시 와서 자세 교정 프로그램을 받아보려 합니다🙌🏻 그 때 좌측 고관절 외회전을 어떻게 최대한 막아보면 좋을지 알려주시면 감사드려요🥲ㅎㅎ 스피루리나 잘 먹고 집에 갑니다! 감사했습니다💜",
+      "createdAt": "2021-10-10 11:23:43",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1624651208388-f8726eace8f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1548&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1623657659760-235e10639d8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 3,
+          "img": "https://images.unsplash.com/photo-1591311630200-ffa9120a540f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1620&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 15,
+      "nickname": "김윤진",
+      "rating": 4,
+      "text": "왼쪽 골반이 자기전에 너무 아팠는데 오랫만에 와서 시원하게 풀고가요!",
+      "createdAt": "2021-07-23 11:25:12",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/flagged/photo-1573556291531-a5d957d7e4e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/flagged/photo-1573556278922-ad9a1914c801?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 16,
+      "nickname": "김휘민",
+      "rating": 5,
+      "text": "살면서 꾸준히 운동을 해본적이 없는데 선생님 만나서 요가 처음해보고 근 두달동안 해보고 있어요!! 맨처음에는 이게 몸인가 싶을정도로 엉망이었는데🤦🏻‍♀️🚮 수년간의 공시+고시공부에 스트레스를 음주+폭식으로 풀었거든요.... ㅠㅠ 지금은 많이 좋아졌답니다😆 피부도 좋아지고 어깨도 펴지고 목도 생겼...ㅋㅋㅋㅋㅋㅋㅋ 다리부종도 많이 좋아지구요!! 슬랙스 종아리부분이 헐렁헐렁해졌어요!! 오늘 골반교정시간에 왼쪽 골반이 엄청 뻐근한 기분을 느껴서 뿌듯하네요 아직 멀었지만 완벽하게 올바른 자세를 만들때까지 계속 해보겠습니당 차 감사하고 팩도 잘쓰겠습니당!!! 좋은 주말 보내세요🧘🏻‍♀️💦",
+      "createdAt": "2021-03-12 20:13:45",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1531403939386-c08a16cd7eef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1540206276207-3af25c08abc4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 17,
+      "nickname": "김원영",
+      "rating": 5,
+      "text": "요가가 이렇게 힘든건지 몰랐어요 ㅠ 선생님께서 떡이랑 다과도 준비해 주시고 한명씩 봐주시고 동작도 쉽지않았어요. 저같이 고강도 운동을 좋아하시는 분이라면 강추! 게다가 생각지도 못한 근력운동까지 해서 너무 알찬 시간이었어요!! 추석연휴 몸 뻐근하신분 꼭 참여하세요!! 너무 힘들어서 집에올때 다리사 후덜덜 했다는 ㅠㅠ 너무 좋아서 한달 끊어서 다니고 싶을 정도예요! 처음 왔는데도 이름까지 기억해주셔서 감사합니다! 차가 너무 맛있었어요!!!",
+      "createdAt": "2021-07-22 21:44:23",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1601568870191-8c417f7e0077?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 18,
+      "nickname": "김동권",
+      "rating": 4,
+      "text": "하고 나면 항상 해냈다는(?) 성취감이 든답니다😄",
+      "createdAt": "2021-10-01 09:12:44",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1618425977996-bebc5afe88f9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 19,
+      "nickname": "진심요가",
+      "rating": 3,
+      "text": "7월부터 주말마다 꾸준히 신청해서 하고 있는데 정말 좋아요~!! 몸이 너무 안좋아서 꾸준히 마사지를 받고 있는데 역시니 남이 풀어주는 거랑 내가 푸는 거랑은 다르네요. 몸이 원체 굳어서 동작이 잘 안되지만 하고 나면 몸이 쭉쭉 늘어나서 개운해요:-) 그리고 수련후 내어주시는 차와 떡은 너무 맛있어서 계속 손이 가요 ㅋㅋ제가 원래 떡을 잘 안먹는데 맛있더라고요~ 여튼 저는 이수업 강추합니다~!!",
+      "createdAt": "2021-08-09 11:29:40",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2940&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1526718583451-e88ebf774771?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 3,
+          "img": "https://images.unsplash.com/photo-1549995546-87cb41aa98a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 20,
+      "nickname": "김지현",
+      "rating": 5,
+      "text": "지난 일요일에 첫수업 듣고 너무 좋아서 새해 첫날에 두번째 수업 듣고 왔어요. 한명 한명 꼼꼼하게 몸 상태 틀어진 부분 짚어주시는 것도 굉장히 인상적이었고, 열정적으로 강도있는 수업 진행해주셔서 너무 좋았습니다. 몸이 많이 굳어서 힘든 동작이 꽤 있었지만 운동 끝나니까 몸이 가볍고 개운하네요. 108배까지 하니까 온몸에 열이 올라 땀났어요. 심신이 맑아지는 기분이 들고 또 뿌듯하네요. 끝나고 따뜻한 차랑 다과 준비해주셔서 감사했습니다. 주말에 적어도 한번씩은 꾸준히 해보고 싶은 욕심이 생겨요. 드림캐처 선물도 감동입니다. 감사합니다.",
+      "createdAt": "2021-02-18 19:53:23",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1820&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1621879164000-2da8d59b733c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 3,
+          "img": "https://images.unsplash.com/photo-1621886178958-be42369fc9e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 4,
+          "img": "https://images.unsplash.com/photo-1570655652364-2e0a67455ac6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1644&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 5,
+          "img": "https://images.unsplash.com/photo-1502230831726-fe5549140034?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 21,
+      "nickname": "성지수",
+      "rating": 5,
+      "text": "선생님 안녕하세요! 수련 과정 친절하게 잘 바꿔주셔서 감사드립니다. 제 몸의 삐뚤어진 곳도 하나하나 다 봐주시고  교정 프로그램 내용도 알차고 정말 좋은 시간이었습니다🧘🏻‍♀️ 현재 하고 있는 필라테스가 끝나면 꼭 여기로 다시 와서 자세 교정 프로그램을 받아보려 합니다🙌🏻 그 때 좌측 고관절 외회전을 어떻게 최대한 막아보면 좋을지 알려주시면 감사드려요🥲ㅎㅎ 스피루리나 잘 먹고 집에 갑니다! 감사했습니다💜",
+      "createdAt": "2021-10-10 11:23:43",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1624651208388-f8726eace8f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1548&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1623657659760-235e10639d8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 3,
+          "img": "https://images.unsplash.com/photo-1591311630200-ffa9120a540f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1620&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 22,
+      "nickname": "젤리파워",
+      "rating": 5,
+      "text": "애드립으로 종종 취미 활동 했었지만, 운동을 해보겠다는 생각은 하지 못했었어요.\n\n일이 바빠져 애드립을 잠시 잊고 지내던중에 고관절 통증이 심해져서 마사지, 물리치료, 침 치료 받아봤지만 치료받을때뿐이라 운동과 같이 해야겠단 생각이 들었어요.\n\n당연하게도(?) 자연스럽게 애드립이 떠오르더군요.\n\n슈퍼호스트중에 센스요가 프립이 있었고 자세교정 문구에 바로 결제했어요.\n\n그렇게 시작된 요가수업이 4월이었으니까 만6개월 되어가네요.\n\n첫 수업에 제 지긋지긋한 고관절 통증교정이 되는걸 느끼고는\n(믿을수 없으시겠지만, 우드롤러 동작에서 원장님이 교정포인트를 바로 짚어주셨어요. 그리고 그날 저녁 편안하게 잠들었습니다.)\n\n수업내용에 반해 꾸준히 지금까지 하고 있어요.\n\n요가수련을 한 뒤로 치료는 따로 받지 않아요. 아프지 않으니까요!! (손목통증까지 사라졌어요. 야호! ^0^)\n\n아픔이 없어지는 것만으로 삶의 질이 한 단계 상승합니다. 너무 좋아요.",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1588286840104-8957b019727f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1527933053326-89d1746b76b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 3,
+          "img": "https://images.unsplash.com/photo-1549576490-b0b4831ef60a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 23,
+      "nickname": "ys1703",
+      "rating": 4,
+      "text": "선생님이 정말 잘 가르쳐주신 수업이어서 추천 드립니다\n평소 허리와 골반에 통증이 있어서 신청했는데\n전문성 있는 선생님께 통증 원인과 교정 자세 등 아주 세세하게 배운 시간 이었네요\n요가 초보자나 남성분들도 부담없이 신청 하셔도 좋은 수업 이었습니다 감사합니다",
+      "createdAt": "2021-10-26 10:34:15",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1562088287-bde35a1ea917?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2592&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1562088287-6d37803aca2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 24,
+      "nickname": "밀가루맛",
+      "rating": 4,
+      "text": "새해 첫 애드립!\n오늘도 자세교정도 세심하게 봐주셔서 감사합니다.\n108배 처음해봤는데 따라가기가 힘들었어요^^; 그래도 뿌듯합니다. 다음엔 오늘보다 완성도 높여서 해보고싶어요.\n맛난차와 간식 그리고 깜짝 드림캐쳐선물까지 감사합니다..\n새해 복 많이 받으세요~!!!^-^",
+      "createdAt": "2021-01-01 18:47:23",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1616376392785-8e7e283571e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1540205453279-389ebbc43b5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 25,
+      "nickname": "김지현",
+      "rating": 5,
+      "text": "지난 일요일에 첫수업 듣고 너무 좋아서 새해 첫날에 두번째 수업 듣고 왔어요. 한명 한명 꼼꼼하게 몸 상태 틀어진 부분 짚어주시는 것도 굉장히 인상적이었고, 열정적으로 강도있는 수업 진행해주셔서 너무 좋았습니다. 몸이 많이 굳어서 힘든 동작이 꽤 있었지만 운동 끝나니까 몸이 가볍고 개운하네요. 108배까지 하니까 온몸에 열이 올라 땀났어요. 심신이 맑아지는 기분이 들고 또 뿌듯하네요. 끝나고 따뜻한 차랑 다과 준비해주셔서 감사했습니다. 주말에 적어도 한번씩은 꾸준히 해보고 싶은 욕심이 생겨요. 드림캐처 선물도 감동입니다. 감사합니다.",
+      "createdAt": "2021-02-18 19:53:23",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1820&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1621879164000-2da8d59b733c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 3,
+          "img": "https://images.unsplash.com/photo-1621886178958-be42369fc9e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 4,
+          "img": "https://images.unsplash.com/photo-1570655652364-2e0a67455ac6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1644&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 5,
+          "img": "https://images.unsplash.com/photo-1502230831726-fe5549140034?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 26,
+      "nickname": "김윤진",
+      "rating": 4,
+      "text": "왼쪽 골반이 자기전에 너무 아팠는데 오랫만에 와서 시원하게 풀고가요!",
+      "createdAt": "2021-07-23 11:25:12",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/flagged/photo-1573556291531-a5d957d7e4e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/flagged/photo-1573556278922-ad9a1914c801?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1598&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 27,
+      "nickname": "김휘민",
+      "rating": 5,
+      "text": "살면서 꾸준히 운동을 해본적이 없는데 선생님 만나서 요가 처음해보고 근 두달동안 해보고 있어요!! 맨처음에는 이게 몸인가 싶을정도로 엉망이었는데🤦🏻‍♀️🚮 수년간의 공시+고시공부에 스트레스를 음주+폭식으로 풀었거든요.... ㅠㅠ 지금은 많이 좋아졌답니다😆 피부도 좋아지고 어깨도 펴지고 목도 생겼...ㅋㅋㅋㅋㅋㅋㅋ 다리부종도 많이 좋아지구요!! 슬랙스 종아리부분이 헐렁헐렁해졌어요!! 오늘 골반교정시간에 왼쪽 골반이 엄청 뻐근한 기분을 느껴서 뿌듯하네요 아직 멀었지만 완벽하게 올바른 자세를 만들때까지 계속 해보겠습니당 차 감사하고 팩도 잘쓰겠습니당!!! 좋은 주말 보내세요🧘🏻‍♀️💦",
+      "createdAt": "2021-03-12 20:13:45",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1531403939386-c08a16cd7eef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1540206276207-3af25c08abc4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 28,
+      "nickname": "김원영",
+      "rating": 5,
+      "text": "요가가 이렇게 힘든건지 몰랐어요 ㅠ 선생님께서 떡이랑 다과도 준비해 주시고 한명씩 봐주시고 동작도 쉽지않았어요. 저같이 고강도 운동을 좋아하시는 분이라면 강추! 게다가 생각지도 못한 근력운동까지 해서 너무 알찬 시간이었어요!! 추석연휴 몸 뻐근하신분 꼭 참여하세요!! 너무 힘들어서 집에올때 다리사 후덜덜 했다는 ㅠㅠ 너무 좋아서 한달 끊어서 다니고 싶을 정도예요! 처음 왔는데도 이름까지 기억해주셔서 감사합니다! 차가 너무 맛있었어요!!!",
+      "createdAt": "2021-07-22 21:44:23",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1601568870191-8c417f7e0077?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 29,
+      "nickname": "김동권",
+      "rating": 4,
+      "text": "하고 나면 항상 해냈다는(?) 성취감이 든답니다😄",
+      "createdAt": "2021-10-01 09:12:44",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1618425977996-bebc5afe88f9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 30,
+      "nickname": "진심요가",
+      "rating": 3,
+      "text": "7월부터 주말마다 꾸준히 신청해서 하고 있는데 정말 좋아요~!! 몸이 너무 안좋아서 꾸준히 마사지를 받고 있는데 역시니 남이 풀어주는 거랑 내가 푸는 거랑은 다르네요. 몸이 원체 굳어서 동작이 잘 안되지만 하고 나면 몸이 쭉쭉 늘어나서 개운해요:-) 그리고 수련후 내어주시는 차와 떡은 너무 맛있어서 계속 손이 가요 ㅋㅋ제가 원래 떡을 잘 안먹는데 맛있더라고요~ 여튼 저는 이수업 강추합니다~!!",
+      "createdAt": "2021-08-09 11:29:40",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2940&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1526718583451-e88ebf774771?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 3,
+          "img": "https://images.unsplash.com/photo-1549995546-87cb41aa98a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 31,
+      "nickname": "KYNGMII",
+      "rating": 4,
+      "text": "차분한 분위기에서 물흐르듯 자연스럽게 수업을 진행해주시던 소정선생님의 아쉬탕가 요가 정말 좋았습니다.! 처음 요가를 접해보는 터라 무슨 수업을 들어야 할지 고민도 했었는데 후회가 없네요. 가볍게 하신다고 말씀하셔놓고 점점 신경써야하는 부분들이 늘어나는 동작들로 이루어지더니 어느순간 땀이 줄줄ㅋㅋㅋ 제가 운동을 안했어서 더 그런듯 하기도 하고..ㅎㅎ 중간중간 자세를 바로 잡아주셔서인지 집중이 더 잘됐습니다. 마지막 쿨링타임의 아로마가 아직도 곁에서 머무는 기분좋은 주말입니다. :)",
+      "createdAt": "2021-08-09 11:29:40",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2940&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1526718583451-e88ebf774771?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 3,
+          "img": "https://images.unsplash.com/photo-1549995546-87cb41aa98a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        }
+      ],
+      "isLiked": false
+    },
+    {
+      "id": 32,
+      "nickname": "휘바스키",
+      "rating": 5,
+      "text": "살면서 꾸준히 운동을 해본적이 없는데 선생님 만나서 요가 처음해보고 근 두달동안 해보고 있어요!! 맨처음에는 이게 몸인가 싶을정도로 엉망이었는데🤦🏻‍♀️🚮 수년간의 공시+고시공부에 스트레스를 음주+폭식으로 풀었거든요.... ㅠㅠ 지금은 많이 좋아졌답니다😆 피부도 좋아지고 어깨도 펴지고 목도 생겼...ㅋㅋㅋㅋㅋㅋㅋ 다리부종도 많이 좋아지구요!! 슬랙스 종아리부분이 헐렁헐렁해졌어요!! 오늘 골반교정시간에 왼쪽 골반이 엄청 뻐근한 기분을 느껴서 뿌듯하네요 아직 멀었지만 완벽하게 올바른 자세를 만들때까지 계속 해보겠습니당 차 감사하고 팩도 잘쓰겠습니당!!! 좋은 주말 보내세요🧘🏻‍♀️💦",
+      "createdAt": "2021-03-12 20:13:45",
+      "images": [
+        {
+          "id": 1,
+          "img": "https://images.unsplash.com/photo-1531403939386-c08a16cd7eef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80",
+          "name": "요가"
+        },
+        {
+          "id": 2,
+          "img": "https://images.unsplash.com/photo-1540206276207-3af25c08abc4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          "name": "요가"
+        }
+      ]
+    }
+  ]
+}
