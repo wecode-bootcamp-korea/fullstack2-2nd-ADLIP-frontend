@@ -12,7 +12,6 @@ function LogIn() {
         <LoginDetail>지금 로그인하고 애드립을 즐기세요.</LoginDetail>
         <AdlipLogIn />
         <KakaoLogin />
-        <div class='g-signin2' data-onsuccess='onSignIn'></div>
       </LoginBox>
     </LoginWrapper>
   );

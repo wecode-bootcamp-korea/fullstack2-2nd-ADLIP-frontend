@@ -7,7 +7,7 @@ import theme from '../../styles/theme';
 function SignUp() {
   const [isHost, setIsHost] = useState(false);
 
-  const handleIsHost = e => {
+  const handleIsHost = () => {
     setIsHost(!isHost);
   };
 
@@ -15,10 +15,8 @@ function SignUp() {
     <SignupWrapper>
       <SignupBox>
         <SignupTitle>반가워요!</SignupTitle>
-        <SignupDetail>
-          <p>지금 애드립 가입하고 쿠폰 받으세요.</p>
-          <p>#오늘부터 #애드립하자</p>
-        </SignupDetail>
+        <SignupDetail>지금 애드립 가입하고 쿠폰 받으세요.</SignupDetail>
+        <SignupDetail>#오늘부터 #애드립하자</SignupDetail>
         <IsHostCheck
           type='checkbox'
           name='sort'
@@ -50,13 +48,14 @@ const SignupBox = styled.div`
 `;
 
 const SignupTitle = styled.h3`
+  margin-bottom: 20px;
   font-size: 25px;
   font-weight: bold;
   text-align: center;
 `;
 
 const SignupDetail = styled.p`
-  margin: 20px 0;
+  margin: 5px 0;
   font-size: 35x;
   text-align: center;
 `;

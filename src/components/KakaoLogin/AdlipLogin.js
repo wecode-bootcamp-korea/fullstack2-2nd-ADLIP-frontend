@@ -34,17 +34,17 @@ function AdlipLogIn() {
     })
       .then(res => res.json())
       .then(res => {
-        localStorage.setItem('accessToken', res.access_token);
-        if (res.access_token) {
-          alert('안녕하세요.');
+        if (res.token) {
+          localStorage.setItem('token', res.token);
+          alert(res.message);
           history.push('/');
         } else {
-          alert('다시 확인해주세요.');
+          alert(res.message);
         }
       });
   }
   return (
-    <AdlipLogInWrapper>
+    <form>
       <IdInput
         id='email'
         name='email'
@@ -53,9 +53,9 @@ function AdlipLogIn() {
         onChange={handleChange}
         valid={isValidEmail}
       />
-      <IdCondition valid={isValidEmail} className='toggleIdCondition'>
-        올바른 이메일 형식이 아닙니다.
-      </IdCondition>
+      {!isValidEmail && (
+        <IdCondition>올바른 이메일 형식이 아닙니다.</IdCondition>
+      )}
       <PasswordInput
         id='password'
         name='password'
@@ -69,13 +69,11 @@ function AdlipLogIn() {
       >
         로그인
       </LoginBtn>
-    </AdlipLogInWrapper>
+    </form>
   );
 }
 
 export default AdlipLogIn;
-
-const AdlipLogInWrapper = styled.div``;
 
 const IdInput = styled.input`
   width: 360px;
@@ -88,8 +86,7 @@ const IdInput = styled.input`
 `;
 
 const IdCondition = styled.p`
-  display: none;
-  display: ${props => (props.valid ? 'none' : 'block')};
+  display: block;
   color: rgb(222, 28, 34);
   font-size: 7px;
   text-align: left;

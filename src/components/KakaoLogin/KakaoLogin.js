@@ -1,58 +1,47 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
+import dotenv from 'dotenv';
+dotenv.config();
+
+window.Kakao.init(process.env.REACT_APP_KAKAO_KEY);
 
 function Kakao({ isHost }) {
   const { Kakao } = window;
   const history = useHistory();
 
+  const hostBody = {
+    status: 'host',
+    socialPlatform: 'kakao',
+  };
+
+  const userBody = {
+    status: 'user',
+    socialPlatform: 'kakao',
+  };
+
   const kakaoLogin = () => {
     Kakao.Auth.login({
       scope: 'account_email, profile_image, profile_nickname',
       success: function (authObj) {
-        if (isHost) {
-          fetch('user/signup', {
-            method: 'POST',
-            headers: {
-              Authorization: authObj.access_token,
-            },
-            body: {
-              status: 'host',
-              socialPlatform: 'kakao',
-            },
-          })
-            .then(res => console.log(res))
-            .then(res => {
-              localStorage.setItem('token', res.access_token);
-              if (res.access_token) {
-                alert('안녕하세요.');
-                history.push('/');
-              } else {
-                alert('다시 확인해주세요.');
-              }
-            });
-        } else {
-          fetch('user/signup', {
-            method: 'POST',
-            headers: {
-              Authorization: authObj.access_token,
-            },
-            body: {
-              status: 'user',
-              socialPlatform: 'kakao',
-            },
-          })
-            .then(res => console.log(res))
-            .then(res => {
-              localStorage.setItem('adlip_token', res.access_token);
-              if (res.access_token) {
-                alert('안녕하세요.');
-                history.push('/');
-              } else {
-                alert('다시 확인해주세요.');
-              }
-            });
-        }
+        fetch('http://localhost:8080/user/kakao', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: authObj.access_token,
+          },
+          body: JSON.stringify(isHost ? hostBody : userBody),
+        })
+          .then(res => res.json())
+          .then(res => {
+            localStorage.setItem('token', res.token);
+            if (res.token) {
+              alert(res.message);
+              history.push('/');
+            } else {
+              alert(res.message);
+            }
+          });
       },
       fail: function (error) {
         alert(JSON.stringify(error));
