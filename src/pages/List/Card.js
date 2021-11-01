@@ -5,18 +5,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 function Card(props) {
-  const { isNew, isOnly, rating, price, discount_rate } = props.data;
+  const {
+    isNew,
+    isOnly,
+    rating,
+    price,
+    discount_rate,
+    summary,
+    product_name,
+    main_image_url,
+  } = props.data;
 
   return (
     <div>
       <CardWrap>
-        <Img src={props.data.main_image_url} alt='img'></Img>
+        <Img src={main_image_url} alt='img'></Img>
 
         <Title color='#9B9B9B' size='12px'>
-          {props.data.summary}
+          {summary}
         </Title>
         <MainTitle color={theme.blackColor} size='14px' bold='600'>
-          {props.data.product_name}
+          {product_name}
         </MainTitle>
         <Title color={theme.blackColor} size='14px' bold='900'>
           {`${price * (1 - discount_rate)}`.replace(
@@ -30,23 +39,19 @@ function Card(props) {
             deco='line-through'
             margin='10px'
           >
-            {discount_rate === null
-              ? null
-              : `${`${props.data.price}`.replace(
-                  /\B(?=(\d{3})+(?!\d))/g,
-                  ','
-                )}`}
+            {discount_rate &&
+              `${`${price}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`}
           </Title>
         </Title>
         <IconWrap>
-          {rating !== null ? (
+          {rating && (
             <>
               <FontAwesomeIcon icon={faStar} />
-              <Rating>{props.data.rating}</Rating>
+              <Rating>{rating}</Rating>
             </>
-          ) : null}
-          {isNew === true ? <New>NEW</New> : null}
-          {isOnly === true ? <Only>ONLY</Only> : null}
+          )}
+          {isNew && <New>NEW</New>}
+          {isOnly && <Only>ONLY</Only>}
         </IconWrap>
       </CardWrap>
     </div>
@@ -57,11 +62,11 @@ export default Card;
 
 const CardWrap = styled.div`
   display: flex;
-  margin-left: 20px;
   flex-direction: column;
   justify-content: space-between;
-  height: 315px;
   width: 180px;
+  height: 315px;
+  margin-left: 20px;
 
   .fa-star {
     margin-right: 2px;
@@ -89,11 +94,11 @@ const Title = styled.span`
 `;
 
 const MainTitle = styled(Title.withComponent('span'))`
-  height: 2.4em;
-  line-height: 1.3em;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  height: 2.4em;
+  line-height: 1.3em;
   text-overflow: ellipsis;
   overflow: hidden;
 `;
