@@ -5,16 +5,17 @@ import { ToggleIcon } from './components/ToggleIcon';
 import { ToTopIcon } from './components/ToTopIcon';
 import DetailCarousel from '../../components/DetailCarousel/DetailCarousel';
 import Map from './components/Map';
-import Card from '../List/Card';
-import { ProductWrap, CardWrap } from '../List/ListPage';
+import CommonCardList from '../List/CommonCardList';
 import styled from 'styled-components';
-import { useParams } from 'react-router';
+import { useParams, useLocation } from 'react-router';
 
 export default function Detail(props) {
   const { id: pathParameterId } = props.match.params;
   const [detailData, setDetailData] = useState([]);
+  const [relatedListData, setRelatedListData] = useState([]);
   const [buttonToTop, setButtonToTop] = useState(false);
   const [toggled, setToggled] = useState(false);
+  const location = useLocation();
   const onButtonToTopClick = () => {
     window.scrollTo({
       top: 0,
@@ -23,17 +24,37 @@ export default function Detail(props) {
     });
   };
   let { id } = useParams();
-  let idx = id - 1;
+
+  let mainId = location.state?.mainCategoryId;
+  let subId = location.state?.subCategoryId;
+  console.log(location);
 
   useEffect(() => {
-    const url = 'http://localhost:3000/data/Detail/detailData.json';
-
     const getDetailData = async () => {
       try {
-        await fetch(url)
+        await fetch(`http://localhost:8080/products/${id}`)
           .then(res => res.json())
           .then(res => {
-            setDetailData(res.detail);
+            setDetailData(res);
+          });
+      } catch (error) {
+        console.log('error', error);
+      }
+    };
+
+    const getRelatedList = async () => {
+      try {
+        await fetch(`http://localhost:8080/category/1/2`, {
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+        })
+          .then(res => res.json())
+          .then(res => {
+            console.log(res.data);
+            setRelatedListData(res.data.subCategoriesProductsByRating);
+            console.log(`fetch ${relatedListData}`);
           });
       } catch (error) {
         console.log('error', error);
@@ -41,6 +62,7 @@ export default function Detail(props) {
     };
 
     getDetailData();
+    getRelatedList();
   }, []);
 
   useEffect(() => {
@@ -56,52 +78,53 @@ export default function Detail(props) {
       setButtonToTop(false);
     }
   };
-
   return (
     <DetailOuterMax>
-      {detailData[idx] && (
+      {detailData && (
         <DetailContainer>
           <HeadSection>
             <ImageFrame>
-              <ProductImage img={detailData[idx].mainImageUrl} />
+              <ProductImage img={detailData.mainImageUrl} />
             </ImageFrame>
             <BasicInfo>
               <BasicProductInfo>
                 <TitleContainer>
-                  <Title>{detailData[idx].name}</Title>
+                  <TitleText>{detailData.name}</TitleText>
                   <ShareIcon src={ShareIcon} />
                 </TitleContainer>
                 <PriceContainer>
-                  {detailData[idx].discountRate ? (
+                  {detailData.discountRate ? (
                     <>
                       <DiscountRate>
-                        {detailData[idx].discountRate}
+                        {detailData.discountRate * 100}%
                       </DiscountRate>
-                      <FinalPrice>{detailData[idx].discountPrice}</FinalPrice>
-                      <OriginalPrice>
-                        {detailData[idx].originalPrice}
-                      </OriginalPrice>
+                      <FinalPrice>
+                        {detailData.price * (1 - detailData.discountRate)}원
+                      </FinalPrice>
+                      <OriginalPrice>{detailData.price}원</OriginalPrice>
                     </>
                   ) : (
                     <>
-                      <FinalPrice>{detailData[idx].originalPrice}</FinalPrice>
+                      <FinalPrice>{detailData.price}</FinalPrice>
                     </>
                   )}
                 </PriceContainer>
-                <DueDate>{detailData[idx].expired_day}</DueDate>
+                <DueDate>
+                  유효기간: 구매일로부터 {detailData.expiredDay}일까지
+                </DueDate>
               </BasicProductInfo>
               <BasicHostInfo>
                 <HostImageFrame>
-                  <HostImage src={detailData[idx].profileImageUrl} />
+                  <HostImage src={detailData.host?.profileImageUrl} />
                 </HostImageFrame>
                 <HostInfoContainer>
                   <HostName>
-                    {detailData[idx].nickname} {'>'}{' '}
+                    {detailData.host?.nickname} {'>'}{' '}
                   </HostName>
                   <HostActivity>
-                    프립 {detailData[idx].hostFrip} | 후기{' '}
-                    {detailData[idx].hostReviewed} | 저장{' '}
-                    {detailData[idx].hostBookmarked}
+                    프립 {detailData.host?.numberOfProduct} | 후기{' '}
+                    {detailData.host?.numberOfGetLiked} | 저장{' '}
+                    {detailData.host?.nuberOfProductLiked}
                   </HostActivity>
                 </HostInfoContainer>
                 <BookmarkIconWrapper>
@@ -114,19 +137,16 @@ export default function Detail(props) {
             <DescriptionWrapper>
               <ProductDescription>
                 <ReviewContainer>
-                  <DetailCarousel pathParameterId={pathParameterId} />
+                  <DetailCarousel pathParameterId={id} />
                 </ReviewContainer>
                 <HeaderTitle>서비스 소개</HeaderTitle>
 
                 <ImageContentWrapper>
-                  <img
-                    src={detailData[idx].detailSectionImage}
-                    alt='상품 안내 사항'
-                  />
+                  <img src={detailData.introduction} alt='상품 안내 사항' />
                 </ImageContentWrapper>
                 <HeaderTitle>진행 장소</HeaderTitle>
                 <ImageContentWrapper>
-                  <Map locationAddress={detailData[idx].locationAddress} />
+                  <Map locationAddress={detailData?.palceOfProgress} />
                 </ImageContentWrapper>
 
                 <HeaderTitle>환불 정책</HeaderTitle>
@@ -149,19 +169,9 @@ export default function Detail(props) {
                     <p>※ 결제 수단에 따라 예금주, 은행명, 계좌번호 입력</p>
                   </TextContentWrapper>
                 )}
-                <HeaderTitle>이런 프립은 어때요?</HeaderTitle>
+                <HeaderTitle>이런 애드립 어때요?</HeaderTitle>
                 <ListContentWrapper>
-                  <ProductWrap>
-                    {detailData[idx].relatedProducts.map(
-                      (relatedProduct, i) => {
-                        return (
-                          <CardWrap key={relatedProduct.id}>
-                            <Card data={relatedProduct} i={i} />
-                          </CardWrap>
-                        );
-                      }
-                    )}
-                  </ProductWrap>
+                  <CommonCardList productsData={relatedListData} />
                 </ListContentWrapper>
               </ProductDescription>
             </DescriptionWrapper>
@@ -171,7 +181,7 @@ export default function Detail(props) {
             <FloatingBarWrapper>
               <BookmarkWrapper>
                 <BookmarkIcon fill='none' stroke='#333' />
-                {detailData[idx].productBookmarked}
+                {detailData.productBookmarked}
               </BookmarkWrapper>
               <BlueButton>참여하기</BlueButton>
               {buttonToTop && (
@@ -239,7 +249,7 @@ export const TitleContainer = styled.div`
   display: flex;
 `;
 
-export const Title = styled.h1`
+export const TitleText = styled.h1`
   margin-right: 40px;
   font-size: 16px;
 `;
@@ -373,9 +383,31 @@ export const TextContentWrapper = styled.div`
   }
 `;
 
-export const ListContentWrapper = styled.div`
-  position: relative;
-  left: -24px;
+export const ListContentWrapper = styled.p`
+  * {
+    position: relative;
+    left: -2px;
+    top: -2px;
+  }
+`;
+
+const Title = styled.span`
+  margin-left: ${props => props.margin};
+  font-size: ${props => props.size};
+  font-weight: ${props => props.bold};
+  text-decoration: ${props => props.deco};
+  color: ${props => props.color};
+`;
+
+const New = styled.span`
+  width: 33px;
+  padding: 1px 0 0 7px;
+  margin-right: 6px;
+  border-radius: 4px;
+  background-color: #3398ff;
+  font-size: 8px;
+  color: white;
+  line-height: 16px;
 `;
 
 export const FloatingBarBackground = styled.nav`

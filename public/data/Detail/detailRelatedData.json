@@ -1,0 +1,147 @@
+{
+  "message": "SUCCESS",
+  "data": {
+    "subCategoriesProductsByRating": [
+      {
+        "id": 2,
+        "mainCategoryId": 1,
+        "subCategoryId": 2,
+        "monthlyThemeProductId": 1,
+        "limitedPeriodDiscountProductId": null,
+        "mainImageUrl": "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=780&q=80",
+        "summary": "#국내여행 #소소함 #대전",
+        "name": "[대전] 대전에 이런 곳이 있다고? 뿌슝빠슝!",
+        "price": "20000",
+        "discountRate": "0.4",
+        "isNew": false,
+        "isOnly": false,
+        "createdAt": "2021-11-04T21:06:41.533Z",
+        "rating": 4.157413151364763
+      },
+      {
+        "id": 11,
+        "mainCategoryId": 1,
+        "subCategoryId": 2,
+        "monthlyThemeProductId": null,
+        "limitedPeriodDiscountProductId": 1,
+        "mainImageUrl": "https://lh3.googleusercontent.com/proxy/2TDElXRqCaecSQggowlL0Mn3uqv7N9KyNS7gpVK32gOZd05WlZSJZPR_HAWSCTpfpLE4HBRuTGBaWHgxUpVQNBayi3SX2ePIMfgJaKjSujP_k8InM8If",
+        "summary": "장미로 수놓아진 길  걷기 #장미 ",
+        "name": "[서울 중랑구] 장미 축제",
+        "price": "110000",
+        "discountRate": "0.3",
+        "isNew": true,
+        "isOnly": true,
+        "createdAt": "2021-11-04T21:06:41.538Z",
+        "rating": 4.2
+      },
+      {
+        "id": 24,
+        "mainCategoryId": 1,
+        "subCategoryId": 2,
+        "monthlyThemeProductId": null,
+        "limitedPeriodDiscountProductId": 1,
+        "mainImageUrl": "https://media.istockphoto.com/photos/gwangalli-beach-in-busan-south-korea-picture-id1141275856?s=612x612",
+        "summary": "#도나쓰 #밀면 #해운대",
+        "name": "붓산에서 등킨도나쓰 먹기 (부산 여행)",
+        "price": "240000",
+        "discountRate": "0.1",
+        "isNew": false,
+        "isOnly": true,
+        "createdAt": "2021-11-04T21:06:41.543Z",
+        "rating": 0
+      }
+    ],
+    "subCategoriesProductsByNew": [
+      {
+        "id": 11,
+        "mainCategoryId": 1,
+        "subCategoryId": 2,
+        "monthlyThemeProductId": null,
+        "limitedPeriodDiscountProductId": 1,
+        "mainImageUrl": "https://lh3.googleusercontent.com/proxy/2TDElXRqCaecSQggowlL0Mn3uqv7N9KyNS7gpVK32gOZd05WlZSJZPR_HAWSCTpfpLE4HBRuTGBaWHgxUpVQNBayi3SX2ePIMfgJaKjSujP_k8InM8If",
+        "summary": "장미로 수놓아진 길  걷기 #장미 ",
+        "name": "[서울 중랑구] 장미 축제",
+        "price": "110000",
+        "discountRate": "0.3",
+        "isNew": true,
+        "isOnly": true,
+        "createdAt": "2021-11-04T21:06:41.538Z",
+        "rating": 4.2
+      }
+    ],
+    "subCategoriesProductsByDiscount": [
+      {
+        "id": 2,
+        "mainCategoryId": 1,
+        "subCategoryId": 2,
+        "mainImageUrl": "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=780&q=80",
+        "summary": "#국내여행 #소소함 #대전",
+        "name": "[대전] 대전에 이런 곳이 있다고? 뿌슝빠슝!",
+        "price": "20000",
+        "discountRate": "0.4",
+        "isNew": false,
+        "isOnly": false,
+        "createdAt": "2021-11-04T21:06:41.533Z",
+        "rating": 4.157413151364764
+      },
+      {
+        "id": 11,
+        "mainCategoryId": 1,
+        "subCategoryId": 2,
+        "mainImageUrl": "https://lh3.googleusercontent.com/proxy/2TDElXRqCaecSQggowlL0Mn3uqv7N9KyNS7gpVK32gOZd05WlZSJZPR_HAWSCTpfpLE4HBRuTGBaWHgxUpVQNBayi3SX2ePIMfgJaKjSujP_k8InM8If",
+        "summary": "장미로 수놓아진 길  걷기 #장미 ",
+        "name": "[서울 중랑구] 장미 축제",
+        "price": "110000",
+        "discountRate": "0.3",
+        "isNew": true,
+        "isOnly": true,
+        "createdAt": "2021-11-04T21:06:41.538Z",
+        "rating": 4.2
+      },
+      {
+        "id": 24,
+        "mainCategoryId": 1,
+        "subCategoryId": 2,
+        "mainImageUrl": "https://media.istockphoto.com/photos/gwangalli-beach-in-busan-south-korea-picture-id1141275856?s=612x612",
+        "summary": "#도나쓰 #밀면 #해운대",
+        "name": "붓산에서 등킨도나쓰 먹기 (부산 여행)",
+        "price": "240000",
+        "discountRate": "0.1",
+        "isNew": false,
+        "isOnly": true,
+        "createdAt": "2021-11-04T21:06:41.543Z",
+        "rating": 0
+      }
+    ],
+    "subCategoriesProductsByOnly": [
+      {
+        "id": 11,
+        "mainCategoryId": 1,
+        "subCategoryId": 2,
+        "mainImageUrl": "https://lh3.googleusercontent.com/proxy/2TDElXRqCaecSQggowlL0Mn3uqv7N9KyNS7gpVK32gOZd05WlZSJZPR_HAWSCTpfpLE4HBRuTGBaWHgxUpVQNBayi3SX2ePIMfgJaKjSujP_k8InM8If",
+        "summary": "장미로 수놓아진 길  걷기 #장미 ",
+        "name": "[서울 중랑구] 장미 축제",
+        "price": "110000",
+        "discountRate": "0.3",
+        "isNew": true,
+        "isOnly": true,
+        "createdAt": "2021-11-04T21:06:41.538Z",
+        "rating": 4.2
+      },
+      {
+        "id": 24,
+        "mainCategoryId": 1,
+        "subCategoryId": 2,
+        "mainImageUrl": "https://media.istockphoto.com/photos/gwangalli-beach-in-busan-south-korea-picture-id1141275856?s=612x612",
+        "summary": "#도나쓰 #밀면 #해운대",
+        "name": "붓산에서 등킨도나쓰 먹기 (부산 여행)",
+        "price": "240000",
+        "discountRate": "0.1",
+        "isNew": false,
+        "isOnly": true,
+        "createdAt": "2021-11-04T21:06:41.543Z",
+        "rating": 0
+      }
+    ]
+  }
+}
