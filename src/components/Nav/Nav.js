@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -10,14 +10,23 @@ import {
   faUser,
 } from '@fortawesome/free-regular-svg-icons';
 import mixinStyle from '../../styles/mixins';
+import SearchModal from './SearchModal';
 
 export default function Nav() {
+  const localValue = localStorage.getItem('search');
   const [searchValueArray, setSearchValueArray] = useState(
-    localStorage.getItem('search') || ''
+    JSON.parse(localValue) || []
   );
   const [searchContent, setSearchContent] = useState('');
-  const [inputBorderColor, setinputBorderColor] = useState('#eeeeee');
+  const [isSearchBoolean, setSearchBoolean] = useState(false);
   const history = useHistory();
+
+  const listPageMove = deliverData => {
+    history.push({
+      pathname: `/category/1`,
+      state: deliverData,
+    });
+  };
 
   const searchOnchange = e => {
     setSearchContent(e.target.value);
@@ -25,23 +34,30 @@ export default function Nav() {
 
   const searchEnterEvent = e => {
     e.preventDefault();
-    setSearchValueArray(`${searchValueArray},${searchContent}`);
-    localStorage.setItem('search', searchValueArray);
-    console.log(searchValueArray);
-    setSearchContent('');
-    history.push({
-      pathname: '/',
-      state: searchContent,
-    });
+    setSearchBoolean(false);
+    listPageMove(searchContent);
+    setSearchValueArray([...searchValueArray, searchContent]);
+    localStorage.setItem(
+      'search',
+      JSON.stringify([...searchValueArray, searchContent])
+    );
   };
 
-  const cancelStorageValue = () => {
-    localStorage.clear();
-    setSearchContent('');
+  const DeleteSearchData = searchData => {
+    const dataIndex = searchValueArray.indexOf(searchData);
+    searchValueArray.splice(dataIndex, 1);
+    setSearchValueArray(searchValueArray);
+    localStorage.setItem('search', JSON.stringify(searchValueArray));
+  };
+
+  const pushInputValueAtMotal = e => {
+    listPageMove(searchContent);
+    setSearchContent(e.target.innerText);
+    setSearchBoolean(false);
   };
 
   const changeSearchBoxBoderColor = isFocus => {
-    setinputBorderColor(isFocus ? colorStyleGroup.AdlipColorBold : '#eeeeee');
+    setSearchBoolean(isFocus);
   };
 
   const navIconImg = [
@@ -51,12 +67,17 @@ export default function Nav() {
   ];
 
   return (
-    <NavStyle onSubmit={searchEnterEvent} height='80px'>
+    <NavStyle onSubmit={searchEnterEvent}>
       <NavFlexCenter>
         <NavSectionFlexStyle>
           <CategoryMenuStyle to='/category'>
             <FontAwesomeIcon className='hambergerIcon isHover' icon={faBars} />
-            <CategoryTilteStyle className='isHover'>
+            <CategoryTilteStyle
+              className='isHover'
+              onFocus={() => {
+                console.log('asdasd');
+              }}
+            >
               카테고리
             </CategoryTilteStyle>
           </CategoryMenuStyle>
@@ -64,19 +85,24 @@ export default function Nav() {
           <AdlipLogoLinkto to='/'>
             <AdlipLogoImgStyle />
           </AdlipLogoLinkto>
-          <SearchBoxStyle borderColor={inputBorderColor}>
+          <SearchBoxStyle
+            borderColor={
+              isSearchBoolean ? colorStyleGroup.AdlipColor : '#eeeeee'
+            }
+          >
             <FontAwesomeIcon className='searchIconStyle' icon={faSearch} />
             <SearchInputStyle
               placeholder='검색어를 입력해주세요!'
               value={searchContent}
               onChange={searchOnchange}
-              onFocus={() => changeSearchBoxBoderColor(true)}
-              onBlur={() => changeSearchBoxBoderColor(false)}
+              onClick={() => changeSearchBoxBoderColor(true)}
             />
             <FontAwesomeIcon
               className='cancelIconStyle'
               icon={faBan}
-              onClick={cancelStorageValue}
+              onClick={() => {
+                setSearchContent('');
+              }}
             />
           </SearchBoxStyle>
         </NavSectionFlexStyle>
@@ -96,6 +122,15 @@ export default function Nav() {
           })}
         </NavSectionFlexStyle>
       </NavFlexCenter>
+      {isSearchBoolean && (
+        <SearchModal
+          searchValueArray={searchValueArray}
+          setSearchValueArray={setSearchValueArray}
+          pushInputValueAtMotal={pushInputValueAtMotal}
+          setSearchBoolean={setSearchBoolean}
+          DeleteSearchData={DeleteSearchData}
+        />
+      )}
     </NavStyle>
   );
 }
@@ -108,19 +143,19 @@ const {
   paddingStyleGroup,
   colorStyleGroup,
   widthStyleGroup,
-  firstTopTagStyle,
   commonHoverStyle,
 } = mixinStyle;
 
 const NavStyle = styled.form`
-  ${firstTopTagStyle(props => props.height)}
-  ${paddingStyleGroup('22px 0 8px 0')}
-  border-bottom: 1.5px #eeeeee solid;
+  ${flexStyleGroup('', 'center', 'column')}
+  ${widthHeightStyleGroup(widthStyleGroup.topHorizontalWidth, '80px')}
 `;
 
 const NavFlexCenter = styled.div`
   ${flexStyleGroup('space-between', 'center')}
   width: ${widthStyleGroup.secondTopWidth};
+  ${paddingStyleGroup('22px 0 20px 0')}
+  border-bottom: 1.5px #eeeeee solid;
 `;
 
 const NavSectionFlexStyle = styled.div`

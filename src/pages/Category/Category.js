@@ -47,7 +47,6 @@ const {
 
 const CategoryStyle = styled.div`
   ${firstTopTagStyle()}
-  border: 1px red solid;
 `;
 
 const CategoryFlexCenter = styled.div`
