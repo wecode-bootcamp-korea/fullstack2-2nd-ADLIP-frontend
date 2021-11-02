@@ -197,8 +197,10 @@ const AdlipLogoLinkto = styled(Link)`
 
 const AdlipLogoImgStyle = styled.img.attrs({
   alt: 'AdlipLogo',
-  src: '/images/AdlipLogo.png',
-})``;
+  src: '/images/AdlipLogo-v2.png',
+})`
+  height: 45px;
+`;
 
 const SearchBoxStyle = styled.main`
   ${flexStyleGroup('', 'center')}
