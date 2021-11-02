@@ -58,12 +58,12 @@ const ProductSection = styled.div`
   font-weight: 700;
 `;
 
-const ProductWrap = styled.div`
+export const ProductWrap = styled.div`
   display: flex;
   width: 788px;
 `;
 
-const CardWrap = styled.div`
+export const CardWrap = styled.div`
   height: 415px;
   padding-top: 20px;
 `;
