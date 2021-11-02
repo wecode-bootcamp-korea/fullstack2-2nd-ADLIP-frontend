@@ -1,18 +1,22 @@
 [
   {
     "id": 1,
-    "category_name": "여행"
+    "category_name": "여행",
+    "url": "/images/4.JPG"
   },
   {
     "id": 2,
-    "category_name": "스포츠"
+    "category_name": "스포츠",
+    "url": "https://images.unsplash.com/photo-1512412046876-f386342eddb3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3BvcnR8ZW58MHwyfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
   },
   {
     "id": 3,
-    "category_name": "모임"
+    "category_name": "모임",
+    "url": "https://images.unsplash.com/photo-1600457187743-9e8bc65c4107?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGFsY29ob2x8ZW58MHwyfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
   },
   {
     "id": 4,
-    "category_name": "문화예술"
+    "category_name": "문화예술",
+    "url": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDR8fG11c2V1bSUyMGFydHxlbnwwfDJ8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
   }
 ]
