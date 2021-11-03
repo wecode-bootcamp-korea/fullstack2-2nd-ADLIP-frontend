@@ -11,9 +11,9 @@ import {
 import theme from '../../styles/theme';
 import Card from './Card.js';
 import ListAll from './ListAll.js';
-
 import ListPage from './ListPage.js';
 import axios from 'axios';
+import ListModal from './ListModal.js';
 
 function List({ match }) {
   useEffect(() => {
@@ -38,13 +38,16 @@ function List({ match }) {
   const [main, setMain] = useState([]);
   const [sub, setSub] = useState([]);
   const [product, setProduct] = useState([]);
-  const [open, setOpen] = useState();
   const { id } = useParams();
 
   return (
     <BrowserRouter>
       <Page>
-        <MainCategory>{main[id]?.category_name}</MainCategory>
+        <MainCategory>
+          {main[id]?.category_name}
+          <ListModal main={main} id={id} />
+        </MainCategory>
+
         <SubCategory>
           <SubName to={`${match.url}`} key={id}>
             전체
@@ -80,6 +83,7 @@ function List({ match }) {
 export default List;
 
 const MainCategory = styled.div`
+  display: flex;
   margin-top: 10px;
   padding: 20px;
   height: 65px;
