@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 //Header.js
+=======
+>>>>>>> ca5d05c (Fix: 로그인 기능 구현 및  상태 관리 추가)
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';

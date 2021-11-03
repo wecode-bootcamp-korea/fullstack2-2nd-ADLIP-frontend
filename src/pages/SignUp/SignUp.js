@@ -6,7 +6,6 @@ import theme from '../../styles/theme';
 
 function SignUp() {
   const [isHost, setIsHost] = useState(false);
-
   const handleIsHost = () => {
     setIsHost(!isHost);
   };

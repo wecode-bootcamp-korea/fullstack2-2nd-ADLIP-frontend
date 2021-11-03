@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 import dotenv from 'dotenv';
+<<<<<<< HEAD
 import jwt_decode from 'jwt-decode';
+=======
+import { UserContext } from '../../Routes';
+>>>>>>> ca5d05c (Fix: 로그인 기능 구현 및  상태 관리 추가)
 
 dotenv.config();
 
@@ -22,6 +26,8 @@ function Kakao({ isHost }) {
     socialPlatform: 'kakao',
   };
 
+  const { setToken } = useContext(UserContext);
+
   const kakaoLogin = () => {
     Kakao.Auth.login({
       scope: 'account_email, profile_image, profile_nickname',
@@ -36,12 +42,18 @@ function Kakao({ isHost }) {
         })
           .then(res => res.json())
           .then(res => {
+<<<<<<< HEAD
             const token = res.token;
             localStorage.setItem('token', JSON.stringify(token));
             let decoded = jwt_decode(token);
             localStorage.setItem('user', JSON.stringify(decoded));
             JSON.parse(localStorage.getItem('user'));
             if (res.token) {
+=======
+            const adlipToken = res.token;
+            if (adlipToken) {
+              setToken(adlipToken);
+>>>>>>> ca5d05c (Fix: 로그인 기능 구현 및  상태 관리 추가)
               alert(res.message);
               history.push('/');
             } else {
@@ -53,17 +65,6 @@ function Kakao({ isHost }) {
         alert(JSON.stringify(error));
       },
     });
-
-    const kakaoLogout = () => {
-      if (Kakao.Auth.getAccessToken()) {
-        Kakao.Auth.logout(() => {
-          localStorage.clear();
-          history.push('/');
-        });
-      } else {
-        console.log('Not logged in.');
-      }
-    };
   };
 
   return (
