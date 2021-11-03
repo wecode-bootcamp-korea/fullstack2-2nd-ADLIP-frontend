@@ -13,22 +13,5 @@ const theme = {
     footerMenuColor: '#333333',
     middleCategoryTextColor: '#AAAAAA',
   },
-  Mixins: {
-    flex: (justify, align, direction) => {
-      return `display:flex; justify-content:${
-        justify || 'flex-start'
-      }; align-items:${align || 'flex-start'}; flex-direction:${
-        direction || 'row'
-      };`;
-    },
-    font: (size, color, weight) => {
-      return `font-size:${size || 'none'}; color:${
-        color || 'none'
-      }; font-weight:${weight || 'normal'};`;
-    },
-    widthHeight: (width, height) => {
-      return `width:${width || 'none'}; height:${height || 'none'}; `;
-    },
-  },
 };
 export default theme;
