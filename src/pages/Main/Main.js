@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import mixin from '../../styles/mixins';
 import MainCarousel from '../../components/MainCarousel/MainCarousel';
 import MainMiddleCategory from './MainMiddleCategory';
-import FancyModalButton from '../FancyModalButton/FancyModalButton';
 import CommonCardList from '../List/CommonCardList';
 // import axios from 'axios';
+import FirstModal from './FirstModal';
 
 export default function Main() {
   const [mainPageCategoryData, setMainPageCategoryData] = useState([]);
@@ -89,7 +89,7 @@ export default function Main() {
         <BannerLinkStyle to='/'>
           <BannerImgStyle />
         </BannerLinkStyle>
-        <FancyModalButton />
+        <FirstModal></FirstModal>
       </MainFlexCenter>
     </MainStyle>
   );

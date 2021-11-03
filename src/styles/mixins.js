@@ -7,6 +7,7 @@ const colorStyleGroup = {
   navColor: '#858585',
   AdlipColorBold: '#1187cf',
   AdlipColor: '#53B7E7',
+  AdlipColorSoftly: '#e8f5fc',
   footerContentColor: '#666666',
   footerIconColor: '#9b9b9b',
   footerMenuColor: '#333333',
@@ -16,6 +17,7 @@ const colorStyleGroup = {
 const widthStyleGroup = {
   topHorizontalWidth: '100wv',
   secondTopWidth: '768px',
+  searchModalWidth: '600px',
 };
 
 const flexStyleGroup = (justify, align, direction) => css`
