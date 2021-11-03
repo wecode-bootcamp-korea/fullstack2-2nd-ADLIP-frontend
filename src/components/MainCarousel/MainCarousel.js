@@ -62,7 +62,7 @@ function MainCarousel(props) {
       <StyledSlider {...settings} propsName={carouselData?.name}>
         {carouselData?.map(image => {
           return (
-            <Link to='/list' key={image.id}>
+            <Link to='/category/0' key={image.id}>
               <img alt={image.name} src={image.url} />
             </Link>
           );
