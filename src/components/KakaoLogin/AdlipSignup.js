@@ -11,75 +11,63 @@ function AdlipSignUp({ isHost }) {
     nickname: '',
   });
 
+  const hostBody = {
+    email: user.email,
+    password: user.password,
+    nickname: user.nickname,
+    status: 'host',
+    socialPlatform: 'local',
+  };
+
+  const userBody = {
+    email: user.email,
+    password: user.password,
+    nickname: user.nickname,
+    status: 'user',
+    socialPlatform: 'local',
+  };
+
   function handleChange(e) {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
   }
 
-  const validEmail =
-    /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
-  const validPw =
-    /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z])(?=.*[!@#\$%\^&\*]).{10,}$/;
+  const validation = {
+    email:
+      /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i,
+    password:
+      /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z])(?=.*[!@#\$%\^&\*]).{10,}$/,
+  };
 
-  const isValidEmail = user.email.match(validEmail) || user.email === '';
-  const isValidPw = user.password.match(validPw) || user.password === '';
+  const isValidEmail = user.email.match(validation.email) || user.email === '';
+  const isValidPw =
+    user.password.match(validation.password) || user.password === '';
   const isValidPwCheck =
     user.passwordCheck === user.password || user.passwordCheck === '';
   const isValidNickname = user.nickname.length <= 20 || user.nickname === '';
 
-  function signup({ isHost }) {
-    if (isHost) {
-      fetch('user/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: {
-          email: user.email,
-          password: user.password,
-          nickname: user.nickname,
-          status: 'host',
-          socialPlatform: 'adlip',
-        },
-      })
-        .then(res => res.json())
-        .then(res => {
-          console.log(res);
-          if (res.message === 'CREATED') {
-            alert('회원가입을 성공했습니다.');
-            history.push('/login');
-          } else {
-            alert(res.message);
-          }
-        });
-    } else {
-      fetch('user/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: user.email,
-          password: user.password,
-          status: 'user',
-          socialPlatform: 'adlip',
-        }),
-      })
-        .then(res => res.json())
-        .then(res => {
-          console.log(res);
-          if (res.message === 'CREATED') {
-            alert('회원가입을 성공했습니다.');
-            history.push('/login');
-          } else {
-            alert(res.message);
-          }
-        });
-    }
+  function signup(e) {
+    e.preventDefault();
+    fetch('user/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(isHost ? hostBody : userBody),
+    })
+      .then(res => res.json())
+      .then(res => {
+        if (res.message === 'CREATED') {
+          alert('회원가입을 성공했습니다.');
+          history.push('/login');
+        } else {
+          alert(res.message);
+        }
+      });
   }
 
   return (
-    <AdlipSignUpWrpper>
+    <form>
       <IdInput
         id='email'
         name='email'
@@ -88,9 +76,9 @@ function AdlipSignUp({ isHost }) {
         onChange={handleChange}
         valid={isValidEmail}
       />
-      <IdCondition valid={isValidEmail}>
-        올바른 이메일 형식이 아닙니다.
-      </IdCondition>
+      {!isValidEmail && (
+        <IdCondition>올바른 이메일 형식이 아닙니다.</IdCondition>
+      )}
       <PasswordInput
         id='password'
         name='password'
@@ -110,9 +98,11 @@ function AdlipSignUp({ isHost }) {
         onChange={handleChange}
         valid={isValidPwCheck}
       />
-      <PwCheckCondition valid={isValidPwCheck}>
-        먼저 입력하신 비밀번호와 일치하지 않습니다.
-      </PwCheckCondition>
+      {!isValidPwCheck && (
+        <PwCheckCondition>
+          먼저 입력하신 비밀번호와 일치하지 않습니다.
+        </PwCheckCondition>
+      )}
       <NicknameInput
         id='nickname'
         name='nickname'
@@ -121,30 +111,24 @@ function AdlipSignUp({ isHost }) {
         onChange={handleChange}
         valid={isValidNickname}
       />
-      <NicknameCondition valid={isValidNickname}>
-        최소 1자 / 최대 20자까지 가능합니다.
-      </NicknameCondition>
+      {!isValidNickname && (
+        <NicknameCondition>
+          최소 1자 / 최대 20자까지 가능합니다.
+        </NicknameCondition>
+      )}
       <SignUpBtn
         onClick={signup}
         disabled={
-          !(
-            isValidEmail &&
-            isValidPw &&
-            isValidPwCheck &&
-            isValidNickname &&
-            user.password >= 10
-          )
+          !(isValidEmail && isValidPw && isValidPwCheck && isValidNickname)
         }
       >
         회원가입
       </SignUpBtn>
-    </AdlipSignUpWrpper>
+    </form>
   );
 }
 
 export default AdlipSignUp;
-
-const AdlipSignUpWrpper = styled.form``;
 
 const IdInput = styled.input`
   width: 360px;
@@ -157,8 +141,7 @@ const IdInput = styled.input`
 `;
 
 const IdCondition = styled.p`
-  display: none;
-  display: ${props => (props.valid ? 'none' : 'block')};
+  display: block;
   color: rgb(222, 28, 34);
   font-size: 7px;
   text-align: left;
@@ -191,8 +174,7 @@ const PasswordCheckInput = styled.input`
 `;
 
 const PwCheckCondition = styled.p`
-  display: none;
-  display: ${props => (props.valid ? 'none' : 'block')};
+  display: block;
   color: rgb(222, 28, 34);
   font-size: 7px;
   text-align: left;
