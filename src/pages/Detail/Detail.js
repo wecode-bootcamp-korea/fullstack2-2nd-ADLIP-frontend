@@ -86,7 +86,9 @@ export default function Detail() {
                   <HostImage src={detailData[idx].profile_image_url} />
                 </HostImageFrame>
                 <HostInfoContainer>
-                  <HostName>{detailData[idx].nickname} > </HostName>
+                  <HostName>
+                    {detailData[idx].nickname} {'>'}{' '}
+                  </HostName>
                   <HostActivity>
                     프립 {detailData[idx].host_frip} | 후기{' '}
                     {detailData[idx].host_reviewed} | 저장{' '}
@@ -249,7 +251,6 @@ export const BasicHostInfo = styled.section`
   padding: 0 0 12px;
   border-top: 0.7px solid lightgray;
   background-color: white;
-  }
 `;
 
 export const HostImageFrame = styled.div`
