@@ -1,13 +1,19 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ShareIcon } from './components/ShareIcon';
 import { BookmarkIcon } from './components/BookmarkIcon';
+import { ToggleIcon } from './components/ToggleIcon';
 import { ToTopIcon } from './components/ToTopIcon';
+import DetailCarousel from '../../components/DetailCarousel/DetailCarousel';
+import Map from './components/Map';
+import Card from '../List/Card';
+import { ProductWrap, CardWrap } from '../List/ListPage';
 import styled from 'styled-components';
 import { useParams } from 'react-router';
 
 export default function Detail() {
   const [detailData, setDetailData] = useState([]);
   const [buttonToTop, setButtonToTop] = useState(false);
+  const [toggled, setToggled] = useState(false);
   const onButtonToTopClick = () => {
     window.scrollTo({
       top: 0,
@@ -38,6 +44,8 @@ export default function Detail() {
 
   useEffect(() => {
     window.addEventListener('scroll', showButtonToTop);
+
+    return () => window.removeEventListener('scroll', showButtonToTop);
   });
 
   const showButtonToTop = () => {
@@ -54,7 +62,7 @@ export default function Detail() {
         <DetailContainer>
           <HeadSection>
             <ImageFrame>
-              <ProductImage img={detailData[idx].main_image_url} />
+              <ProductImage img={detailData[idx].mainImageUrl} />
             </ImageFrame>
             <BasicInfo>
               <BasicProductInfo>
@@ -63,19 +71,19 @@ export default function Detail() {
                   <ShareIcon src={ShareIcon} />
                 </TitleContainer>
                 <PriceContainer>
-                  {detailData[idx].discount_rate ? (
+                  {detailData[idx].discountRate ? (
                     <>
                       <DiscountRate>
-                        {detailData[idx].discount_rate}
+                        {detailData[idx].discountRate}
                       </DiscountRate>
-                      <FinalPrice>{detailData[idx].discount_price}</FinalPrice>
+                      <FinalPrice>{detailData[idx].discountPrice}</FinalPrice>
                       <OriginalPrice>
-                        {detailData[idx].original_price}
+                        {detailData[idx].originalPrice}
                       </OriginalPrice>
                     </>
                   ) : (
                     <>
-                      <FinalPrice>{detailData[idx].original_price}</FinalPrice>
+                      <FinalPrice>{detailData[idx].originalPrice}</FinalPrice>
                     </>
                   )}
                 </PriceContainer>
@@ -83,63 +91,86 @@ export default function Detail() {
               </BasicProductInfo>
               <BasicHostInfo>
                 <HostImageFrame>
-                  <HostImage src={detailData[idx].profile_image_url} />
+                  <HostImage src={detailData[idx].profileImageUrl} />
                 </HostImageFrame>
                 <HostInfoContainer>
                   <HostName>
                     {detailData[idx].nickname} {'>'}{' '}
                   </HostName>
                   <HostActivity>
-                    프립 {detailData[idx].host_frip} | 후기{' '}
-                    {detailData[idx].host_reviewed} | 저장{' '}
-                    {detailData[idx].host_bookmarked}
+                    프립 {detailData[idx].hostFrip} | 후기{' '}
+                    {detailData[idx].hostReviewed} | 저장{' '}
+                    {detailData[idx].hostBookmarked}
                   </HostActivity>
                 </HostInfoContainer>
+                <BookmarkIconWrapper>
+                  <BookmarkIcon fill='none' stroke='lightgray' />
+                </BookmarkIconWrapper>
               </BasicHostInfo>
             </BasicInfo>
           </HeadSection>
           <DetailSection>
-            <div className='Description__Wrapper'>
-              <div className='product-description'>
-                <div
-                  className='ReviewContainer'
-                  style={{
-                    height: '756px',
-                    width: '768px',
-                    border: '0.5px solid red',
-                    margin: '40px auto',
-                  }}
-                >
-                  Review will be added here
-                </div>
-                <HeaderTitle>프립 소개</HeaderTitle>
-                <DetailSectionImageWrapper>
-                  <img
-                    src='https://res.cloudinary.com/frientrip/image/upload/c_limit,dpr_3.0,f_auto,q_auto:best,w_500/1628829649998_fupslp.png'
-                    alt='구매 안내 사항'
-                  />
-                </DetailSectionImageWrapper>
-                <DetailSectionImageWrapper>
+            <DescriptionWrapper>
+              <ProductDescription>
+                <ReviewContainer>
+                  <DetailCarousel />
+                </ReviewContainer>
+                <HeaderTitle>서비스 소개</HeaderTitle>
+
+                <ImageContentWrapper>
                   <img
                     src={detailData[idx].detailSectionImage}
                     alt='상품 안내 사항'
                   />
-                </DetailSectionImageWrapper>
-                <DetailSectionImageWrapper>
-                  <img
-                    src='https://res.cloudinary.com/frientrip/image/upload/c_limit,dpr_3.0,f_auto,q_auto:best,w_500/bottom-corona-notice_u2r6sx.jpg'
-                    alt='상품 상세'
-                  />
-                </DetailSectionImageWrapper>
-              </div>
-            </div>
+                </ImageContentWrapper>
+                <HeaderTitle>진행 장소</HeaderTitle>
+                <ImageContentWrapper>
+                  <Map locationAddress={detailData[idx].locationAddress} />
+                </ImageContentWrapper>
+
+                <HeaderTitle>환불 정책</HeaderTitle>
+                <ToggleMenuWrapper
+                  onClick={() =>
+                    toggled ? setToggled(false) : setToggled(true)
+                  }
+                >
+                  <ToggleIcon />
+                </ToggleMenuWrapper>
+                {toggled && (
+                  <TextContentWrapper>
+                    <p>구매 후 2주 이내 : 100% 환불</p>
+                    <p>구매 후 2주 후 : 환불 불가</p>
+                    <br />
+                    <p>[환불 신청 방법]</p>
+                    <p>1. 해당 프립을 결제한 계정으로 로그인</p>
+                    <p>2. 마이 - 신청내역</p>
+                    <p>3. 취소를 원하는 프립 상세 정보 버튼 - 취소</p>
+                    <p>※ 결제 수단에 따라 예금주, 은행명, 계좌번호 입력</p>
+                  </TextContentWrapper>
+                )}
+                <HeaderTitle>이런 프립은 어때요?</HeaderTitle>
+                <ListContentWrapper>
+                  <ProductWrap>
+                    {detailData[idx].relatedProducts.map(
+                      (relatedProduct, i) => {
+                        return (
+                          <CardWrap key={relatedProduct.id}>
+                            <Card data={relatedProduct} i={i} />
+                          </CardWrap>
+                        );
+                      }
+                    )}
+                  </ProductWrap>
+                </ListContentWrapper>
+              </ProductDescription>
+            </DescriptionWrapper>
           </DetailSection>
 
           <FloatingBarBackground>
             <FloatingBarWrapper>
               <BookmarkWrapper>
-                <BookmarkIcon />
-                {detailData[idx].product_bookmarked}
+                <BookmarkIcon fill='none' stroke='#333' />
+                {detailData[idx].productBookmarked}
               </BookmarkWrapper>
               <BlueButton>참여하기</BlueButton>
               {buttonToTop && (
@@ -178,6 +209,7 @@ export const ImageFrame = styled.div`
   height: 375px;
   border-radius: 10px;
   background-size: 375px;
+  background-color: lightgray;
   overflow: hidden;
 `;
 
@@ -258,7 +290,7 @@ export const HostImageFrame = styled.div`
   height: 56px;
   border-radius: 50%;
   margin: 16px;
-  background-color: red;
+  background-color: lightgray;
   overflow: hidden;
 `;
 
@@ -277,6 +309,12 @@ export const HostInfoContainer = styled.div`
   top: 30px;
 `;
 
+export const BookmarkIconWrapper = styled.div`
+  position: relative;
+  top: 30px;
+  left: 50px;
+`;
+
 export const HostName = styled.h2`
   margin-bottom: 6px;
   font-size: 18px;
@@ -288,15 +326,20 @@ export const HostActivity = styled.h3`
   font-size: 12px;
 `;
 
-export const DetailSection = styled.section`
-  .Description__Wrapper {
-    width: 768px;
-    width: ${({ theme }) => theme.width};
-  }
-  .product-description {
-    padding: 0 20px;
-    margin-left: -20px;
-  }
+export const DetailSection = styled.section``;
+
+export const DescriptionWrapper = styled.div`
+  width: 768px;
+  width: ${({ theme }) => theme.width};
+`;
+
+export const ProductDescription = styled.div`
+  padding: 0 20px;
+  margin-left: -20px;
+`;
+
+export const ReviewContainer = styled.div`
+  margin: 0 0 50px 0;
 `;
 
 export const HeaderTitle = styled.h2`
@@ -309,11 +352,29 @@ export const HeaderTitle = styled.h2`
   text-align: left;
 `;
 
-export const DetailSectionImageWrapper = styled.p`
-  img {
+export const ImageContentWrapper = styled.p`
+  * {
     width: 768px;
-    margin: 12px;
+    margin: 0px 0px 30px 0px;
   }
+`;
+
+export const ToggleMenuWrapper = styled.div`
+  display: flex;
+`;
+
+export const TextContentWrapper = styled.div`
+  align-content: center;
+  margin: 0px 0px 30px 0px;
+  * {
+    font-size: 14px;
+    margin: 4px;
+  }
+`;
+
+export const ListContentWrapper = styled.div`
+  position: relative;
+  left: -24px;
 `;
 
 export const FloatingBarBackground = styled.nav`
