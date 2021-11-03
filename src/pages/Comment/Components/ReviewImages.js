@@ -18,8 +18,8 @@ function ReviewImages(props) {
           return (
             <ImageWrapper key={image.id}>
               <ReviewImage
-                alt={image.name}
-                src={image.img}
+                alt='애드립'
+                src={image.commentImageUrl}
                 onClick={toggleModal}
               />
             </ImageWrapper>

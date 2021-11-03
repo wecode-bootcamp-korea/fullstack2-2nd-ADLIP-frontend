@@ -14,4 +14,5 @@ const theme = {
     middleCategoryTextColor: '#AAAAAA',
   },
 };
+
 export default theme;

@@ -23,18 +23,26 @@ function AddReviewModal(props) {
   const addNewReview = () => {
     if (newText === '') return alert('후기를 입력해주세요');
     if (newRating === 0) return alert('별점을 선택해주세요');
+
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = ('0' + (today.getMonth() + 1)).slice(-2);
+    const day = ('0' + today.getDate()).slice(-2);
+    const dateString = year + '-' + month + '-' + day;
+
     setReviews([
       {
         id: reviews.length + 1,
         nickname: '김지현',
         rating: Number(newRating),
-        text: newText,
-        createdAt: `${new Date().toLocaleString()}`,
-        images: [],
+        commentText: newText,
+        createdAt: dateString,
+        CommentImage: [],
         isLike: false,
       },
       ...reviews,
     ]);
+
     toggleModal();
     window.scrollTo(0, 0);
   };
@@ -56,7 +64,6 @@ function AddReviewModal(props) {
             <option value='4'>★★★★️</option>
             <option value='5'>★★★★★</option>
           </RatingSelect>
-          <AddImages>이미지 첨부</AddImages>
         </div>
         <div>
           <button onClick={addNewReview}>작성완료</button>
@@ -86,10 +93,6 @@ const ReviewTextArea = styled.textarea`
 `;
 
 const RatingSelect = styled.select`
-  outline: none;
-`;
-
-const AddImages = styled.button`
   outline: none;
 `;
 

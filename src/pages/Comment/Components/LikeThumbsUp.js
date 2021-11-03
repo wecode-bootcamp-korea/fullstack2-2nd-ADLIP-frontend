@@ -5,6 +5,7 @@ import { faThumbsUp } from '@fortawesome/free-regular-svg-icons';
 
 function LikeThumbsUp(props) {
   const { review, handleLike } = props;
+  review.isLiked = false;
 
   return (
     <LikeThumbsUpWrapper

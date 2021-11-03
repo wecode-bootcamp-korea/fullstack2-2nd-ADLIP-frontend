@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons';
@@ -7,33 +7,28 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 function CommentHeader(props) {
-  const { reviews, sortOptions, changeSortOption } = props;
+  const {
+    sortOptions,
+    changeSortOption,
+    totalConutOfComment,
+    ratingAvg,
+    isSortOptionOpen,
+    setIsSortOptionOpen,
+  } = props;
   const maxRating = 5;
-  const [isSortOptionOpen, setIsSortOptionOpen] = useState(false);
   const [activeSort] = sortOptions.filter(sort => sort.isChecked);
 
-  const getAverage = reviews => {
-    let sum = 0;
-    for (let i = 0; i < reviews.length; i++) {
-      sum += reviews[i].rating;
-    }
-    const average = sum / reviews.length;
-    return average.toFixed(2);
-  };
-
-  const average = getAverage(reviews);
-
-  const getRedStars = average => {
+  const getRedStars = ratingAvg => {
     let redStars = [];
-    for (let i = 0; i < Math.round(average); i++) {
+    for (let i = 0; i < Math.round(ratingAvg); i++) {
       redStars.push(<FontAwesomeIcon key={i} icon={fasStar} />);
     }
     return redStars;
   };
 
-  const getEmptyStars = average => {
+  const getEmptyStars = ratingAvg => {
     let emptyStars = [];
-    for (let i = 0; i < maxRating - Math.round(average); i++) {
+    for (let i = 0; i < maxRating - Math.round(ratingAvg); i++) {
       emptyStars.push(<FontAwesomeIcon key={i} icon={farStar} />);
     }
     return emptyStars;
@@ -47,7 +42,7 @@ function CommentHeader(props) {
     <ReviewContainer>
       <ReviewHeader>
         <HeaderMenu>
-          <ReviewAmount>후기 {reviews.length}개</ReviewAmount>
+          <ReviewAmount>후기 {totalConutOfComment}개</ReviewAmount>
           <SortMenu onClick={toggleSortMenu}>
             <ActiveSort>{activeSort.option}</ActiveSort>
             {isSortOptionOpen ? (
@@ -58,9 +53,9 @@ function CommentHeader(props) {
           </SortMenu>
         </HeaderMenu>
         <div>
-          {getRedStars(average)}
-          {getEmptyStars(average)}
-          <Average>{average}</Average>
+          {getRedStars(ratingAvg)}
+          {getEmptyStars(ratingAvg)}
+          <Average>{ratingAvg.toFixed(2)}</Average>
         </div>
         <SortOption
           style={

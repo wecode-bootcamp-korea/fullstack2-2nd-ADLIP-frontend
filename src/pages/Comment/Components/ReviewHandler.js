@@ -45,8 +45,13 @@ const AddBtnWrapper = styled.div`
   margin-top: 20px;
 `;
 
-const AddBtn = styled.button`
-  outline: none;
+const AddBtn = styled.span`
+  font-size: 13px;
+  cursor: pointer;
+
+  &:hover {
+    color: #3397fe;
+  }
 `;
 
 const StyledReviewModal = Modal.styled`

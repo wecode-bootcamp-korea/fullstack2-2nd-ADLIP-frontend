@@ -6,26 +6,26 @@ import LikeThumbsUp from './LikeThumbsUp';
 import ReviewImages from './ReviewImages';
 
 function ReviewCard(props) {
-  const { reviews, page, handleLike, deleteReview } = props;
-  const data = reviews.slice((page - 1) * 10, page * 10);
+  const { reviews, handleLike, deleteReview } = props;
 
   return (
     <CardWrapper>
-      {data.map(review => {
-        return (
-          <ReviewWrapper key={review.id}>
-            <UserInfo review={review} />
-            <ReviewText>{review.text}</ReviewText>
-            <div>
-              {review.nickname === '김태규' && (
-                <DeleteReview review={review} deleteReview={deleteReview} />
-              )}
-              <LikeThumbsUp review={review} handleLike={handleLike} />
-            </div>
-            <ReviewImages images={review.images} />
-          </ReviewWrapper>
-        );
-      })}
+      {reviews &&
+        reviews.map(review => {
+          return (
+            <ReviewWrapper key={review.id}>
+              <UserInfo review={review} />
+              <ReviewText>{review.commentText}</ReviewText>
+              <div>
+                {review.nickname === '김지현' && (
+                  <DeleteReview review={review} deleteReview={deleteReview} />
+                )}
+                <LikeThumbsUp review={review} handleLike={handleLike} />
+              </div>
+              <ReviewImages images={review.CommentImage} />
+            </ReviewWrapper>
+          );
+        })}
     </CardWrapper>
   );
 }
