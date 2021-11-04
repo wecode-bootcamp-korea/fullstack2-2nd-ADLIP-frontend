@@ -40,9 +40,9 @@ export default function FirstModal() {
 const StyledModal = Modal.styled`
   display:flex;
   justify-content: flex-end;
-  width: 390px;
-  height:500px;
-  background-image : url('https://ifh.cc/g/w9Iana.jpg');
+  width: 422px;
+  height:505px;
+  background-image : url('https://ifh.cc/g/SRWnTG.jpg');
   border-radius: 10px;
   cursor: pointer;
   &:hover {

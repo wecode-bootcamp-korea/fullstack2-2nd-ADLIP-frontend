@@ -4,13 +4,13 @@ import Card from './Card.js';
 import mixinStyle from '../../styles/mixins';
 
 export default function CommonCardList(props) {
-  const { productsData } = props;
+  const { productsData, title } = props;
 
   return (
     <ProductGroup>
-      <ProductSection>{productsData?.title}</ProductSection>
+      <ProductSection>{title}</ProductSection>
       <ProductWrap>
-        {productsData?.productList.map(product => {
+        {productsData?.map(product => {
           return (
             <CardWrap key={product.id}>
               <Card data={product} />

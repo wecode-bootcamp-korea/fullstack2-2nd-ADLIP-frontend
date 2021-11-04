@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Slider from 'react-slick';
-import theme from '../../styles/theme';
 import { Link } from 'react-router-dom';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -62,7 +61,7 @@ function MainCarousel(props) {
       <StyledSlider {...settings} propsName={carouselData?.name}>
         {carouselData?.map(image => {
           return (
-            <Link to='/category/0' key={image.id}>
+            <Link to='/' key={image.id}>
               <img alt={image.name} src={image.url} />
             </Link>
           );

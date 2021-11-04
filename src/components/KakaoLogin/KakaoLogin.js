@@ -2,6 +2,8 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 import dotenv from 'dotenv';
+import jwt_decode from 'jwt-decode';
+
 dotenv.config();
 
 window.Kakao.init(process.env.REACT_APP_KAKAO_KEY);
@@ -34,7 +36,11 @@ function Kakao({ isHost }) {
         })
           .then(res => res.json())
           .then(res => {
-            localStorage.setItem('token', res.token);
+            const token = res.token;
+            localStorage.setItem('token', JSON.stringify(token));
+            let decoded = jwt_decode(token);
+            localStorage.setItem('user', JSON.stringify(decoded));
+            JSON.parse(localStorage.getItem('user'));
             if (res.token) {
               alert(res.message);
               history.push('/');
