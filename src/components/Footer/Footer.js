@@ -24,7 +24,10 @@ export default function Footer() {
         <div>
           {footerData.footerMenu?.map(menu => {
             return (
-              <FooterMenuStyle to='/' key={menu.id}>
+              <FooterMenuStyle
+                to={`/${menu.name === '팀원소개' ? 'teamInfo' : ''}`}
+                key={menu.id}
+              >
                 {menu.name}
               </FooterMenuStyle>
             );

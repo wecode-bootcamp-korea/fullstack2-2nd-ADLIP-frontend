@@ -88,7 +88,6 @@ const {
   flexStyleGroup,
   widthHeightStyleGroup,
   colorStyleGroup,
-  paddingStyleGroup,
   fontStyleGroup,
   commonHoverStyle,
   widthStyleGroup,

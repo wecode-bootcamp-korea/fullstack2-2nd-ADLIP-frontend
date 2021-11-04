@@ -1,95 +1,105 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import mixin from '../../styles/mixins';
 import MainCarousel from '../../components/MainCarousel/MainCarousel';
 import MainMiddleCategory from './MainMiddleCategory';
 import CommonCardList from '../List/CommonCardList';
-// import axios from 'axios';
+import axios from 'axios';
 import FirstModal from './FirstModal';
+import HambergerIconMenu from '../../components/HambergerIconMenu/HambergerIconMenu';
+import { API_ENDPOINT } from '../../api';
 
 export default function Main() {
   const [mainPageCategoryData, setMainPageCategoryData] = useState([]);
   const [topCarouselData, setTopCarouselData] = useState([]);
   const [middleCarouselData, setMiddleCarouselData] = useState([]);
   const [productsData, setProductsData] = useState([]);
+  const [isPositionMenu, setIsPositionMenu] = useState(false);
+  const multyRef = {
+    topRef: useRef(),
+    productRef: useRef(),
+    bottomRef: useRef(),
+  };
+
+  const mainCardListTitle = [
+    { name: 'monthlyTheme', title: '주간 BEST🏆 ' },
+    { name: 'limitPeriodDiscount', title: '인기 급상승🚀' },
+    { name: 'newProduct', title: '신규상품⚡' },
+    { name: 'includeRatingProduct', title: '위코드 X Adlip✌💛' },
+  ];
 
   useEffect(() => {
-    getCategoryData();
-    getTopCarouselData();
-    getMiddleCarouselData();
-    getProductsData();
-
-    // totalData();
+    totalData();
   }, []);
 
-  //데이터가 안받아짐 차후에 원인찾고 수정예정
-  // const totalData = () => {
-  //   axios
-  //     .all([
-  //       axios.get('/data/Main/mainMiddleCategory.json'),
-  //       axios.get('/data/Main/mainCarousel.json'),
-  //       axios.get('/data/Main/mainMiddleCarousel.json'),
-  //       axios.get('/data/List/mainProduct.json'),
-  //     ])
-  //     .then(
-  //       axios.spread((res1, res2, res3, res4) => {
-  //         setMainPageCategoryData(res1.data);
-  //         setTopCarouselData([...res2.data]);
-  //         setMiddleCarouselData([...res3.data]);
-  //         setProductsData([...res4.data]);
-  //       })
-  //     )
-  //     .catch(() => {
-  //       console.log('FAIL!!');
-  //     });
-  // };
-
-  const getCategoryData = () => {
-    fetch('/data/Main/mainMiddleCategory.json')
-      .then(res => res.json())
-      .then(data => setMainPageCategoryData(data.category))
-      .catch(console.log);
+  const totalData = () => {
+    axios
+      .all([
+        axios.get('/data/Main/mainMiddleCategory.json'),
+        axios.get('/data/Main/mainCarousel.json'),
+        axios.get('/data/Main/mainMiddleCarousel.json'),
+        axios.get(`${API_ENDPOINT}/`),
+      ])
+      .then(
+        axios.spread((res1, res2, res3, res4) => {
+          setMainPageCategoryData(res1.data.category);
+          setTopCarouselData(res2.data.images);
+          setMiddleCarouselData(res3.data.images);
+          setProductsData(res4.data.data);
+        })
+      )
+      .catch(() => {
+        console.log('FAIL!!');
+      });
   };
 
-  const getTopCarouselData = () => {
-    fetch('/data/Main/mainCarousel.json')
-      .then(res => res.json())
-      .then(data => setTopCarouselData(data.images))
-      .catch(console.log);
+  const changeStateEventShow = isFocus => {
+    setIsPositionMenu(isFocus);
   };
 
-  const getMiddleCarouselData = () => {
-    fetch('/data/Main/mainMiddleCarousel.json')
-      .then(res => res.json())
-      .then(data => setMiddleCarouselData(data.images))
-      .catch(console.log);
-  };
-
-  const getProductsData = () => {
-    fetch('/data/List/mainProduct.json')
-      .then(res => res.json())
-      .then(data => setProductsData(data.products))
-      .catch(console.log);
+  const changePositionScroll = whereMovePosition => {
+    multyRef[whereMovePosition].current?.scrollIntoView({
+      behavior: 'smooth',
+    });
   };
 
   return (
     <MainStyle>
       <MainFlexCenter>
+        <div ref={multyRef?.topRef}></div>
         <MainCarousel carouselData={topCarouselData} isDot={true} />
         <MainMiddleCategory
           className='MiddleCategory'
           mainPageCategoryData={mainPageCategoryData}
         />
-        <CommonCardList productsData={productsData[0]} />
-        <CommonCardList productsData={productsData[1]} />
+        <div ref={multyRef?.productRef}></div>
+        <CommonCardList
+          title={mainCardListTitle[0].title}
+          productsData={productsData[mainCardListTitle[0].name]}
+        />
+        <CommonCardList
+          title={mainCardListTitle[1].title}
+          productsData={productsData[mainCardListTitle[1].name]}
+        />
         <MainCarousel carouselData={middleCarouselData} />
-        <CommonCardList productsData={productsData[2]} />
-        <CommonCardList productsData={productsData[3]} />
-        <BannerLinkStyle to='/'>
+        <CommonCardList
+          title={mainCardListTitle[2].title}
+          productsData={productsData[mainCardListTitle[2].name]}
+        />
+        <CommonCardList
+          title={mainCardListTitle[3].title}
+          productsData={productsData[mainCardListTitle[3].name]}
+        />
+        <BannerLinkStyle to='/' ref={multyRef.bottomRef}>
           <BannerImgStyle />
         </BannerLinkStyle>
         <FirstModal></FirstModal>
+        <HambergerIconMenu
+          {...{ isPositionMenu }}
+          changeStateEventShow={changeStateEventShow}
+          changePositionScroll={changePositionScroll}
+        ></HambergerIconMenu>
       </MainFlexCenter>
     </MainStyle>
   );

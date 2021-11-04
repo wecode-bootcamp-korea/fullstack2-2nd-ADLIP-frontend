@@ -3,32 +3,51 @@ import styled from 'styled-components';
 import theme from '../../styles/theme';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { useHistory } from 'react-router';
 
 function Card(props) {
   const {
+    id,
+    mainCategoryId,
+    subCategoryId,
     isNew,
     isOnly,
     rating,
     price,
-    discount_rate,
+    discountRate,
     summary,
-    product_name,
-    main_image_url,
+    name,
+    mainImageUrl,
+    paseValue,
   } = props.data;
-
+  const history = useHistory();
   return (
     <div>
       <CardWrap>
-        <Img src={main_image_url} alt='img'></Img>
+        <Img
+          src={mainImageUrl}
+          alt='img'
+          onClick={() => {
+            paseValue &&
+              history.push({
+                pathname: `/products/${id}`,
+                state: {
+                  productId: id,
+                  mainCategoryId: mainCategoryId,
+                  subCategoryId: subCategoryId,
+                },
+              });
+          }}
+        ></Img>
 
         <Title color='#9B9B9B' size='12px'>
           {summary}
         </Title>
         <MainTitle color={theme.blackColor} size='14px' bold='600'>
-          {product_name}
+          {name}
         </MainTitle>
         <Title color={theme.blackColor} size='14px' bold='900'>
-          {`${price * (1 - discount_rate)}`.replace(
+          {`${price * (1 - discountRate)}`.replace(
             /\B(?=(\d{3})+(?!\d))/g,
             ','
           ) + '원'}
@@ -39,15 +58,15 @@ function Card(props) {
             deco='line-through'
             margin='10px'
           >
-            {discount_rate &&
+            {discountRate &&
               `${`${price}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`}
           </Title>
         </Title>
         <IconWrap>
-          {rating && (
+          {rating !== 0 && (
             <>
               <FontAwesomeIcon icon={faStar} />
-              <Rating>{rating}</Rating>
+              <Rating>{rating.toFixed(2)}</Rating>
             </>
           )}
           {isNew && <New>NEW</New>}

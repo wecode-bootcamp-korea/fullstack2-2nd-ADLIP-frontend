@@ -1,0 +1,102 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "mainCategoryId": 1,
+      "subCategoryId": 1,
+      "mainImageUrl": "https://ca.slack-edge.com/TH0U6FBTN-U028TJC628H-a721f9937cbe-512",
+      "summary": "#정렬리스트 #해피해피 #데이터주세요~!",
+      "name": "[Backend] 모델링하다가 2차 프로젝트가 끝남",
+      "price": "60000",
+      "discountRate": "0.2",
+      "isNew": true,
+      "isOnly": true,
+      "createdAt": "2021-11-04T20:54:04.736Z",
+      "rating": 4.201923076923077
+    },
+    {
+      "id": 2,
+      "mainCategoryId": 1,
+      "subCategoryId": 1,
+      "mainImageUrl": "https://ca.slack-edge.com/TH0U6FBTN-U02886GN2R4-60009d346805-512",
+      "summary": "#시크해도따듯한 #soju #정렬의여왕",
+      "name": "[Frontend] 개발이 재미있어요~!",
+      "price": "60000",
+      "discountRate": "0.2",
+      "isNew": true,
+      "isOnly": false,
+      "createdAt": "2021-11-04T20:54:04.736Z",
+      "rating": 4.801923076923077
+    },
+    {
+      "id": 3,
+      "mainCategoryId": 1,
+      "subCategoryId": 1,
+      "mainImageUrl": "https://ca.slack-edge.com/TH0U6FBTN-U02AR957P44-2b6f5c006bdb-512",
+      "summary": "#모닝줌 #풋풋 #지도의모든것 #샐러드원픽",
+      "name": "[Frontend] 파란만장한 인생 개발자로~",
+      "price": "60000",
+      "discountRate": "0.2",
+      "isNew": true,
+      "isOnly": true,
+      "createdAt": "2021-11-04T20:54:04.736Z",
+      "rating": 4.991923076923077
+    },
+    {
+      "id": 6,
+      "mainCategoryId": 1,
+      "subCategoryId": 1,
+      "mainImageUrl": "https://ca.slack-edge.com/TH0U6FBTN-U028M524VNG-9cbc2e62f5c4-512",
+      "summary": "#카카오API는껌 #전역상태관리마스터",
+      "name": "[Frontend] 로그인하다가 맨탈이 로그아웃됬어요~!",
+      "price": "60000",
+      "discountRate": "0.2",
+      "isNew": true,
+      "isOnly": false,
+      "createdAt": "2021-11-04T20:54:04.736Z",
+      "rating": 4.501923076923077
+    },
+    {
+      "id": 6,
+      "mainCategoryId": 1,
+      "subCategoryId": 1,
+      "mainImageUrl": "https://ca.slack-edge.com/TH0U6FBTN-U028BTUCCJZ-c320ff068053-512",
+      "summary": "#규각코 #주인장 #케라셀리뷰장인 #정렬하다가빡침",
+      "name": "[Frontend] 저녁 DJ는 제가 맡겠습니다 (아이유 노래 제외)",
+      "price": "60000",
+      "discountRate": "0.2",
+      "isNew": false,
+      "isOnly": true,
+      "createdAt": "2021-11-04T20:54:04.736Z",
+      "rating": 4.801923076923077
+    },
+    {
+      "id": 6,
+      "mainCategoryId": 1,
+      "subCategoryId": 1,
+      "mainImageUrl": "https://ca.slack-edge.com/TH0U6FBTN-U028BTUM693-bb7a42c52440-512",
+      "summary": "#야행성=>바른사나이 #하루에6일자는남자 #원하는거는다주는남자",
+      "name": "[Backend] 데이터는 나한테 맡겨라~!!",
+      "price": "60000",
+      "discountRate": "0.2",
+      "isNew": false,
+      "isOnly": true,
+      "createdAt": "2021-11-04T20:54:04.736Z",
+      "rating": 4.9801923076923077
+    },
+    {
+      "id": 6,
+      "mainCategoryId": 1,
+      "subCategoryId": 1,
+      "mainImageUrl": "https://ca.slack-edge.com/TH0U6FBTN-U028BTUDB4M-7c7f0d3c27c4-512",
+      "summary": "#바른사나이=>야행성 #모달하다가css마스터 #검색ㅈㅈ #아이유원픽",
+      "name": "[Frontend] 질문 하는시간이 절반, 코딩치는시간이 절반 ??",
+      "price": "60000",
+      "discountRate": "0.2",
+      "isNew": false,
+      "isOnly": true,
+      "createdAt": "2021-11-04T20:54:04.736Z",
+      "rating": 4.101923076923077
+    }
+  ]
+}
