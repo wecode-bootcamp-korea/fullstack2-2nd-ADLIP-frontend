@@ -27,7 +27,6 @@ export default function Detail(props) {
 
   let mainId = location.state?.mainCategoryId;
   let subId = location.state?.subCategoryId;
-  console.log(location);
 
   useEffect(() => {
     const getDetailData = async () => {
@@ -44,7 +43,7 @@ export default function Detail(props) {
 
     const getRelatedList = async () => {
       try {
-        await fetch(`http://localhost:8080/category/1/2`, {
+        await fetch(`http://localhost:8080/product/${mainId}/${subId}`, {
           headers: {
             'Content-Type': 'application/json',
             Accept: 'application/json',
@@ -52,8 +51,7 @@ export default function Detail(props) {
         })
           .then(res => res.json())
           .then(res => {
-            console.log(res.data);
-            setRelatedListData(res.data.subCategoriesProductsByRating);
+            setRelatedListData(res.data);
             console.log(`fetch ${relatedListData}`);
           });
       } catch (error) {
@@ -78,6 +76,7 @@ export default function Detail(props) {
       setButtonToTop(false);
     }
   };
+
   return (
     <DetailOuterMax>
       {detailData && (

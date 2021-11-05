@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { NavLink, BrowserRouter, Route, Switch } from 'react-router-dom';
+import {
+  NavLink,
+  BrowserRouter,
+  Route,
+  Switch,
+  useRouteMatch,
+  useParams,
+} from 'react-router-dom';
 import ListAll from './ListAll.js';
 import ListPage from './ListPage.js';
 import axios from 'axios';
@@ -11,18 +18,20 @@ import SubList from './SubList.js';
 import { API } from '../../API/api';
 
 function List({ match }) {
-  console.log('match.params.id!', match.params.id);
+  const { id: newId } = useParams();
+
   useEffect(() => {
     axios
       .all([
-        axios.get(`${API}/category/1/2`),
+        axios.get(`${API}/category/${newId}`),
         axios.get(`${API}/category/${Number(match.params.id) + 1}`),
-        axios.get(`${API}/product`),
+        axios.get(`${API}/product/${Number(match.params.id) + 1}/all`),
         axios.get('/data/List/title.json'),
         axios.get('/data/List/sub.json'),
       ])
       .then(
         axios.spread((res1, res2, res3, res4, res5) => {
+          console.log(res5);
           setSubProduct(res1.data.data);
           setProduct(res2.data.data);
           setProductAll(res3.data.data);
@@ -42,12 +51,15 @@ function List({ match }) {
   const [productAll, setProductAll] = useState([]);
   const [title, setTitle] = useState([]);
 
+  let { path, url } = useRouteMatch();
+
   const { id } = match.params;
-  console.log(main);
+
   const test = event => {
-    console.log(event.target.innerText);
     setTitle(event.target.innerText);
   };
+  // const subId = product.mainCategoriesProductsByRating[0].subCategoryId;
+  console.log(sub, 'SUB');
   return (
     <BrowserRouter>
       <Page>
@@ -57,18 +69,14 @@ function List({ match }) {
         </MainCategory>
 
         <SubCategory>
-          <SubName to={`${match.url}`} key={id}>
+          <SubName to={`${url}`} key={id}>
             전체
           </SubName>
-          <SubName to={`${match.url}/1`} key={id} onClick={test}>
-            {sub[id]?.sub_category_name_1}
-          </SubName>
-          <SubName to={`${match.url}/2`} key={id} onClick={test}>
-            {sub[id]?.sub_category_name_2}
-          </SubName>
-          <SubName to={`${match.url}/3`} key={id} onClick={test}>
-            {sub[id]?.sub_category_name_3}
-          </SubName>
+          {sub[newId]?.subs.map(s => (
+            <SubName to={`${url}/${s.id}`} key={s.id} onClick={test}>
+              {s.name}
+            </SubName>
+          ))}
         </SubCategory>
 
         <Wrap>
@@ -77,13 +85,13 @@ function List({ match }) {
         </Wrap>
         <Switch>
           <Route
-            path='/category/:id/all'
+            path={`${path}/all`}
             render={() => (
               <ListAll productAll={productAll} main={main} sub={sub} id={id} />
             )}
           />
           <Route
-            path='/category/:id/:sub'
+            path={`${path}/:sub`}
             render={() => (
               <SubList
                 subProduct={subProduct}
@@ -97,7 +105,7 @@ function List({ match }) {
 
           <Route
             exact
-            path='/category/:id'
+            path={`${path}`}
             render={() => (
               <ListPage
                 product={product}

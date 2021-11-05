@@ -197,7 +197,7 @@ const AdlipLogoLinkto = styled(Link)`
 
 const AdlipLogoImgStyle = styled.img.attrs({
   alt: 'AdlipLogo',
-  src: '/images/AdlipLogo-v2.png',
+  src: '/images/adlipLogo-v2.png',
 })`
   height: 45px;
 `;
