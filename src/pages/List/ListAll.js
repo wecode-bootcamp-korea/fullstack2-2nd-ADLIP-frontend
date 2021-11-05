@@ -1,37 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
-import theme from '../../styles/theme';
 import Card from './Card.js';
 import axios from 'axios';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 
-function ListAll() {
-  useEffect(() => {
-    async function fetchData() {
-      await axios
-        .all([
-          axios.get('/data/List/title.json'),
-          axios.get('/data/List/card.json'),
-        ])
-        .then(
-          axios.spread((res1, res3) => {
-            setMain([...res1.data]);
-            setProduct([...res3.data]);
-          })
-        )
-        .catch(() => {
-          console.log('FAIL!!');
-        });
-    }
-    fetchData();
-  }, []);
+function ListAll(props) {
+  const id = props.id;
+  const main = props.main;
+  const productAll = props.productAll;
 
-  const [main, setMain] = useState([]);
-  const { id } = useParams();
+  useEffect(() => {}, [props.productAll]);
 
-  const [product, setProduct] = useState([]);
   const [page, setPage] = useState(1);
   const [postPerPage] = useState(12);
 
@@ -43,16 +24,16 @@ function ListAll() {
     return currentPosts;
   }
 
-  const pageTotalNum = Math.ceil(`${product.length}` / postPerPage);
+  const pageTotalNum = Math.ceil(`${productAll.length}` / postPerPage);
 
   return (
     <Page>
       <ProductSection> {main[id]?.category_name} 전체</ProductSection>
       <ProductAllWrap>
-        {currentPosts(product).map((a, i) => {
+        {currentPosts(productAll).map((a, i) => {
           return (
             <Wrap key={a.ai}>
-              <Card data={a} i={i} key={product.id} />
+              <Card data={a} i={i} key={productAll.id} />
             </Wrap>
           );
         })}
@@ -78,8 +59,8 @@ export default ListAll;
 const Page = styled.div`
   width: 808px;
   margin: auto;
-  font-style: ${theme.fontStyle};
-  color: ${theme.blackColor};
+  font-style: 'Noto Sans KR', Helvetica, Arial, sans-serif;
+  color: #000000;
 `;
 
 const ProductSection = styled.div`

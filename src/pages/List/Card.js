@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import theme from '../../styles/theme';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router';
@@ -18,9 +17,9 @@ function Card(props) {
     summary,
     name,
     mainImageUrl,
-    paseValue,
   } = props.data;
   const history = useHistory();
+  const { cardName } = props;
   return (
     <div>
       <CardWrap>
@@ -28,7 +27,7 @@ function Card(props) {
           src={mainImageUrl}
           alt='img'
           onClick={() => {
-            paseValue &&
+            cardName ||
               history.push({
                 pathname: `/products/${id}`,
                 state: {
@@ -43,10 +42,10 @@ function Card(props) {
         <Title color='#9B9B9B' size='12px'>
           {summary}
         </Title>
-        <MainTitle color={theme.blackColor} size='14px' bold='600'>
+        <MainTitle color='black' size='14px' bold='600'>
           {name}
         </MainTitle>
-        <Title color={theme.blackColor} size='14px' bold='900'>
+        <Title color='black' size='14px' bold='900'>
           {`${price * (1 - discountRate)}`.replace(
             /\B(?=(\d{3})+(?!\d))/g,
             ','
@@ -101,7 +100,6 @@ const Img = styled.img`
   border-radius: 5px;
   background-size: contain;
   src: url(${props => props.src});
-  cursor: pointer;
 `;
 
 const Title = styled.span`

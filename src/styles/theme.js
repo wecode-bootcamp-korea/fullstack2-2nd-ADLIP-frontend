@@ -3,6 +3,7 @@ const theme = {
   width: '768px',
   Color: {
     whiteColor: '#FFFFFF',
+    blackColor: '#000000',
     headerBgColor: '#F4F4F4',
     headerColor: '#777777',
     navColor: '#858585',
