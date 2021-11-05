@@ -15,15 +15,14 @@ function AdlipLogIn() {
   }
 
   const validEmail =
-    /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+    /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
 
   const isValidEmail = user.email.match(validEmail) || user.email === '';
 
   function login(e) {
     e.preventDefault();
-    fetch('user/login', {
+    fetch('http://localhost:8080/user/signin', {
       method: 'POST',
-      credentials: 'include',
       headers: {
         'Content-Type': 'application/json',
       },

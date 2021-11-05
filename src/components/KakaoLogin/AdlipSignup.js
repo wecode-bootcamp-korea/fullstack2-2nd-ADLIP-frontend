@@ -11,6 +11,8 @@ function AdlipSignUp({ isHost }) {
     nickname: '',
   });
 
+  const [disabled, setDisabled] = useState(true);
+
   const hostBody = {
     email: user.email,
     password: user.password,
@@ -30,13 +32,16 @@ function AdlipSignUp({ isHost }) {
   function handleChange(e) {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
+    if (isValidEmail && isValidPw && isValidPwCheck && isValidNickname) {
+      setDisabled(false);
+    }
   }
 
   const validation = {
     email:
-      /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i,
+      /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i,
     password:
-      /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z])(?=.*[!@#\$%\^&\*]).{10,}$/,
+      /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z])(?=.*[!@#$%^&*]).{10,}$/,
   };
 
   const isValidEmail = user.email.match(validation.email) || user.email === '';
@@ -48,7 +53,7 @@ function AdlipSignUp({ isHost }) {
 
   function signup(e) {
     e.preventDefault();
-    fetch('user/signup', {
+    fetch('http://localhost:8080/user/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -116,12 +121,7 @@ function AdlipSignUp({ isHost }) {
           최소 1자 / 최대 20자까지 가능합니다.
         </NicknameCondition>
       )}
-      <SignUpBtn
-        onClick={signup}
-        disabled={
-          !(isValidEmail && isValidPw && isValidPwCheck && isValidNickname)
-        }
-      >
+      <SignUpBtn onClick={signup} disabled={disabled}>
         회원가입
       </SignUpBtn>
     </form>

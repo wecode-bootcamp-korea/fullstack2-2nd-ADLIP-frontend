@@ -1,4 +1,3 @@
-//Routes.js
 import React, { useState, createContext } from 'react';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import LogIn from './pages/LogIn/LogIn';
@@ -32,7 +31,6 @@ function Router() {
               <Header />
               <Nav />
               <Switch>
-                <Route exact path='/teamInfo' component={TeamInfo} />
                 <Route exact path='/login' component={LogIn} />
                 <Route exact path='/signup' component={SignUp} />
                 <Route exact path='/category' component={Category} />
