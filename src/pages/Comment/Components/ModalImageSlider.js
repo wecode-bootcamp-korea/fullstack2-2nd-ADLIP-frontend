@@ -43,7 +43,7 @@ function ModalImageSlider(props) {
         {images &&
           images.map(image => (
             <ImageContainer key={image.id}>
-              <SlideImage alt={image.name} src={image.img} />
+              <SlideImage alt='애드립' src={image.commentImageUrl} />
             </ImageContainer>
           ))}
       </SlideList>

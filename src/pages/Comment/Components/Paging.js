@@ -3,19 +3,18 @@ import Pagination from 'react-js-pagination';
 import styled from 'styled-components';
 
 const Paging = props => {
-  const { id, page, handlePageChange, handleParameter } = props;
+  const { page, handlePageChange, totalConutOfComment } = props;
 
   return (
     <Container>
       <Pagination
         activePage={page}
         itemsCountPerPage={10}
-        totalItemsCount={200}
+        totalItemsCount={totalConutOfComment}
         pageRangeDisplayed={5}
         prevPageText={'<'}
         nextPageText={'>'}
         onChange={handlePageChange}
-        onClick={() => handleParameter(id, page)}
       />
     </Container>
   );

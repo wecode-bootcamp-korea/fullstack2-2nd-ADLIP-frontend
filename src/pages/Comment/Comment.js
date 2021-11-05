@@ -1,57 +1,81 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router';
+import { useLocation } from 'react-router';
 import CommentHeader from './Components/CommentHeader';
 import ReviewCard from './Components/ReviewCard';
-import Paging from './Components/Pagination';
+import Paging from './Components/Paging';
 import ReviewHandler from './Components/ReviewHandler';
 import { API } from '../../API/api';
 
 const LIMIT = 10;
 
 function Comment(props) {
-  console.log(props);
-  const id = props.match.params.id;
+  const history = useHistory();
+  const location = useLocation();
+  console.log(location);
+  const { id: pathParameterId } = props.match.params;
   const [reviews, setReviews] = useState([]);
+  const [totalConutOfComment, setTotalConutOfComment] = useState(0);
+  const [ratingAvg, setRatingAvg] = useState(0);
   const sortOptionData = [
     {
       id: 1,
-      option: '평점 높은순',
+      option: '최신순',
       isChecked: true,
     },
     {
       id: 2,
-      option: '평점 낮은순',
+      option: '평점 높은순',
       isChecked: false,
     },
     {
       id: 3,
-      option: '최신순',
+      option: '평점 낮은순',
       isChecked: false,
     },
   ];
+  const [isSortOptionOpen, setIsSortOptionOpen] = useState(false);
   const [sortOptions, setSortOptions] = useState(sortOptionData);
+  const [page, setPage] = useState(1);
+
+  const latest = sortOptions[0].isChecked;
+  const ratingHigh = sortOptions[1].isChecked;
+  const ratingLow = sortOptions[2].isChecked;
+
+  let order;
+  latest && (order = 'latest');
+  ratingHigh && (order = 'ratingHigh');
+  ratingLow && (order = 'ratingLow');
+
+  const query = `orderBy=${order}&offset=${(page - 1) * LIMIT}`;
 
   useEffect(() => {
     getReviews();
   }, []);
 
+  useEffect(() => {
+    fetch(`${API}/products/${pathParameterId}/comments?${query}`)
+      .then(res => res.json())
+      .then(res => {
+        setReviews(res.Comment);
+      })
+      .catch(console.log);
+  }, [query, pathParameterId]);
+
+  useEffect(() => {
+    const newPageNumber = Number(location.search[location.search.length - 1]);
+    setPage(newPageNumber);
+  }, [location]);
+
   const getReviews = () => {
-    fetch('/data/Comment/comments.json')
+    fetch(`${API}/products/${pathParameterId}/comments?orderBy=latest&offset=0`)
       .then(res => res.json())
-      .then(res => setReviews(res.data))
+      .then(res => {
+        setReviews(res.Comment);
+        setTotalConutOfComment(res.totalConutOfComment);
+        setRatingAvg(res.ratingAvg);
+      })
       .catch(console.log);
-  };
-
-  const [page, setPage] = useState(1);
-
-  const handlePageChange = page => {
-    setPage(page);
-    const query = `limit=${LIMIT}$offset=${(page - 1) * LIMIT}`;
-    console.log(query);
-    fetch(`${API}/comments?${query}`)
-      .then(res => res.json())
-      .then(res => setReviews(res.data))
-      .catch(console.log);
-    window.scrollTo(0, 0);
   };
 
   const handleLike = review => {
@@ -67,25 +91,15 @@ function Comment(props) {
     newSortOptions.forEach(option => (option.isChecked = false));
     newSortOptions[sortIndex].isChecked = true;
     setSortOptions(newSortOptions);
-    fetchSortData();
+    history.push(`/products/${pathParameterId}/comments?page=1`);
+    window.scrollTo(0, 0);
+    setIsSortOptionOpen(false);
   };
 
-  const fetchSortData = () => {
-    const ratingHigh = sortOptions[0].isChecked;
-    const ratingLow = sortOptions[1].isChecked;
-    const recent = sortOptions[2].isChecked;
-
-    let order;
-    ratingHigh && (order = 'ratinghigh');
-    ratingLow && (order = 'ratinglow');
-    recent && (order = 'recent');
-
-    const query = `orderby=${order}&page=${page}`;
-
-    fetch(`${API}/comments?${query}`)
-      .then(res => res.json())
-      .then(res => setReviews(res.data))
-      .catch(console.log);
+  const handlePageChange = page => {
+    setPage(page);
+    history.push(`/products/${pathParameterId}/comments?page=${page}`);
+    window.scrollTo(0, 0);
   };
 
   const deleteReview = id => {
@@ -96,29 +110,26 @@ function Comment(props) {
     }
   };
 
-  const handleParameter = (id, page) => {
-    props.history.push(`/products/${id}/comments&page=${page}`);
-  };
-
   return (
     <section>
       <CommentHeader
-        reviews={reviews}
+        isSortOptionOpen={isSortOptionOpen}
+        setIsSortOptionOpen={setIsSortOptionOpen}
         sortOptions={sortOptions}
         changeSortOption={changeSortOption}
+        totalConutOfComment={totalConutOfComment}
+        ratingAvg={ratingAvg}
       />
       <ReviewCard
         reviews={reviews}
-        page={page}
         handleLike={handleLike}
         deleteReview={deleteReview}
       />
       <ReviewHandler reviews={reviews} setReviews={setReviews} />
       <Paging
-        id={id}
         page={page}
         handlePageChange={handlePageChange}
-        handleParameter={handleParameter}
+        totalConutOfComment={totalConutOfComment}
       />
     </section>
   );

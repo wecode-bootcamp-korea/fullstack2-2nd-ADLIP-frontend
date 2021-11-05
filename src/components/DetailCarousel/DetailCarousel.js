@@ -6,23 +6,27 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { faThumbsUp } from '@fortawesome/free-regular-svg-icons';
+import { API } from '../../API/api';
 
 const SLIDERWIDTH = 732;
 
-function DetailCarousel() {
+function DetailCarousel(props) {
+  const { pathParameterId } = props;
   const [reviews, setReviews] = useState([]);
   const [position, setPosition] = useState(0);
-  const slideLength = reviews.length > 15 ? 5 : Math.floor(reviews.length / 3);
-  const dataForSlide = reviews.slice(0, 15);
+  const dataForSlide = reviews.filter(
+    review => review.CommentImage?.length !== 0
+  );
+  const slideLength = Math.ceil(dataForSlide?.length / 3);
 
   useEffect(() => {
     getImages();
   }, []);
 
   const getImages = () => {
-    fetch('/data/Detail/detailCarousel.json')
+    fetch(`${API}/products/${pathParameterId}`)
       .then(res => res.json())
-      .then(res => setReviews(res.data))
+      .then(res => setReviews(res.comment))
       .catch(console.log);
   };
 
@@ -66,21 +70,21 @@ function DetailCarousel() {
         }}
       >
         {dataForSlide.map(review => {
-          const { id, nickname, text, images } = review;
-          const showingImg = images[0];
+          const { id, nickname, commentText, CommentImage } = review;
+          const showingImg = CommentImage[0];
 
           return (
             <ReviewWrapper key={id}>
-              <Link to='/products/:id/comments'>
+              <Link to={`/products/${pathParameterId}/comments?page=1`}>
                 <ReviewImgWrapper>
-                  <ReviewImg alt={showingImg.name} src={showingImg.img} />
+                  <ReviewImg alt='애드립' src={showingImg?.commentImageUrl} />
                 </ReviewImgWrapper>
               </Link>
               <UserProfile>
                 <FontAwesomeIcon icon={faUserCircle} />
                 <NickName>{nickname}</NickName>
               </UserProfile>
-              <ReviewText>{text}</ReviewText>
+              <ReviewText>{commentText}</ReviewText>
               <LikeBtn
                 onClick={() => handleLike(review)}
                 style={
@@ -99,7 +103,7 @@ function DetailCarousel() {
         })}
       </Slider>
       <ReviewNumber>
-        <StyledLink to='/comments'>
+        <StyledLink to={`/products/${pathParameterId}/comments`}>
           <MoreReview>{reviews.length}개 후기 더 보기</MoreReview>
           <FontAwesomeIcon icon={faChevronRight} />
         </StyledLink>

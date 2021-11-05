@@ -10,7 +10,8 @@ import { ProductWrap, CardWrap } from '../List/ListPage';
 import styled from 'styled-components';
 import { useParams } from 'react-router';
 
-export default function Detail() {
+export default function Detail(props) {
+  const { id: pathParameterId } = props.match.params;
   const [detailData, setDetailData] = useState([]);
   const [buttonToTop, setButtonToTop] = useState(false);
   const [toggled, setToggled] = useState(false);
@@ -113,7 +114,7 @@ export default function Detail() {
             <DescriptionWrapper>
               <ProductDescription>
                 <ReviewContainer>
-                  <DetailCarousel />
+                  <DetailCarousel pathParameterId={pathParameterId} />
                 </ReviewContainer>
                 <HeaderTitle>서비스 소개</HeaderTitle>
 

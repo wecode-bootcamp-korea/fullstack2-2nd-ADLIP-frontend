@@ -15,12 +15,9 @@ import GlobalStyle from './styles/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import { ModalProvider } from 'styled-react-modal';
 import theme from './styles/theme';
-
 export const UserContext = createContext();
-
 function Router() {
   const [token, setToken] = useState('');
-
   return (
     <>
       <GlobalStyle />
@@ -31,6 +28,7 @@ function Router() {
               <Header />
               <Nav />
               <Switch>
+                <Route exact path='/teamInfo' component={TeamInfo} />
                 <Route exact path='/login' component={LogIn} />
                 <Route exact path='/signup' component={SignUp} />
                 <Route exact path='/category' component={Category} />
@@ -52,5 +50,4 @@ function Router() {
     </>
   );
 }
-
 export default Router;
