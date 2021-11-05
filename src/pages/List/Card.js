@@ -18,8 +18,8 @@ function Card(props) {
     name,
     mainImageUrl,
   } = props.data;
-  const history = useHistory();
   const { cardName } = props;
+  const history = useHistory();
   return (
     <div>
       <CardWrap>

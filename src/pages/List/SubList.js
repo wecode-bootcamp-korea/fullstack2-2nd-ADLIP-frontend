@@ -1,24 +1,38 @@
 /* eslint-disable */
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import Card from './Card.js';
+import axios from 'axios';
+import { API } from '../../API/api';
+function SubList(props) {
+  const { id: newId, sub: Sub } = useParams();
 
-function SubList(props, match) {
-  const id = props.id;
-  const sub = props.sub;
-  const subProduct = props.subProduct;
-  const productAll = props.productAll;
+  console.log(newId, 'aa', Sub);
+
+  useEffect(() => {
+    axios
+      .all([axios.get(`${API}/category/${Number(newId) + 1}/${Sub}`)])
+      .then(
+        axios.spread(res1 => {
+          setSubProduct(res1.data.data);
+        })
+      )
+      .catch(() => {
+        console.log('FAIL!!');
+      });
+  }, [Sub]);
+  const [subProduct, setSubProduct] = useState([]);
 
   const categoryfirst = subProduct.subCategoriesProductsByRating;
   const categorytwo = subProduct.subCategoriesProductsByNew;
   const category = subProduct.subCategoriesProductsByOnly;
   const categorydiscount = subProduct.subCategoriesProductsByDiscount;
   useEffect(() => {}, [props.subProduct]);
-  useEffect(() => {}, [subProduct[id]?.subCategoryName]);
-  useEffect(() => {}, [subProduct[id]?.subCategoriesProductsByDiscount]);
-  useEffect(() => {}, [subProduct[id]?.subCategoriesProductsByNew]);
-  useEffect(() => {}, [subProduct[id]?.subCategoriesProductsByOnly]);
+  useEffect(() => {}, [subProduct[Sub]?.subCategoryName]);
+  useEffect(() => {}, [subProduct[Sub]?.subCategoriesProductsByDiscount]);
+  useEffect(() => {}, [subProduct[Sub]?.subCategoriesProductsByNew]);
+  useEffect(() => {}, [subProduct[Sub]?.subCategoriesProductsByOnly]);
 
   return (
     <div>
