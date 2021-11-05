@@ -1,138 +1,165 @@
 {
-  "detail": [
+  "id": 1,
+  "name": "자세교정 특화 | Adlip Gym (예약 가능)",
+  "price": "66000",
+  "summary": "#애드립 특별 짐 #빡셈",
+  "mainImageUrl": "https://i.ibb.co/wgGYRRB/image.png",
+  "discountRate": "0.1",
+  "host": {
+    "id": 1,
+    "nickname": "jimgym",
+    "profileImageUrl": "https://i.ibb.co/z8tDZr7/image.png",
+    "numberOfProduct": 7,
+    "numberOfGetLiked": 2
+  },
+  "comment": [
     {
-      "id": 1,
-      "mainImageUrl": "https://i.ibb.co/wgGYRRB/image.png",
-      "name": "자세교정 특화 | Adlip Gym (예약 가능)",
-      "discountRate": null,
-      "discountPrice": null,
-      "originalPrice": "66,000원",
-      "expiredDay": "구매일로부터 90일까지",
-      "profileImageUrl": "https://i.ibb.co/z8tDZr7/image.png",
-      "nickname": "Jim Gym",
-      "hostFrip": 2,
-      "hostReviewed": 15,
-      "hostBookmarked": 70,
-      "rating": 4,
-      "reviewCount": 23,
-      "bestScoreRate": 97,
-      "bestScore": 5,
-      "detailSectionImage": "https://i.ibb.co/LphJ405/2.png",
-      "locationAddress": "서울특별시 종로구 종로 51",
-      "productBookmarked": "87",
-      "relatedProducts": [
+      "id": 190,
+      "productId": 1,
+      "rating": 5,
+      "commentText": "피곤함이 풀리네요",
+      "createdAt": "2021-10-5",
+      "reply": null,
+      "CommentImage": [
         {
-          "id": 1,
-          "isNew": true,
-          "isOnly": false,
-          "rating": 4.5,
-          "price": 200000,
-          "discount_rate": 0.1,
-          "summary": "함께해서 더해지는 시너지",
-          "product_name": "스쿼트 1000개 챌린지",
-          "main_image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzN9n9JrWybuY-YUFPU3G1PGYIix8HGEc1WwypycXhaJrAnSYKk2QTTZS0nHBoBQpJk64&usqp=CAU"
-        },
-        {
-          "id": 2,
-          "isNew": false,
-          "isOnly": false,
-          "rating": 4,
-          "price": 80000,
-          "discount_rate": 0.2,
-          "summary": "홈트, 혼자하기 어렵죠?",
-          "product_name": "AR 홈트 가이드",
-          "main_image_url": "https://i.ibb.co/ys6N4Xj/image.png"
-        },
-        {
-          "id": 3,
-          "isNew": false,
-          "isOnly": true,
-          "rating": 5,
-          "price": 50000,
-          "discount_rate": 0.5,
-          "summary": "스위치는 있는데 친구가 없다고요?",
-          "product_name": "Nintendo 링피트 소모임",
-          "main_image_url": "https://www.costco.co.kr/medias/sys_master/images/hcf/hee/26735610200094.jpg"
-        },
-        {
-          "id": 4,
-          "isNew": false,
-          "isOnly": true,
-          "rating": 5,
-          "price": 95000,
-          "discount_rate": 0.2,
-          "summary": "벌금이 굉장합니다",
-          "product_name": "자세 바로 앉기 계모임",
-          "main_image_url": "https://img1.daumcdn.net/thumb/S240x240/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Fblog%2F1537710D4B309CD67F"
+          "id": 98,
+          "commentImageUrl": "https://images.unsplash.com/photo-1635869375166-9c925b0c2d74?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1172&q=80",
+          "commentId": 190
         }
-      ]
+      ],
+      "nickname": "test03",
+      "profileImageUrl": "https://dummyimage.com/50x50/7d7d7d/fff&text=user3",
+      "totalLiked": 0
     },
     {
-      "id": 1,
-      "mainImageUrl": "https://i.ibb.co/Wts5x0m/image.png",
-      "name": "[제주] 애드립 제주 여행 가이드 (예약 가능)",
-      "discountRate": "30%",
-      "discountPrice": "69,300원",
-      "originalPrice": "99,000원",
-      "expiredDay": "구매일로부터 90일까지",
-      "profileImageUrl": "http://t1.daumcdn.net/section/oc/176650288fca43ea9dc347708a078bd3",
-      "nickname": "사진찍는 투어리스트 J",
-      "hostFrip": 2,
-      "hostReviewed": 45,
-      "hostBookmarked": 60,
+      "id": 177,
+      "productId": 1,
       "rating": 5,
-      "reviewCount": 33,
-      "bestScoreRate": 97,
-      "bestScore": 5,
-      "detailSectionImage": "https://i.ibb.co/2gNPG3t/3.png",
-      "locationAddress": "제주특별자치도 서귀포시 성산읍 성산리 1번지",
-      "productBookmarked": "123",
-      "relatedProducts": [
+      "commentText": "행복해요",
+      "createdAt": "2021-10-5",
+      "reply": null,
+      "CommentImage": [],
+      "nickname": "test02",
+      "profileImageUrl": "https://dummyimage.com/50x50/7d7d7d/fff&text=user2",
+      "totalLiked": 0
+    },
+    {
+      "id": 130,
+      "productId": 1,
+      "rating": 5,
+      "commentText": "피곤함이 풀리네요",
+      "createdAt": "2021-10-5",
+      "reply": null,
+      "CommentImage": [],
+      "nickname": "test02",
+      "profileImageUrl": "https://dummyimage.com/50x50/7d7d7d/fff&text=user2",
+      "totalLiked": 0
+    },
+    {
+      "id": 123,
+      "productId": 1,
+      "rating": 5,
+      "commentText": "좋아요",
+      "createdAt": "2021-10-5",
+      "reply": null,
+      "CommentImage": [],
+      "nickname": "test02",
+      "profileImageUrl": "https://dummyimage.com/50x50/7d7d7d/fff&text=user2",
+      "totalLiked": 0
+    },
+    {
+      "id": 96,
+      "productId": 1,
+      "rating": 5,
+      "commentText": "피곤함이 풀리네요",
+      "createdAt": "2021-10-5",
+      "reply": null,
+      "CommentImage": [],
+      "nickname": "test02",
+      "profileImageUrl": "https://dummyimage.com/50x50/7d7d7d/fff&text=user2",
+      "totalLiked": 0
+    },
+    {
+      "id": 103,
+      "productId": 1,
+      "rating": 5,
+      "commentText": "힐링이필요해~~~~",
+      "createdAt": "2021-10-5",
+      "reply": null,
+      "CommentImage": [
         {
-          "id": 1,
-          "isNew": true,
-          "isOnly": false,
-          "rating": 4.5,
-          "price": 200000,
-          "discount_rate": 0.1,
-          "summary": "아름다운 섬 우도에서 추억 쌓아가세요",
-          "product_name": "우도 스쿠터 여행 with 가이드",
-          "main_image_url": "https://i.ibb.co/nwB6xmD/image.png"
-        },
-        {
-          "id": 2,
-          "isNew": false,
-          "isOnly": false,
-          "rating": 4,
-          "price": 80000,
-          "discount_rate": 0.2,
-          "summary": "내 손으로 수확한 감귤",
-          "product_name": "감귤 따기 체험",
-          "main_image_url": "https://i.ibb.co/jk2q72b/image.png"
-        },
-        {
-          "id": 3,
-          "isNew": false,
-          "isOnly": true,
-          "rating": 5,
-          "price": 50000,
-          "discount_rate": 0.5,
-          "summary": "한 달 동안 소설 쓰기 프로젝트",
-          "product_name": "제주 돌담길 백일장",
-          "main_image_url": "https://i.ibb.co/Y83R37x/image.png"
-        },
-        {
-          "id": 4,
-          "isNew": false,
-          "isOnly": true,
-          "rating": 5,
-          "price": 95000,
-          "discount_rate": 0.2,
-          "summary": "이색 체험, 같은 도시 다르게 바라보기",
-          "product_name": "흰 등대 술래잡기",
-          "main_image_url": "https://i.ibb.co/1rPkfCp/image.png"
+          "id": 69,
+          "commentImageUrl": "https://images.unsplash.com/photo-1633113090205-cc1ac795b5f9?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
+          "commentId": 103
         }
-      ]
+      ],
+      "nickname": "test02",
+      "profileImageUrl": "https://dummyimage.com/50x50/7d7d7d/fff&text=user2",
+      "totalLiked": 0
+    },
+    {
+      "id": 120,
+      "productId": 1,
+      "rating": 5,
+      "commentText": "피곤이 안 풀려요 ㅜ",
+      "createdAt": "2021-10-5",
+      "reply": null,
+      "CommentImage": [],
+      "nickname": "test02",
+      "profileImageUrl": "https://dummyimage.com/50x50/7d7d7d/fff&text=user2",
+      "totalLiked": 0
+    },
+    {
+      "id": 109,
+      "productId": 1,
+      "rating": 4,
+      "commentText": "힐링이필요해~~~~",
+      "createdAt": "2021-10-5",
+      "reply": null,
+      "CommentImage": [
+        {
+          "id": 75,
+          "commentImageUrl": "https://images.unsplash.com/photo-1635873768589-37f70ed3c001?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80",
+          "commentId": 109
+        }
+      ],
+      "nickname": "test02",
+      "profileImageUrl": "https://dummyimage.com/50x50/7d7d7d/fff&text=user2",
+      "totalLiked": 0
+    },
+    {
+      "id": 93,
+      "productId": 1,
+      "rating": 4,
+      "commentText": "최고",
+      "createdAt": "2021-10-5",
+      "reply": null,
+      "CommentImage": [],
+      "nickname": "test02",
+      "profileImageUrl": "https://dummyimage.com/50x50/7d7d7d/fff&text=user2",
+      "totalLiked": 0
+    },
+    {
+      "id": 150,
+      "productId": 1,
+      "rating": 4,
+      "commentText": "피곤이 안 풀려요 ㅜ",
+      "createdAt": "2021-10-5",
+      "reply": null,
+      "CommentImage": [
+        {
+          "id": 88,
+          "commentImageUrl": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1169&q=80",
+          "commentId": 150
+        }
+      ],
+      "nickname": "test02",
+      "profileImageUrl": "https://dummyimage.com/50x50/7d7d7d/fff&text=user2",
+      "totalLiked": 0
     }
-  ]
+  ],
+  "palceOfProgress": "서울특별시 종로구 종로 51",
+  "gatheringPlace": "서울특별시 종로구 종로 51",
+  "expiredDay": 30,
+  "liked": 3
 }

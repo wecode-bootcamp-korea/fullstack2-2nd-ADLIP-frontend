@@ -23,7 +23,7 @@ function Map(props) {
         marker.setMap(map);
       }
     });
-  }, []);
+  }, [locationAddress]);
 
   return (
     <div
