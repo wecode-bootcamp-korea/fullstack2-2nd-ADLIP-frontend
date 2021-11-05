@@ -1,33 +1,33 @@
-/* eslint-disable */
 import React, { useState, useEffect } from 'react';
-import styled, { ThemeProvider } from 'styled-components';
-import {
-  NavLink,
-  useParams,
-  BrowserRouter,
-  Route,
-  Switch,
-} from 'react-router-dom';
-import theme from '../../styles/theme';
-import Card from './Card.js';
+import styled from 'styled-components';
+import { NavLink, BrowserRouter, Route, Switch } from 'react-router-dom';
 import ListAll from './ListAll.js';
 import ListPage from './ListPage.js';
 import axios from 'axios';
 import ListModal from './ListModal.js';
+import ListFilterWhere from './ListFilterWhere';
+import ListFilter from './ListFilter.js';
+import SubList from './SubList.js';
+import { API } from '../../API/api';
 
 function List({ match }) {
+  console.log('match.params.id!', match.params.id);
   useEffect(() => {
     axios
       .all([
+        axios.get(`${API}/category/1/2`),
+        axios.get(`${API}/category/${Number(match.params.id) + 1}`),
+        axios.get(`${API}/product`),
         axios.get('/data/List/title.json'),
         axios.get('/data/List/sub.json'),
-        axios.get('/data/List/card.json'),
       ])
       .then(
-        axios.spread((res1, res2, res3) => {
-          setMain([...res1.data]);
-          setSub([...res2.data]);
-          setProduct([...res3.data]);
+        axios.spread((res1, res2, res3, res4, res5) => {
+          setSubProduct(res1.data.data);
+          setProduct(res2.data.data);
+          setProductAll(res3.data.data);
+          setMain([...res4.data]);
+          setSub([...res5.data]);
         })
       )
       .catch(() => {
@@ -38,8 +38,16 @@ function List({ match }) {
   const [main, setMain] = useState([]);
   const [sub, setSub] = useState([]);
   const [product, setProduct] = useState([]);
-  const { id } = useParams();
+  const [subProduct, setSubProduct] = useState([]);
+  const [productAll, setProductAll] = useState([]);
+  const [title, setTitle] = useState([]);
 
+  const { id } = match.params;
+  console.log(main);
+  const test = event => {
+    console.log(event.target.innerText);
+    setTitle(event.target.innerText);
+  };
   return (
     <BrowserRouter>
       <Page>
@@ -52,28 +60,54 @@ function List({ match }) {
           <SubName to={`${match.url}`} key={id}>
             전체
           </SubName>
-          <SubName to={`${match.url}/1`} key={id}>
+          <SubName to={`${match.url}/1`} key={id} onClick={test}>
             {sub[id]?.sub_category_name_1}
           </SubName>
-          <SubName to={`${match.url}/2`} key={id}>
+          <SubName to={`${match.url}/2`} key={id} onClick={test}>
             {sub[id]?.sub_category_name_2}
           </SubName>
-          <SubName to={`${match.url}/3`} key={id}>
+          <SubName to={`${match.url}/3`} key={id} onClick={test}>
             {sub[id]?.sub_category_name_3}
           </SubName>
         </SubCategory>
+
         <Wrap>
-          <Button>언제</Button>
-          <Button>어디서</Button>
-          <Button>필터</Button>
+          <ListFilterWhere />
+          <ListFilter product={product} />
         </Wrap>
         <Switch>
           <Route
+            path='/category/:id/all'
+            render={() => (
+              <ListAll productAll={productAll} main={main} sub={sub} id={id} />
+            )}
+          />
+          <Route
+            path='/category/:id/:sub'
+            render={() => (
+              <SubList
+                subProduct={subProduct}
+                main={main}
+                sub={sub}
+                id={id}
+                title={title}
+              />
+            )}
+          />
+
+          <Route
             exact
             path='/category/:id'
-            render={() => <ListPage product={product} main={main} id={id} />}
+            render={() => (
+              <ListPage
+                product={product}
+                productAll={productAll}
+                main={main}
+                sub={sub}
+                id={id}
+              />
+            )}
           />
-          <Route path='/category/:id/all' component={ListAll} />
         </Switch>
       </Page>
     </BrowserRouter>
@@ -94,39 +128,28 @@ const MainCategory = styled.div`
 const Page = styled.div`
   width: 808px;
   margin: auto;
-  font-style: ${theme.fontStyle};
-  color: ${theme.blackColor};
+  font-style: 'Noto Sans KR', Helvetica, Arial, sans-serif;
+  color: #000000;
 `;
 
 const SubCategory = styled.div`
-  padding: 0 0 20px 20px;
-  height: 30px;
+  padding: 0 0 10px 20px;
+  height: 10px;
 `;
 
 const SubName = styled(NavLink)`
   padding-right: 20px;
   text-decoration: none;
   font-size: 13px;
-  color: ${theme.blackColor};
-  &.selected {
-    font-weight: 700;
-    color: #3397ff;
+  color: #000000;
+  &.active {
+    font-weight: bold;
+    color: #1187cf;
   }
 `;
 
 const Wrap = styled.div`
-  padding: 10px 0 80px 20px;
+  display: flex;
+  padding: 0 0 100px 10px;
   height: 81px;
-`;
-
-const Button = styled.button`
-  height: 38px;
-  margin-right: 20px;
-  padding: 11px 18px;
-  border: 1px solid #eeeeee;
-  border-radius: 5px;
-  background-color: ${theme.whiteColor};
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
 `;

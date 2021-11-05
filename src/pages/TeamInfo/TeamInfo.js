@@ -5,23 +5,19 @@ import Card from '../List/Card';
 
 export default function TeamInfo() {
   const [TeamUserData, setTeamUserData] = useState([]);
-
   useEffect(() => {
     fetch('/data/Main/teamUserData.json')
       .then(res => res.json())
       .then(data => setTeamUserData(data.data))
       .catch(console.log);
   }, []);
-
-  console.log(TeamUserData);
-
   return (
     <TeamInfoStyle>
       <TeamInfoFlexCenter>
-        <PageTitleStyle> 팀원 소개 📢</PageTitleStyle>
+        <PageTitleStyle> 팀원 소개 :확성기:</PageTitleStyle>
         <PageContentsGroupStyle>
           {TeamUserData?.map(user => {
-            return <Card paseValue={'userInfo'} data={user} />;
+            return <Card cardName={'userInfo'} data={user} />;
           })}
         </PageContentsGroupStyle>
       </TeamInfoFlexCenter>
