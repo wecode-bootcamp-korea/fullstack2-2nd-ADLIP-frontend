@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import Modal from 'styled-react-modal';
 import ModalImageSlider from './ModalImageSlider';
 
-function ReviewImages(props) {
-  const { images } = props;
+function ReviewImages({ images }) {
   const [isOpen, setIsOpen] = useState(false);
 
   function toggleModal() {

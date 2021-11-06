@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
@@ -6,27 +7,34 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { faThumbsUp } from '@fortawesome/free-regular-svg-icons';
-import { API } from '../../API/api';
+import { API_ENDPOINT } from '../../api';
 
-const SLIDERWIDTH = 732;
+const SLIDER_WIDTH = 732;
 
-function DetailCarousel(props) {
-  const { pathParameterId } = props;
+function DetailCarousel({ pathParameterId }) {
   const [reviews, setReviews] = useState([]);
+  const [totalCountOfComment, setTotalCountOfComment] = useState(0);
   const [position, setPosition] = useState(0);
   const dataForSlide = reviews?.filter(
     review => review.CommentImage.length !== 0
   );
   const slideLength = Math.ceil(dataForSlide?.length / 3);
+  // eslint-disable-next-line no-unused-vars
+  const [offset, setOffset] = useState(0);
 
   useEffect(() => {
     getImages();
   }, []);
 
   const getImages = () => {
-    fetch('/data/Comment/tempComments.json')
+    fetch(
+      `${API_ENDPOINT}/products/${pathParameterId}/comments?orderBy=latest&offset=${offset}`
+    )
       .then(res => res.json())
-      .then(res => setReviews(res.comment))
+      .then(res => {
+        setReviews(res.Comment);
+        setTotalCountOfComment(res.totalCountOfComment);
+      })
       .catch(console.log);
   };
 
@@ -66,7 +74,7 @@ function DetailCarousel(props) {
       <Slider
         style={{
           transform: `translateX(
-                ${position * -SLIDERWIDTH}px`,
+                ${position * -SLIDER_WIDTH}px`,
         }}
       >
         {dataForSlide.map(review => {
@@ -104,7 +112,7 @@ function DetailCarousel(props) {
       </Slider>
       <ReviewNumber>
         <StyledLink to={`/products/${pathParameterId}/comments?page=1`}>
-          <MoreReview>32개 후기 더 보기</MoreReview>
+          <MoreReview>{totalCountOfComment}개 후기 더 보기</MoreReview>
           <FontAwesomeIcon icon={faChevronRight} />
         </StyledLink>
       </ReviewNumber>
@@ -220,14 +228,14 @@ const NickName = styled.span`
 `;
 
 const ReviewText = styled.p`
-  font-size: 14px;
-  overflow: hidden;
-  text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
   word-wrap: break-word;
   line-height: 1.5em;
+  font-size: 14px;
+  overflow: hidden;
 `;
 
 const LikeBtn = styled.div`

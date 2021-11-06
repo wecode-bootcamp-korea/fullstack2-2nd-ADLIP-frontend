@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import Modal from 'styled-react-modal';
 import AddReviewModal from './AddReviewModal';
 
-function ReviewHandler(props) {
-  const { reviews, setReviews } = props;
+function ReviewHandler({ reviews, setReviews }) {
   const [isOpen, setIsOpen] = useState(false);
 
   function toggleModal() {
@@ -41,8 +40,8 @@ const HandlerWrapper = styled.div`
 const AddBtnWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
-  width: ${({ theme }) => theme.width};
   margin-top: 20px;
+  width: ${({ theme }) => theme.width};
 `;
 
 const AddBtn = styled.span`

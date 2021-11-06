@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 const MODALWIDTH = 600;
 
-function AddReviewModal(props) {
-  const { toggleModal, reviews, setReviews } = props;
+function AddReviewModal({ toggleModal, reviews, setReviews }) {
   const [newText, setNewText] = useState('');
   const [newRating, setNewRating] = useState(0);
   const textRef = useRef();

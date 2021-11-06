@@ -2,15 +2,13 @@ import React from 'react';
 import Pagination from 'react-js-pagination';
 import styled from 'styled-components';
 
-const Paging = props => {
-  const { page, handlePageChange, totalConutOfComment } = props;
-
+function Paging({ page, handlePageChange, totalCountOfComment }) {
   return (
     <Container>
       <Pagination
         activePage={page}
         itemsCountPerPage={10}
-        totalItemsCount={totalConutOfComment}
+        totalItemsCount={totalCountOfComment}
         pageRangeDisplayed={5}
         prevPageText={'<'}
         nextPageText={'>'}
@@ -18,7 +16,7 @@ const Paging = props => {
       />
     </Container>
   );
-};
+}
 
 export default Paging;
 
@@ -35,12 +33,11 @@ const Container = styled.div`
   }
 
   ul.pagination li {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
   }
 

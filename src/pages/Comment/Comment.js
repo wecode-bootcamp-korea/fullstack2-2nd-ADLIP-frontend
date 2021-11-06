@@ -1,52 +1,47 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router';
-import { useLocation } from 'react-router';
+import { useHistory, useLocation, useParams } from 'react-router';
 import CommentHeader from './Components/CommentHeader';
 import ReviewCard from './Components/ReviewCard';
 import Paging from './Components/Paging';
 import ReviewHandler from './Components/ReviewHandler';
-import { API } from '../../API/api';
+import { API_ENDPOINT } from '../../api';
 
 const LIMIT = 10;
 
-function Comment(props) {
+function Comment() {
   const history = useHistory();
   const location = useLocation();
-  console.log(location);
-  const { id: pathParameterId } = props.match.params;
+  const params = useParams();
+  const paramsId = params.id;
   const [reviews, setReviews] = useState([]);
-  const [totalConutOfComment, setTotalConutOfComment] = useState(0);
+  const [totalCountOfComment, setTotalCountOfComment] = useState(0);
   const [ratingAvg, setRatingAvg] = useState(0);
   const sortOptionData = [
     {
       id: 1,
       option: '최신순',
       isChecked: true,
+      orderBy: 'latest',
     },
     {
       id: 2,
       option: '평점 높은순',
       isChecked: false,
+      orderBy: 'ratingHigh',
     },
     {
       id: 3,
       option: '평점 낮은순',
       isChecked: false,
+      orderBy: 'ratingLow',
     },
   ];
   const [isSortOptionOpen, setIsSortOptionOpen] = useState(false);
   const [sortOptions, setSortOptions] = useState(sortOptionData);
   const [page, setPage] = useState(1);
-
-  const latest = sortOptions[0].isChecked;
-  const ratingHigh = sortOptions[1].isChecked;
-  const ratingLow = sortOptions[2].isChecked;
-
-  let order;
-  latest && (order = 'latest');
-  ratingHigh && (order = 'ratingHigh');
-  ratingLow && (order = 'ratingLow');
-
+  const [selectedSortOption] = sortOptions.filter(option => option.isChecked);
+  const order = selectedSortOption.orderBy;
   const query = `orderBy=${order}&offset=${(page - 1) * LIMIT}`;
 
   useEffect(() => {
@@ -54,13 +49,13 @@ function Comment(props) {
   }, []);
 
   useEffect(() => {
-    fetch(`${API}/products/${pathParameterId}/comments?${query}`)
+    fetch(`${API_ENDPOINT}/products/${paramsId}/comments?${query}`)
       .then(res => res.json())
       .then(res => {
         setReviews(res.Comment);
       })
       .catch(console.log);
-  }, [query, pathParameterId]);
+  }, [query, paramsId]);
 
   useEffect(() => {
     const newPageNumber = Number(location.search[location.search.length - 1]);
@@ -68,11 +63,13 @@ function Comment(props) {
   }, [location]);
 
   const getReviews = () => {
-    fetch(`${API}/products/${pathParameterId}/comments?orderBy=latest&offset=0`)
+    fetch(
+      `${API_ENDPOINT}/products/${paramsId}/comments?orderBy=latest&offset=0`
+    )
       .then(res => res.json())
       .then(res => {
         setReviews(res.Comment);
-        setTotalConutOfComment(res.totalConutOfComment);
+        setTotalCountOfComment(res.totalCountOfComment);
         setRatingAvg(res.ratingAvg);
       })
       .catch(console.log);
@@ -91,14 +88,14 @@ function Comment(props) {
     newSortOptions.forEach(option => (option.isChecked = false));
     newSortOptions[sortIndex].isChecked = true;
     setSortOptions(newSortOptions);
-    history.push(`/products/${pathParameterId}/comments?page=1`);
+    history.push(`/products/${paramsId}/comments?page=1`);
     window.scrollTo(0, 0);
     setIsSortOptionOpen(false);
   };
 
   const handlePageChange = page => {
     setPage(page);
-    history.push(`/products/${pathParameterId}/comments?page=${page}`);
+    history.push(`/products/${paramsId}/comments?page=${page}`);
     window.scrollTo(0, 0);
   };
 
@@ -117,7 +114,7 @@ function Comment(props) {
         setIsSortOptionOpen={setIsSortOptionOpen}
         sortOptions={sortOptions}
         changeSortOption={changeSortOption}
-        totalConutOfComment={totalConutOfComment}
+        totalCountOfComment={totalCountOfComment}
         ratingAvg={ratingAvg}
       />
       <ReviewCard
@@ -129,7 +126,7 @@ function Comment(props) {
       <Paging
         page={page}
         handlePageChange={handlePageChange}
-        totalConutOfComment={totalConutOfComment}
+        totalCountOfComment={totalCountOfComment}
       />
     </section>
   );

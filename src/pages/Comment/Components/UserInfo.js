@@ -1,38 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import Rating from './Rating';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 
-function UserInfo(props) {
-  const { review } = props;
-  const maxRating = 5;
-
-  const getRedStars = review => {
-    let redStars = [];
-    for (let i = 0; i < review.rating; i++) {
-      redStars.push(<FontAwesomeIcon key={i} icon={fasStar} />);
-    }
-    return redStars;
-  };
-
-  const getEmptyStars = review => {
-    let emptyStars = [];
-    for (let i = 0; i < maxRating - review.rating; i++) {
-      emptyStars.push(<FontAwesomeIcon key={i} icon={farStar} />);
-    }
-    return emptyStars;
-  };
-
+function UserInfo({ review }) {
   return (
     <UserInfoWrapper>
       <FontAwesomeIcon icon={faUserCircle} />
       <div>
         <NickName>{review.nickname}</NickName>
         <div>
-          {getRedStars(review)}
-          {getEmptyStars(review)}
+          <Rating rating={review.rating} />
           <CreatedTime>{review.createdAt}</CreatedTime>
         </div>
       </div>

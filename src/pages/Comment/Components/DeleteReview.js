@@ -3,9 +3,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
 
-function DeleteReview(props) {
-  const { review, deleteReview } = props;
-
+function DeleteReview({ review, deleteReview }) {
   return (
     <DeleteBtnWrapper>
       <DeleteBtn onClick={() => deleteReview(review.id)}>
@@ -37,8 +35,8 @@ const DeleteBtnWrapper = styled.div`
 const DeleteBtn = styled.p`
   display: flex;
   align-items: flex-end;
-  font-size: 10px;
   margin-right: 5px;
+  font-size: 10px;
   cursor: pointer;
 
   &:hover {
