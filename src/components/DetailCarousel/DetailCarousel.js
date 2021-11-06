@@ -24,7 +24,7 @@ function DetailCarousel(props) {
   }, []);
 
   const getImages = () => {
-    fetch(`${API}/products/${pathParameterId}`)
+    fetch('/data/Comment/tempComments.json')
       .then(res => res.json())
       .then(res => setReviews(res.comment))
       .catch(console.log);
@@ -103,8 +103,8 @@ function DetailCarousel(props) {
         })}
       </Slider>
       <ReviewNumber>
-        <StyledLink to={`/products/${pathParameterId}/comments`}>
-          <MoreReview>{reviews.length}개 후기 더 보기</MoreReview>
+        <StyledLink to={`/products/${pathParameterId}/comments?page=1`}>
+          <MoreReview>32개 후기 더 보기</MoreReview>
           <FontAwesomeIcon icon={faChevronRight} />
         </StyledLink>
       </ReviewNumber>
