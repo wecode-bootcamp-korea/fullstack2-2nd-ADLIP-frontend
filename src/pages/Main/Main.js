@@ -9,7 +9,7 @@ import axios from 'axios';
 import FirstModal from './FirstModal';
 import HambergerIconMenu from '../../components/HambergerIconMenu/HambergerIconMenu';
 import { API_ENDPOINT } from '../../api';
-import UserContext from '../../contexts/UserContext';
+import { UserContext } from '../../contexts';
 
 export default function Main() {
   const [mainPageCategoryData, setMainPageCategoryData] = useState([]);
@@ -29,7 +29,7 @@ export default function Main() {
     { name: 'newProduct', title: '신규상품⚡' },
     { name: 'includeRatingProduct', title: '위코드 X Adlip✌💛' },
   ];
-  const { token, setToken } = useContext(UserContext);
+  const { token } = useContext(UserContext);
 
   useEffect(() => {
     totalData();
@@ -96,7 +96,7 @@ export default function Main() {
         <BannerLinkStyle to='/' ref={multyRef.bottomRef}>
           <BannerImgStyle />
         </BannerLinkStyle>
-        {token ? null : <FirstModal></FirstModal>}
+        {token || localStorage.getItem('token') ? null : <FirstModal />}
         <HambergerIconMenu
           {...{ isPositionMenu }}
           changeStateEventShow={changeStateEventShow}

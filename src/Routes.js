@@ -12,6 +12,7 @@ import Category from './pages/Category/Category';
 import Comment from './pages/Comment/Comment';
 import TeamInfo from './pages/TeamInfo/TeamInfo';
 import Feed from './pages/Feed/Feed';
+import PublicRoute from './PublicRoute';
 
 function Router() {
   return (
@@ -20,8 +21,8 @@ function Router() {
       <Nav />
       <Switch>
         <Route exact path='/teamInfo' component={TeamInfo} />
-        <Route exact path='/login' component={LogIn} />
-        <Route exact path='/signup' component={SignUp} />
+        <PublicRoute restricted exact path='/login' component={LogIn} />
+        <PublicRoute restricted exact path='/signup' component={SignUp} />
         <Route exact path='/category' component={Category} />
         <Route path='/category/:id' component={List} />
         <Route exact path='/products/:id' component={Detail} />

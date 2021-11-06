@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
+import { UserContext } from '../../contexts';
+import { API_ENDPOINT } from '../../api';
 
 function AdlipLogIn() {
   const history = useHistory();
@@ -19,9 +21,11 @@ function AdlipLogIn() {
 
   const isValidEmail = user.email.match(validEmail) || user.email === '';
 
+  const { setToken } = useContext(UserContext);
+
   function login(e) {
     e.preventDefault();
-    fetch('http://localhost:8080/user/signin', {
+    fetch(`${API_ENDPOINT}/user/signin`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -33,8 +37,11 @@ function AdlipLogIn() {
     })
       .then(res => res.json())
       .then(res => {
-        if (res.token) {
-          localStorage.setItem('token', res.token);
+        const { token: adlipToken, socialPlatform: userSocialPlatform } = res;
+        if (adlipToken) {
+          setToken(adlipToken);
+          localStorage.setItem('token', adlipToken);
+          localStorage.setItem('socialPlatform', userSocialPlatform);
           alert(res.message);
           history.push('/');
         } else {

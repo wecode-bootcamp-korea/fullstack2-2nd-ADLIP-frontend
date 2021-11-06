@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
+import { API_ENDPOINT } from '../../api';
 
 function AdlipSignUp({ isHost }) {
   const history = useHistory();
@@ -53,7 +54,7 @@ function AdlipSignUp({ isHost }) {
 
   function signup(e) {
     e.preventDefault();
-    fetch('http://localhost:8080/user/signup', {
+    fetch(`${API_ENDPOINT}/user/signup`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
