@@ -1,0 +1,103 @@
+{
+  "message": "GET_PRODUCTS",
+  "data": [
+    {
+      "id": 12,
+      "mainCategoryId": 1,
+      "subCategoryId": 3,
+      "mainImageUrl": "https://t1.daumcdn.net/blogfile/fs4/10_blog_2007_08_31_15_39_46d7b79fd6c1c?x-content-disposition=inline&filename=%EB%8F%8C%ED%95%98%EB%A5%B4%EB%B0%A92.JPG",
+      "summary": "슉..슈슈슉..슉..ㅅ",
+      "name": "[제주] 제주 돌하르방 축제",
+      "price": "120000",
+      "discountRate": null,
+      "isNew": true,
+      "isOnly": true,
+      "createdAt": "2021-11-05T10:42:24.638Z",
+      "rating": 4.2
+    },
+    {
+      "id": 17,
+      "mainCategoryId": 1,
+      "subCategoryId": 1,
+      "mainImageUrl": "https://images.unsplash.com/photo-1610997999027-681b320cee66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3387&q=80",
+      "summary": "#해외여행은 아니지만 모른척 plz",
+      "name": "[제주] 애드립 제주 여행 가이드 (예약 가능)",
+      "price": "99000",
+      "discountRate": "0.2",
+      "isNew": true,
+      "isOnly": true,
+      "createdAt": "2021-11-05T10:42:24.638Z",
+      "rating": 4.162162162162162
+    },
+    {
+      "id": 5,
+      "mainCategoryId": 1,
+      "subCategoryId": 3,
+      "mainImageUrl": "https://images.unsplash.com/photo-1613186448181-7ba25cc0ff2a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3387&q=80",
+      "summary": "#제주 #돌하르방 #성산일출봉",
+      "name": "[제주] 마음이 편해지는 제주여행",
+      "price": "50000",
+      "discountRate": "0.5",
+      "isNew": false,
+      "isOnly": false,
+      "createdAt": "2021-11-05T10:42:24.617Z",
+      "rating": 4.139423076923077
+    },
+    {
+      "id": 28,
+      "mainCategoryId": 1,
+      "subCategoryId": 3,
+      "mainImageUrl": "https://images.unsplash.com/photo-1550388342-b3fd986e4e67?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80",
+      "summary": "#흑돼지 #서귀포 #해물라면",
+      "name": "[제주] 제주도 가서 흑돼지 먹기",
+      "price": "280000",
+      "discountRate": "0.5",
+      "isNew": true,
+      "isOnly": true,
+      "createdAt": "2021-11-05T10:42:24.632Z",
+      "rating": 4.052941176470588
+    },
+    {
+      "id": 19,
+      "mainCategoryId": 1,
+      "subCategoryId": 3,
+      "mainImageUrl": "https://images.unsplash.com/photo-1628164220670-28617d94df3a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3024&q=80",
+      "summary": "걸으면 걸을 수록 즐거운",
+      "name": "[제주] 제주 올레길 걷기",
+      "price": "190000",
+      "discountRate": "0.1",
+      "isNew": false,
+      "isOnly": false,
+      "createdAt": "2021-11-05T10:42:24.631Z",
+      "rating": 3.9144144144144146
+    },
+    {
+      "id": 10,
+      "mainCategoryId": 1,
+      "subCategoryId": 3,
+      "mainImageUrl": "https://images.unsplash.com/photo-1602199926649-2e5e447bab97?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3135&q=80",
+      "summary": "해녀, 어렵지 않아요",
+      "name": "[제주, 해녀] 해녀체험",
+      "price": "100000",
+      "discountRate": "0.1",
+      "isNew": false,
+      "isOnly": false,
+      "createdAt": "2021-11-05T10:42:24.618Z",
+      "rating": 0
+    },
+    {
+      "id": 53,
+      "mainCategoryId": 1,
+      "subCategoryId": 3,
+      "mainImageUrl": "https://images.unsplash.com/photo-1579169326371-ccb4e63f7889?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3387&q=80",
+      "summary": "#귤 #천애향 #한라봉",
+      "name": "제주도에서 맛보는 귤맛 뀰맛!",
+      "price": "200000",
+      "discountRate": "0.2",
+      "isNew": true,
+      "isOnly": true,
+      "createdAt": "2021-11-05T10:42:24.641Z",
+      "rating": 0
+    }
+  ]
+}

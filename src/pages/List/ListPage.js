@@ -8,7 +8,6 @@ function ListPage(props, match) {
   let id = props.id;
 
   const product = props.product;
-  console.log(product);
 
   const productAll = props.productAll;
   const mainTitle = props.main[id]?.category_name;

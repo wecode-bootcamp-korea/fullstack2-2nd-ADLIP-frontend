@@ -8,8 +8,6 @@ import { API } from '../../API/api';
 function SubList(props) {
   const { id: newId, sub: Sub } = useParams();
 
-  console.log(newId, 'aa', Sub);
-
   useEffect(() => {
     axios
       .all([axios.get(`${API}/category/${Number(newId) + 1}/${Sub}`)])

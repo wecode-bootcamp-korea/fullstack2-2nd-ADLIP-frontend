@@ -14,8 +14,8 @@ function DetailCarousel(props) {
   const { pathParameterId } = props;
   const [reviews, setReviews] = useState([]);
   const [position, setPosition] = useState(0);
-  const dataForSlide = reviews.filter(
-    review => review.CommentImage?.length !== 0
+  const dataForSlide = reviews?.filter(
+    review => review.CommentImage.length !== 0
   );
   const slideLength = Math.ceil(dataForSlide?.length / 3);
 

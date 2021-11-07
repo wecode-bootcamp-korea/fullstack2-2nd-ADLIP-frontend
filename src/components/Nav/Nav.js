@@ -23,7 +23,7 @@ export default function Nav() {
 
   const listPageMove = deliverData => {
     history.push({
-      pathname: `/category/1`,
+      pathname: `/category/${deliverData}/searchAll`,
       state: deliverData,
     });
   };
@@ -51,8 +51,9 @@ export default function Nav() {
   };
 
   const pushInputValueAtMotal = e => {
-    listPageMove(searchContent);
     setSearchContent(e.target.innerText);
+    console.log(searchContent);
+    listPageMove(searchContent);
     setSearchBoolean(false);
   };
 
@@ -70,7 +71,13 @@ export default function Nav() {
     <NavStyle onSubmit={searchEnterEvent}>
       <NavFlexCenter>
         <NavSectionFlexStyle>
-          <CategoryMenuStyle to='/category'>
+          <CategoryMenuStyle
+            to='/category'
+            onClick={() => {
+              changeSearchBoxBoderColor(false);
+              setSearchContent(' ');
+            }}
+          >
             <FontAwesomeIcon className='hambergerIcon isHover' icon={faBars} />
             <CategoryTilteStyle
               className='isHover'
@@ -82,7 +89,13 @@ export default function Nav() {
             </CategoryTilteStyle>
           </CategoryMenuStyle>
           <BoundaryCategoryLogo />
-          <AdlipLogoLinkto to='/'>
+          <AdlipLogoLinkto
+            to='/'
+            onClick={() => {
+              changeSearchBoxBoderColor(false);
+              setSearchContent(' ');
+            }}
+          >
             <AdlipLogoImgStyle />
           </AdlipLogoLinkto>
           <SearchBoxStyle
