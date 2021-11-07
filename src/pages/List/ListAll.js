@@ -18,6 +18,7 @@ function ListAll(props) {
 
   const indexOfLast = page * postPerPage;
   const indexOfFirst = indexOfLast - postPerPage;
+
   function currentPosts(tmp) {
     let currentPosts = 0;
     currentPosts = tmp.slice(indexOfFirst, indexOfLast);

@@ -19,6 +19,13 @@ import { API } from '../../API/api';
 
 function List({ match }) {
   const { id: newId } = useParams();
+  const [main, setMain] = useState([]);
+  const [sub, setSub] = useState([]);
+  const [product, setProduct] = useState([]);
+  const [subProduct, setSubProduct] = useState([]);
+  const [productAll, setProductAll] = useState([]);
+  const [searchAll, setSearchAll] = useState([]);
+  const [title, setTitle] = useState([]);
 
   useEffect(() => {
     axios
@@ -31,7 +38,6 @@ function List({ match }) {
       ])
       .then(
         axios.spread((res1, res2, res3, res4, res5) => {
-          console.log(res5);
           setSubProduct(res1.data.data);
           setProduct(res2.data.data);
           setProductAll(res3.data.data);
@@ -44,12 +50,14 @@ function List({ match }) {
       });
   }, []);
 
-  const [main, setMain] = useState([]);
-  const [sub, setSub] = useState([]);
-  const [product, setProduct] = useState([]);
-  const [subProduct, setSubProduct] = useState([]);
-  const [productAll, setProductAll] = useState([]);
-  const [title, setTitle] = useState([]);
+  useEffect(() => {
+    fetch(`${API}/search/${match.params.id}/all`)
+      .then(res => res.json())
+      .then(res => {
+        console.log(res);
+        res.data === [] ? setSearchAll([]) : setSearchAll(res.data);
+      });
+  }, [setSearchAll]);
 
   let { path, url } = useRouteMatch();
 
@@ -58,8 +66,7 @@ function List({ match }) {
   const test = event => {
     setTitle(event.target.innerText);
   };
-  // const subId = product.mainCategoriesProductsByRating[0].subCategoryId;
-  console.log(sub, 'SUB');
+
   return (
     <BrowserRouter>
       <Page>
@@ -85,11 +92,18 @@ function List({ match }) {
         </Wrap>
         <Switch>
           <Route
+            path={`${path}/searchAll`}
+            render={() => (
+              <ListAll productAll={searchAll} main={main} sub={sub} id={id} />
+            )}
+          />
+          <Route
             path={`${path}/all`}
             render={() => (
               <ListAll productAll={productAll} main={main} sub={sub} id={id} />
             )}
           />
+
           <Route
             path={`${path}/:sub`}
             render={() => (
