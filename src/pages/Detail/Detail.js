@@ -43,7 +43,7 @@ export default function Detail(props) {
 
     const getRelatedList = async () => {
       try {
-        await fetch(`http://localhost:8080/product/${mainId}/${subId}`, {
+        await fetch(`http://localhost:8080/product/1/1`, {
           headers: {
             'Content-Type': 'application/json',
             Accept: 'application/json',
@@ -136,7 +136,7 @@ export default function Detail(props) {
             <DescriptionWrapper>
               <ProductDescription>
                 <ReviewContainer>
-                  <DetailCarousel pathParameterId={id} />
+                  <DetailCarousel pathParameterId={pathParameterId} />
                 </ReviewContainer>
                 <HeaderTitle>서비스 소개</HeaderTitle>
 

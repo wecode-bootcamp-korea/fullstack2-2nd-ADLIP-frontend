@@ -68,7 +68,7 @@ function List({ match }) {
   };
 
   return (
-    <BrowserRouter>
+    <>
       <Page>
         <MainCategory>
           {main[id]?.category_name}
@@ -132,7 +132,7 @@ function List({ match }) {
           />
         </Switch>
       </Page>
-    </BrowserRouter>
+    </>
   );
 }
 

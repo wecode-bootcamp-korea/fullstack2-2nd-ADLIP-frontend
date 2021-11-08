@@ -1,5 +1,5 @@
 {
-  "data": [
+  "comment": [
     {
       "id": 1,
       "nickname": "젤리파워",
@@ -97,17 +97,17 @@
       "CommentImage": [
         {
           "id": 1,
-          "img": "https://images.unsplash.com/photo-1624651208388-f8726eace8f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1548&q=80",
+          "commentImageUrl": "https://images.unsplash.com/photo-1624651208388-f8726eace8f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1548&q=80",
           "name": "요가"
         },
         {
           "id": 2,
-          "img": "https://images.unsplash.com/photo-1623657659760-235e10639d8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
+          "commentImageUrl": "https://images.unsplash.com/photo-1623657659760-235e10639d8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
           "name": "요가"
         },
         {
           "id": 3,
-          "img": "https://images.unsplash.com/photo-1591311630200-ffa9120a540f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1620&q=80",
+          "commentImageUrl": "https://images.unsplash.com/photo-1591311630200-ffa9120a540f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1620&q=80",
           "name": "요가"
         }
       ],
@@ -134,24 +134,6 @@
         }
       ],
       "totalLiked": 0
-    },
-    {
-      "id": 7,
-      "nickname": "ys1703",
-      "rating": 4,
-      "commentText": "선생님이 정말 잘 가르쳐주신 수업이어서 추천 드립니다\n평소 허리와 골반에 통증이 있어서 신청했는데\n전문성 있는 선생님께 통증 원인과 교정 자세 등 아주 세세하게 배운 시간 이었네요\n요가 초보자나 남성분들도 부담없이 신청 하셔도 좋은 수업 이었습니다 감사합니다",
-      "createdAt": "2021. 10. 26 오전 10:34:15",
-      "CommentImage": [
-        {
-          "id": 1,
-          "commentImageUrl": "https://images.unsplash.com/photo-1562088287-bde35a1ea917?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2592&q=80"
-        },
-        {
-          "id": 2,
-          "commentImageUrl": "https://images.unsplash.com/photo-1562088287-6d37803aca2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80"
-        }
-      ],
-      "totalLiked": 1
     },
     {
       "id": 8,
@@ -210,17 +192,17 @@
       "CommentImage": [
         {
           "id": 1,
-          "img": "https://images.unsplash.com/photo-1624651208388-f8726eace8f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1548&q=80",
+          "commentImageUrl": "https://images.unsplash.com/photo-1624651208388-f8726eace8f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1548&q=80",
           "name": "요가"
         },
         {
           "id": 2,
-          "img": "https://images.unsplash.com/photo-1623657659760-235e10639d8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
+          "commentImageUrl": "https://images.unsplash.com/photo-1623657659760-235e10639d8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
           "name": "요가"
         },
         {
           "id": 3,
-          "img": "https://images.unsplash.com/photo-1591311630200-ffa9120a540f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1620&q=80",
+          "commentImageUrl": "https://images.unsplash.com/photo-1591311630200-ffa9120a540f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1620&q=80",
           "name": "요가"
         }
       ],

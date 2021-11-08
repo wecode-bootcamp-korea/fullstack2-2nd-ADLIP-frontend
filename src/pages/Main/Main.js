@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import mixin from '../../styles/mixins';
@@ -9,6 +9,7 @@ import axios from 'axios';
 import FirstModal from './FirstModal';
 import HambergerIconMenu from '../../components/HambergerIconMenu/HambergerIconMenu';
 import { API_ENDPOINT } from '../../api';
+import { UserContext } from '../../Routes';
 
 export default function Main() {
   const [mainPageCategoryData, setMainPageCategoryData] = useState([]);
@@ -28,6 +29,7 @@ export default function Main() {
     { name: 'newProduct', title: '신규상품⚡' },
     { name: 'includeRatingProduct', title: '위코드 X Adlip✌💛' },
   ];
+  const { token, setToken } = useContext(UserContext);
 
   useEffect(() => {
     totalData();
@@ -94,7 +96,7 @@ export default function Main() {
         <BannerLinkStyle to='/' ref={multyRef.bottomRef}>
           <BannerImgStyle />
         </BannerLinkStyle>
-        <FirstModal></FirstModal>
+        {token ? null : <FirstModal></FirstModal>}
         <HambergerIconMenu
           {...{ isPositionMenu }}
           changeStateEventShow={changeStateEventShow}
