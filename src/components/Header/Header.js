@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import mixinStyle from '../../styles/mixins';
 import { useHistory } from 'react-router-dom';
-import { UserContext } from '../../Routes';
+import UserContext from '../../contexts/UserContext';
 
 export default function Header() {
   const history = useHistory();

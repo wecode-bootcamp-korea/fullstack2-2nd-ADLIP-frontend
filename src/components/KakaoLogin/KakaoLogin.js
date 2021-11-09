@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 import dotenv from 'dotenv';
-import { UserContext } from '../../Routes';
+import UserContext from '../../contexts/UserContext';
 
 dotenv.config();
 
