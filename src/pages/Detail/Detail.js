@@ -417,6 +417,7 @@ export const FloatingBarBackground = styled.nav`
   height: 92px;
   background-color: white;
   box-shadow: rgb(0 0 0 / 8%) 0px -10px 30px -10px;
+  z-index: 3;
 `;
 
 export const FloatingBarWrapper = styled.div`
