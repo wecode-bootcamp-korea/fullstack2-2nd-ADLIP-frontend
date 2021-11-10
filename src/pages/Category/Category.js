@@ -2,24 +2,25 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import mixinStyle from '../../styles/mixins';
-// import { API_ENDPOINT } from '../../api';
+import { API_ENDPOINT } from '../../api';
 
 export default function Category() {
   const [mainCategoryData, setMainCategoryData] = useState([]);
 
   useEffect(() => {
-    fetch('/data/Main/mainCategory.json')
+    fetch(`${API_ENDPOINT}/category`)
       .then(res => res.json())
       .then(res => setMainCategoryData(res.data))
       .catch(console.log);
   }, []);
 
+  console.log(mainCategoryData);
   return (
     <CategoryStyle>
       <CategoryFlexCenter>
         <PageTitleStyle>카테고리</PageTitleStyle>
         <div className='categoryListFlex'>
-          {mainCategoryData.map(category => {
+          {mainCategoryData?.map(category => {
             return (
               <CategoryLinkStyle
                 to={`./category/${category.id - 1}`}

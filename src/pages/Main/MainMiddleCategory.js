@@ -17,7 +17,7 @@ export default function MainMiddleCategory(props) {
         {mainPageCategoryData?.map(category => {
           return (
             <MainPageCategoryLinkStyle
-              to={`/category/${category.mainId}/${category.subId}`}
+              to={`/category/${category.mainId}/${category.subId || ''}`}
               key={category.id}
               align='center'
               direction='column'

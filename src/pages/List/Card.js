@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router';
+import mixin from '../../styles/mixins';
 
 function Card(props) {
   const {
@@ -79,6 +80,8 @@ function Card(props) {
 
 export default Card;
 
+const { commonHoverStyle } = mixin;
+
 const CardWrap = styled.div`
   display: flex;
   flex-direction: column;
@@ -86,6 +89,7 @@ const CardWrap = styled.div`
   width: 180px;
   height: 315px;
   margin-left: 20px;
+  ${commonHoverStyle()}
 
   .fa-star {
     margin-right: 2px;

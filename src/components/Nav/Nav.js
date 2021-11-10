@@ -51,9 +51,8 @@ export default function Nav() {
   };
 
   const pushInputValueAtMotal = e => {
+    listPageMove(e.target.innerText);
     setSearchContent(e.target.innerText);
-    console.log(searchContent);
-    listPageMove(searchContent);
     setSearchBoolean(false);
   };
 

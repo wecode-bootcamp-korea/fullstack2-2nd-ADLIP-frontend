@@ -2,35 +2,35 @@
   "category": [
     {
       "id": 1,
-      "mainId": 1,
+      "mainId": 0,
       "subId": 1,
       "name": "국내여행",
       "url": "https://ifh.cc/g/IRF2qE.png"
     },
     {
       "id": 2,
-      "mainId": 3,
-      "subId": 1,
+      "mainId": 2,
+      "subId": 7,
       "name": "술",
       "url": "https://ifh.cc/g/RJj1pB.png"
     },
     {
       "id": 3,
-      "mainId": 4,
-      "subId": 1,
+      "mainId": 3,
+      "subId": 10,
       "name": "음악",
       "url": "https://ifh.cc/g/EP8VLn.png"
     },
     {
       "id": 4,
-      "mainId": 3,
-      "subId": 2,
+      "mainId": 2,
+      "subId": 8,
       "name": "스터디",
       "url": "https://ifh.cc/g/bvaFuz.png"
     },
     {
       "id": 5,
-      "mainId": 2,
+      "mainId": 1,
       "name": "운동",
       "url": "https://ifh.cc/g/powy9C.png"
     }
