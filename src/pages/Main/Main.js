@@ -9,7 +9,7 @@ import axios from 'axios';
 import FirstModal from './FirstModal';
 import HambergerIconMenu from '../../components/HambergerIconMenu/HambergerIconMenu';
 import { API_ENDPOINT } from '../../api';
-import { UserContext } from '../../Routes';
+import UserContext from '../../contexts/UserContext';
 
 export default function Main() {
   const [mainPageCategoryData, setMainPageCategoryData] = useState([]);

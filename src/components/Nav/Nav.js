@@ -62,9 +62,9 @@ export default function Nav() {
   };
 
   const navIconImg = [
-    { id: 1, name: '피드', img: faCommentAlt },
-    { id: 2, name: '저장', img: faBookmark },
-    { id: 3, name: '마이', img: faUser },
+    { id: 1, name: '피드', img: faCommentAlt, link: '/feed' },
+    { id: 2, name: '저장', img: faBookmark, link: '/' },
+    { id: 3, name: '마이', img: faUser, link: '/' },
   ];
 
   return (
@@ -123,13 +123,15 @@ export default function Nav() {
           {navIconImg.map(icon => {
             return (
               <NavLeftIconStyle key={icon.id}>
-                <FontAwesomeIcon
-                  className='leftTopIconStyle isHover'
-                  icon={icon.img}
-                />
-                <NavLeftIconTextStyle className='isHover'>
-                  {icon.name}
-                </NavLeftIconTextStyle>
+                <StyledLink to={`${icon.link}`}>
+                  <FontAwesomeIcon
+                    className='leftTopIconStyle isHover'
+                    icon={icon.img}
+                  />
+                  <NavLeftIconTextStyle className='isHover'>
+                    {icon.name}
+                  </NavLeftIconTextStyle>
+                </StyledLink>
               </NavLeftIconStyle>
             );
           })}
@@ -268,4 +270,8 @@ const NavLeftIconStyle = styled.div`
 const NavLeftIconTextStyle = styled.p`
   ${marginStyleGroup('5px 0 0 0')}
   ${fontStyleGroup('10px', colorStyleGroup.navColor)}
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
 `;
