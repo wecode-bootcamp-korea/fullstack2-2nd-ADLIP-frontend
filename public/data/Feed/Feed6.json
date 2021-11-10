@@ -1,0 +1,116 @@
+{
+  "comment": [
+    {
+      "id": 31,
+      "productId": 14,
+      "name": "[서울, 종로] 밴드 일일 체험",
+      "nickname": "김휘민",
+      "rating": 5,
+      "commentText": "친구들이랑 좋은 추억 쌓고 왔네요!",
+      "createdAt": "2021-10-10",
+      "CommentImage": [
+        {
+          "id": 1,
+          "commentImageUrl": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80"
+        }
+      ],
+      "totalLiked": 0
+    },
+    {
+      "id": 32,
+      "productId": 9,
+      "name": "가족과 함께 자전거 어떠세요?",
+      "nickname": "김윤진",
+      "rating": 5,
+      "commentText": "친구들이랑 좋은 추억 쌓고 왔네요!",
+      "createdAt": "2021-10-9",
+      "CommentImage": [
+        {
+          "id": 1,
+          "commentImageUrl": "https://images.unsplash.com/photo-1614715414627-c5806d69b7fd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=872&q=80"
+        },
+        {
+          "id": 2,
+          "commentImageUrl": "https://images.unsplash.com/photo-1484920274317-87885fcbc504?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2064&q=80"
+        },
+        {
+          "id": 3,
+          "commentImageUrl": "https://images.unsplash.com/photo-1624821716937-b29c5fb95dd8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80"
+        }
+      ],
+      "totalLiked": 0
+    },
+    {
+      "id": 33,
+      "productId": 31,
+      "name": "서울여행 가보자",
+      "nickname": "성지수",
+      "rating": 5,
+      "commentText": "여행지는 마치 단종의 슬픔을 따라가는 역사투어로 구성되어 있네요🎈이 청명한 날씨 무엇👍 운전기사님 너무 편안하게 운전해 주시고, 캡틴은 마치 10년 동안 가이드 하신 것처럼 깔끔하게 안내해주셨습니다👏 새벽에 졸린 눈 비비고 나서길 잘했다는 생각이 들게 하는 프립버스🚐 가을이 오기 직전의 영월은 싱그러우면서 산뜻하네요⛰ 여행 오신 대원들도 기분이 좋아서 시간약속도 칼같이⏰ 눈살 찌푸릴 트러블 하나 없이 무사히 서울로 복귀합니다. 애드립버스 흥해라🙏",
+      "createdAt": "2021-10-8",
+      "CommentImage": [
+        {
+          "id": 1,
+          "commentImageUrl": "https://images.unsplash.com/photo-1518792260489-e32824ef0bc8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80"
+        }
+      ],
+      "totalLiked": 0
+    },
+    {
+      "id": 34,
+      "productId": 56,
+      "name": "라이딩라이딩무엇을타볼까?",
+      "nickname": "이소헌",
+      "rating": 4,
+      "commentText": "친구랑 저랑 이번이 마지막이다 하는 비장한 각오로 갔어요. 쫄보+운동신경 없어서 진짜 걱정 많이 했는데 수업 끝나갈때쯤 되니 자전거를 타고있었어요..! 처음에 균형잡기 할때도 너무 안돼서 이렇게 영원히 못타는건가 했는데 선생님이 계속 잘한다 해주시고 체계적으로 잘 가르쳐 주셔서 저희 둘다 공원 한바퀴 돌 수 있게 되었어요. 친구들한테 배울땐 그냥 몇번 넘어져보면 돼~ 라고 하니까 무서워서 제대로 타보지도 못했는데 기초부터 천천히 알려주셔서 한번도 안 넘어지고 안전하게 배울 수 있었습니다ㅎㅎ 감사해요~~!",
+      "createdAt": "2021-10-7",
+      "CommentImage": [
+        {
+          "id": 1,
+          "commentImageUrl": "https://images.unsplash.com/photo-1520323376666-640158c146df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1854&q=80"
+        }
+      ],
+      "totalLiked": 0
+    },
+    {
+      "id": 35,
+      "productId": 1,
+      "name": "자세교정 특화 | Adlip Gym (예약 가능)",
+      "nickname": "이장현",
+      "rating": 5,
+      "commentText": "살면서 꾸준히 운동을 해본적이 없는데 선생님 만나서 요가 처음해보고 근 두달동안 해보고 있어요!! 맨처음에는 이게 몸인가 싶을정도로 엉망이었는데🤦🏻‍♀️🚮 수년간의 공시+고시공부에 스트레스를 음주+폭식으로 풀었거든요.... ㅠㅠ 지금은 많이 좋아졌답니다😆 피부도 좋아지고 어깨도 펴지고 목도 생겼...ㅋㅋㅋㅋㅋㅋㅋ 다리부종도 많이 좋아지구요!! 슬랙스 종아리부분이 헐렁헐렁해졌어요!! 오늘 골반교정시간에 왼쪽 골반이 엄청 뻐근한 기분을 느껴서 뿌듯하네요 아직 멀었지만 완벽하게 올바른 자세를 만들때까지 계속 해보겠습니당 차 감사하고 팩도 잘쓰겠습니당!!! 좋은 주말 보내세요🧘🏻‍♀️💦",
+      "createdAt": "2021-10-6",
+      "CommentImage": [
+        {
+          "id": 1,
+          "commentImageUrl": "https://images.unsplash.com/photo-1597361767895-4c85305e54d3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1764&q=80"
+        }
+      ],
+      "totalLiked": 0
+    },
+    {
+      "id": 36,
+      "productId": 39,
+      "name": "이색운동 배우기",
+      "nickname": "김관희",
+      "rating": 5,
+      "commentText": "러닝과 크로스핏을 좋아합니다. 보통 아침이나 저녁에 운동을 꼭 하는 편입니다. 제주도에 와서는 정적이고 나를 정리하는 운동을 하고 싶어 이 클래스를 신청했습니다. 일단 숙소가 서귀포 근처에 있어서 매우 가까웠습니다. 결론만 이야기하자면 매우 쉬운 자세로 진행됩니다. 땀은 조금 나지만 온몸이 전체적으로 시원하고 마음도 차분해지는 애드립입니다.",
+      "createdAt": "2021-10-5",
+      "CommentImage": [
+        {
+          "id": 1,
+          "commentImageUrl": "https://images.unsplash.com/photo-1569074187119-c87815b476da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1450&q=80"
+        },
+        {
+          "id": 2,
+          "commentImageUrl": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80"
+        },
+        {
+          "id": 3,
+          "commentImageUrl": "https://images.unsplash.com/photo-1607962837359-5e7e89f86776?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80"
+        }
+      ],
+      "totalLiked": 0
+    }
+  ]
+}

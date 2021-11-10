@@ -18,7 +18,7 @@ function FeedHeaderModal() {
       </ModalBodyText>
       <ModalBodyImage
         src='https://images.unsplash.com/photo-1595588982209-5c45ceb4f350?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGNocmlzdG1hc3xlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60'
-        alt='peopel'
+        alt='people'
       />
     </FeedHeaderModalWrapper>
   );
@@ -41,7 +41,7 @@ const HeaderTitle = styled.h1`
   font-weight: 700;
 `;
 
-const ModalBodyText = styled.p`
+const ModalBodyText = styled.div`
   height: 150px;
   padding: 20px 20px;
   font-size: 16px;

@@ -35,12 +35,12 @@ const FeedCardWrapper = styled.div`
   padding: 30px 20px;
   width: 382px;
 
-  :nth-child(odd) {
+  :nth-child(even) {
     border-right: 1px solid rgba(1, 1, 1, 0.1);
     border-bottom: 1px solid rgba(1, 1, 1, 0.1);
   }
 
-  :nth-child(even) {
+  :nth-child(odd) {
     border-bottom: 1px solid rgba(1, 1, 1, 0.1);
   }
 `;
