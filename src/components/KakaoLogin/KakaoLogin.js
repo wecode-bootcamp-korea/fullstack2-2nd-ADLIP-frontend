@@ -1,10 +1,8 @@
 import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
-import dotenv from 'dotenv';
-import UserContext from '../../contexts/UserContext';
-
-dotenv.config();
+import { UserContext } from '../../contexts';
+import { API_ENDPOINT } from '../../api';
 
 window.Kakao.init(process.env.REACT_APP_KAKAO_KEY);
 
@@ -28,7 +26,7 @@ function Kakao({ isHost }) {
     Kakao.Auth.login({
       scope: 'account_email, profile_image, profile_nickname',
       success: function (authObj) {
-        fetch('http://localhost:8080/user/kakao', {
+        fetch(`${API_ENDPOINT}/user/kakao`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -38,9 +36,12 @@ function Kakao({ isHost }) {
         })
           .then(res => res.json())
           .then(res => {
-            const adlipToken = res.token;
+            const { token: adlipToken, socialPlatform: userSocialPlatform } =
+              res;
             if (adlipToken) {
               setToken(adlipToken);
+              localStorage.setItem('token', adlipToken);
+              localStorage.setItem('socialPlatform', userSocialPlatform);
               alert(res.message);
               history.push('/');
             } else {
