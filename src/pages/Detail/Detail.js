@@ -9,10 +9,7 @@ import CommonCardList from '../List/CommonCardList';
 import styled from 'styled-components';
 import { useParams, useLocation } from 'react-router';
 
-export default function Detail(props) {
-  const { pathParameterId } = props.match.params.id;
-  console.log('<<<<<<<<');
-  console.log(props.match.params.id);
+export default function Detail() {
   const [detailData, setDetailData] = useState([]);
   const [relatedListData, setRelatedListData] = useState([]);
   const [buttonToTop, setButtonToTop] = useState(false);
@@ -138,7 +135,7 @@ export default function Detail(props) {
             <DescriptionWrapper>
               <ProductDescription>
                 <ReviewContainer>
-                  <DetailCarousel pathParameterId={pathParameterId} />
+                  <DetailCarousel pathParameterId={id} />
                 </ReviewContainer>
                 <HeaderTitle>서비스 소개</HeaderTitle>
 

@@ -5,9 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFlag } from '@fortawesome/free-regular-svg-icons';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-function FeedCardName(props) {
-  const { productId, name } = props;
-
+function FeedCardName({ productId, name }) {
   return (
     <FeedCardNameWrapper>
       <FeedName to={`/products/${productId}`}>

@@ -3,9 +3,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 
-function FeedCardLike(props) {
-  const { feed, handleLike } = props;
-
+function FeedCardLike({ feed, handleLike }) {
   return (
     <FeedCardLikeWrapper>
       <FontAwesomeIcon

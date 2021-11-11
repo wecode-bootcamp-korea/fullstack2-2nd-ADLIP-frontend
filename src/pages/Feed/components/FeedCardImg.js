@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function FeedCardImg(props) {
-  const { CommentImage } = props;
+function FeedCardImg({ CommentImage }) {
   const showingImg = CommentImage[0]?.commentImageUrl;
 
   return (

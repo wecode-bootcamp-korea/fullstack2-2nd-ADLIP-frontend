@@ -3,9 +3,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
-function FeedCardHeader(props) {
-  const { nickname, createdAt } = props;
-
+function FeedCardHeader({ nickname, createdAt }) {
   return (
     <FeedCardHeaderWrapper>
       <FontAwesomeIcon icon={faUserCircle} />
