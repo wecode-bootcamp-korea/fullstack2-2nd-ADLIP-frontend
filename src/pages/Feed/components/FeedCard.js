@@ -6,8 +6,7 @@ import FeedCardName from './FeedCardName';
 import FeedCardText from './FeedCardText';
 import FeedCardLike from './FeedCardLike';
 
-function FeedCard(props) {
-  const { feed, handleLike } = props;
+function FeedCard({ feed, handleLike }) {
   const [moreText, setMoreText] = useState(false);
 
   const handleMoreText = () => {
