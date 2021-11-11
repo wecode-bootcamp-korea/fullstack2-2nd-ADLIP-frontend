@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <HeaderStyle>
       <HeaderFlexCenter>
-        <LinkToTegStyle to='/'>{headerMenus.host}</LinkToTegStyle>
+        <LinkToTegStyle to='/hostSupport'>{headerMenus.host}</LinkToTegStyle>
         <HeaderUserMenuFlex>
           {!token && !localStorage.getItem('token') ? (
             <HeaderLogout />

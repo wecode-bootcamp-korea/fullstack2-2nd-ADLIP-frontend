@@ -13,6 +13,7 @@ import Comment from './pages/Comment/Comment';
 import TeamInfo from './pages/TeamInfo/TeamInfo';
 import Feed from './pages/Feed/Feed';
 import PublicRoute from './PublicRoute';
+import HostSupport from './pages/HostSupport/HostSupport';
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
       <Header />
       <Nav />
       <Switch>
+        <Route exact path='/hostSupport' component={HostSupport} />
         <Route exact path='/teamInfo' component={TeamInfo} />
         <PublicRoute restricted exact path='/login' component={LogIn} />
         <PublicRoute restricted exact path='/signup' component={SignUp} />

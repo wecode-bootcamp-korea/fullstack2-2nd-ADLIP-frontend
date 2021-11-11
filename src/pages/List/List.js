@@ -52,12 +52,13 @@ function List({ match }) {
 
   useEffect(() => {
     fetch(`${API}/search/${match.params.id}/all`)
-      .then(res => res.json())
       .then(res => {
-        console.log(res);
-        res.data === [] ? setSearchAll([]) : setSearchAll(res.data);
+        return res.json();
+      })
+      .then(res => {
+        setSearchAll(res.data);
       });
-  }, [setSearchAll]);
+  }, [match.params.id]);
 
   let { path, url } = useRouteMatch();
 
@@ -71,7 +72,7 @@ function List({ match }) {
     <>
       <Page>
         <MainCategory>
-          {main[id]?.category_name}
+          {main[id]?.category_name || `${id} 검색 결과`}
           <ListModal main={main} id={id} />
         </MainCategory>
 

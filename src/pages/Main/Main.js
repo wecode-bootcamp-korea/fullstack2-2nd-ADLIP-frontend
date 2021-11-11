@@ -49,6 +49,7 @@ export default function Main() {
           setTopCarouselData(res2.data.images);
           setMiddleCarouselData(res3.data.images);
           setProductsData(res4.data.data);
+          console.log(res4.data.data);
         })
       )
       .catch(() => {
@@ -93,7 +94,7 @@ export default function Main() {
           title={mainCardListTitle[3].title}
           productsData={productsData[mainCardListTitle[3].name]}
         />
-        <BannerLinkStyle to='/' ref={multyRef.bottomRef}>
+        <BannerLinkStyle to='/hostSupport' ref={multyRef.bottomRef}>
           <BannerImgStyle />
         </BannerLinkStyle>
         {token || localStorage.getItem('token') ? null : <FirstModal />}
