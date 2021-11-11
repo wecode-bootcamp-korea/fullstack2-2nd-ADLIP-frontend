@@ -8,6 +8,7 @@ import Map from './components/Map';
 import CommonCardList from '../List/CommonCardList';
 import styled from 'styled-components';
 import { useParams, useLocation } from 'react-router';
+import { API_ENDPOINT } from '../../api';
 
 export default function Detail() {
   const [detailData, setDetailData] = useState([]);
@@ -30,7 +31,7 @@ export default function Detail() {
   useEffect(() => {
     const getDetailData = async () => {
       try {
-        await fetch(`http://localhost:8080/products/${id}`)
+        await fetch(`${API_ENDPOINT}/products/${id}`)
           .then(res => res.json())
           .then(res => {
             setDetailData(res);
@@ -42,7 +43,7 @@ export default function Detail() {
 
     const getRelatedList = async () => {
       try {
-        await fetch(`http://localhost:8080/product/1/1`, {
+        await fetch(`${API_ENDPOINT}/product/1/1`, {
           headers: {
             'Content-Type': 'application/json',
             Accept: 'application/json',

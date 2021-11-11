@@ -4,13 +4,14 @@ import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import Card from './Card.js';
 import axios from 'axios';
-import { API } from '../../API/api';
+import { API_ENDPOINT } from '../../api';
+
 function SubList(props) {
   const { id: newId, sub: Sub } = useParams();
 
   useEffect(() => {
     axios
-      .all([axios.get(`${API}/category/${Number(newId) + 1}/${Sub}`)])
+      .all([axios.get(`${API_ENDPOINT}/category/${Number(newId) + 1}/${Sub}`)])
       .then(
         axios.spread(res1 => {
           setSubProduct(res1.data.data);

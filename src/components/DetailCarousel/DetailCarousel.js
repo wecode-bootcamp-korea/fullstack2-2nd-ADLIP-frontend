@@ -77,7 +77,7 @@ function DetailCarousel({ pathParameterId }) {
                 ${position * -SLIDER_WIDTH}px`,
         }}
       >
-        {dataForSlide.map(review => {
+        {dataForSlide?.map(review => {
           const { id, nickname, commentText, CommentImage } = review;
           const showingImg = CommentImage[0];
 

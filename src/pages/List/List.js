@@ -15,7 +15,7 @@ import ListModal from './ListModal.js';
 import ListFilterWhere from './ListFilterWhere';
 import ListFilter from './ListFilter.js';
 import SubList from './SubList.js';
-import { API } from '../../API/api';
+import { API_ENDPOINT } from '../../api';
 
 function List({ match }) {
   const { id: newId } = useParams();
@@ -30,9 +30,9 @@ function List({ match }) {
   useEffect(() => {
     axios
       .all([
-        axios.get(`${API}/category/${newId}`),
-        axios.get(`${API}/category/${Number(match.params.id) + 1}`),
-        axios.get(`${API}/product/${Number(match.params.id) + 1}/all`),
+        axios.get(`${API_ENDPOINT}/category/${newId}`),
+        axios.get(`${API_ENDPOINT}/category/${Number(match.params.id) + 1}`),
+        axios.get(`${API_ENDPOINT}/product/${Number(match.params.id) + 1}/all`),
         axios.get('/data/List/title.json'),
         axios.get('/data/List/sub.json'),
       ])
@@ -51,7 +51,7 @@ function List({ match }) {
   }, []);
 
   useEffect(() => {
-    fetch(`${API}/search/${match.params.id}/all`)
+    fetch(`${API_ENDPOINT}/search/${match.params.id}/all`)
       .then(res => {
         return res.json();
       })
