@@ -10,7 +10,9 @@ import styled from 'styled-components';
 import { useParams, useLocation } from 'react-router';
 
 export default function Detail(props) {
-  const { id: pathParameterId } = props.match.params;
+  const { pathParameterId } = props.match.params.id;
+  console.log('<<<<<<<<');
+  console.log(props.match.params.id);
   const [detailData, setDetailData] = useState([]);
   const [relatedListData, setRelatedListData] = useState([]);
   const [buttonToTop, setButtonToTop] = useState(false);
@@ -205,12 +207,14 @@ export const DetailOuterMax = styled.div`
 
 export const DetailContainer = styled.div`
   width: 768px;
+  margin-top: 20px;
 `;
 
 export const HeadSection = styled.div`
   display: flex;
   justify-content: space-between;
   width: 750px;
+  margin-bottom: 20px;
   padding: 0 0 24px;
 `;
 
@@ -249,7 +253,7 @@ export const TitleContainer = styled.div`
 `;
 
 export const TitleText = styled.h1`
-  margin-right: 40px;
+  margin-right: 60px;
   font-size: 16px;
 `;
 
@@ -322,7 +326,7 @@ export const HostInfoContainer = styled.div`
 export const BookmarkIconWrapper = styled.div`
   position: relative;
   top: 30px;
-  left: 50px;
+  left: 100px;
 `;
 
 export const HostName = styled.h2`
@@ -385,8 +389,8 @@ export const TextContentWrapper = styled.div`
 export const ListContentWrapper = styled.p`
   * {
     position: relative;
-    left: -2px;
-    top: -2px;
+    left: -5px;
+    top: -6px;
   }
 `;
 
