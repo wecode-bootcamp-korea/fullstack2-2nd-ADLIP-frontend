@@ -3,10 +3,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp } from '@fortawesome/free-regular-svg-icons';
 
-function LikeThumbsUp(props) {
-  const { review, handleLike } = props;
-  review.isLiked = false;
-
+function LikeThumbsUp({ review, handleLike }) {
   return (
     <LikeThumbsUpWrapper
       style={review.isLiked ? { color: '#3397fe' } : { color: 'black' }}
@@ -39,7 +36,7 @@ const LikeThumbsUpWrapper = styled.div`
 
 const LikeComment = styled.p`
   display: flex;
+  margin-right: 5px;
   align-items: flex-end;
   font-size: 10px;
-  margin-right: 5px;
 `;

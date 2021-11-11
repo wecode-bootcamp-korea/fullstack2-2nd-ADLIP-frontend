@@ -5,9 +5,7 @@ import DeleteReview from './DeleteReview';
 import LikeThumbsUp from './LikeThumbsUp';
 import ReviewImages from './ReviewImages';
 
-function ReviewCard(props) {
-  const { reviews, handleLike, deleteReview } = props;
-
+function ReviewCard({ reviews, handleLike, deleteReview }) {
   return (
     <CardWrapper>
       {reviews &&
@@ -39,9 +37,9 @@ const CardWrapper = styled.div`
 `;
 
 const ReviewWrapper = styled.div`
+  padding-bottom: 32px;
   width: ${({ theme }) => theme.width};
   border-bottom: 1px solid rgba(1, 1, 1, 0.1);
-  padding-bottom: 32px;
 `;
 
 const ReviewText = styled.p`

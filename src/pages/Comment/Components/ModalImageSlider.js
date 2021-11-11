@@ -7,8 +7,7 @@ import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 const MODALWIDTH = 600;
 
-function ModalImageSlider(props) {
-  const { images, toggleModal } = props;
+function ModalImageSlider({ images, toggleModal }) {
   const [position, setPosition] = useState(0);
   const slideLength = images.length;
 
