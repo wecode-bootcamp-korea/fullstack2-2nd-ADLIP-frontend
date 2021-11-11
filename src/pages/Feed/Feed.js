@@ -3,10 +3,11 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import FeedCard from './components/FeedCard';
 import FeedHeader from './components/FeedHeader';
+import Loader from './components/Loader';
 
 function Feed() {
   const [feeds, setFeeds] = useState([]);
-  const [groupNumOfFeeds, setGroupNumOfFeeds] = useState(1);
+  const [isLoading, setIsLoading] = useState([]);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -17,10 +18,15 @@ function Feed() {
 
   useEffect(() => {
     getImages();
-  }, [groupNumOfFeeds]);
+  }, []);
 
-  const getImages = () => {
-    fetch(`/data/Feed/Feed${groupNumOfFeeds}.json`)
+  const getImages = async () => {
+    setIsLoading(true);
+
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
+    const offset = feeds.length;
+    await fetch(`/data/Feed/Feed${offset}.json`)
       .then(res => res.json())
       .then(res => {
         const data = res.comment;
@@ -28,6 +34,8 @@ function Feed() {
         setFeeds(newData);
       })
       .catch(console.log);
+
+    setIsLoading(false);
   };
 
   const handleLike = feed => {
@@ -43,7 +51,7 @@ function Feed() {
     const clientHeight = document.documentElement.clientHeight;
 
     if (scrollTop + clientHeight >= scrollHeight) {
-      setGroupNumOfFeeds(groupNumOfFeeds + 1);
+      getImages();
     }
   };
 
@@ -54,6 +62,7 @@ function Feed() {
         feeds.map(feed => (
           <FeedCard key={feed.id} feed={feed} handleLike={handleLike} />
         ))}
+      {isLoading && <Loader />}
     </FeedWrapper>
   );
 }
