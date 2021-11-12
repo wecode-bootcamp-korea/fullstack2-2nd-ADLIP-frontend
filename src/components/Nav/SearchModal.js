@@ -94,9 +94,8 @@ const {
 } = mixinStyle;
 
 const ModalTotalPosition = styled.div`
-  position: fixed;
+  position: absolute;
   top: 110px;
-  bottom: 0px;
   left: 0px;
   right: 0px;
   z-index: 5000;
